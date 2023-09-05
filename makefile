@@ -2,20 +2,20 @@
 # Generates VOWL file for visualization in WebVOWL
 
 SHELL := /bin/bash
-.PHONY: clean
+.PHONY: vowl clean
 
-# Variables
+# paths
 ONTO = ./display-ontology.ttl
 VOWL = ./webvowl/data/display.json
 
-all: $(VOWL)
-
-$(VOWL): $(ONTO)
+vowl:
 	@echo "Generate VOWL"
 	java -jar ./owl2vowl/owl2vowl.jar \
 		-file $(ONTO) \
-		-output $@
+		-output $(VOWL)
 	@echo "DONE"
 
 clean:
 	@echo "foobar"
+
+build: vowl
