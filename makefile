@@ -8,11 +8,13 @@ SHELL := /bin/bash
 ONTO = ./display-ontology.ttl
 VOWL = ./webvowl/data/display.json
 
-all: $(VOWL) $(GRAPH) $(CONVERT)
+all: $(VOWL)
 
 $(VOWL): $(ONTO)
 	@echo "Generate VOWL"
-	java -jar owl2vowl.jar -file $(ONTO) -output $@
+	java -jar ./owl2vowl/owl2vowl.jar \
+		-file $(ONTO) \
+		-output $@
 	@echo "DONE"
 
 clean:
