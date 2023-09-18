@@ -57,6 +57,24 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
+display:containsExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:domain display:ExhibitionSpace ;
+                        rdfs:range display:Exhibit ;
+                        rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l'espace expographique."@fr .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#includesExhibit
+display:includesExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:domain display:Display ;
+                        rdfs:range display:Exhibit ;
+                        rdfs:comment "Realtion entre un display et un expôt agencé au sein du display."@fr .
+
+
+#################################################################
 #    Classes
 #################################################################
 
