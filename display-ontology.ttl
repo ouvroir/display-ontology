@@ -213,7 +213,7 @@ display:Artwork rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Base
 display:Base rdf:type owl:Class ;
              rdfs:subClassOf display:Support ;
-             rdfs:comment "Socle, plateforme, base, etc."@fr ;
+             rdfs:comment "Objet sur lequel repose un expôt. Exemple : socle, plateforme, base, chevalet, etc."@fr ;
              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
              vs:term_status "unstable" .
 
@@ -228,7 +228,7 @@ display:BuildingElement rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
-                             "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace d’exposition."@fr ;
+                             "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                 rdfs:label "display"@en ,
                            "display"@fr ;
@@ -242,18 +242,10 @@ display:DistancingDevice rdf:type owl:Class ;
                          vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#Easel
-display:Easel rdf:type owl:Class ;
-              rdfs:subClassOf display:Support ;
-              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-              rdfs:label "chevalet"@fr ,
-                         "easel"@en ;
-              vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
 display:Exhibit rdf:type owl:Class ;
-                rdfs:comment "Objet exposé"@fr ;
+                rdfs:comment "Constituent of a display entity with a characteristic aesthetic or technical function, with form or position"@en ,
+                             "Objet exposé"@fr ;
                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                 rdfs:label "exhibit"@en ,
                            "expôt"@fr ;
@@ -306,10 +298,7 @@ display:SonicArtifact rdf:type owl:Class ;
 display:StructuralExhibit rdf:type owl:Class ;
                           rdfs:subClassOf display:Exhibit ;
                           rdfs:comment """Contrainte physique qui structure l’espace d’exposition. Détermine ou influence la relation spatiale entre l’expôt et l’origine du point de vue.
-Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde
-mazzanine
-cadre (regarder un expôt à travers un cadre, un trou ou un objectif).
-À discuter : portes et fenêtres incluses dans un display, ou autres éléments fixes de l’espace du bâtiment."""@fr ;
+Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde; mazzanine; cadre (regarder un expôt à travers un cadre, un trou ou un objectif)."""@fr ;
                           rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                           vs:term_status "unstable" .
 
@@ -317,15 +306,7 @@ cadre (regarder un expôt à travers un cadre, un trou ou un objectif).
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
-                rdfs:comment """instanciable? Est-il nécessaire de créer une hiérarchie de classe?
-
-Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace d’exposition, si ce support n’est qu’un type générique?
-
-Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet).
-
-Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter).
-
-La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."""@fr ;
+                rdfs:comment "instanciable? Est-il nécessaire de créer une hiérarchie de classe? Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace expographique, si ce support n’est qu’un type générique? Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet). Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter). La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."@fr ;
                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                 vs:term_status "unstable" .
 
@@ -333,12 +314,14 @@ La question est : besoin d’indentification? Si oui, instanciation. Sinon, typ
 ###  https://ouvroir.umontreal.ca/onto/display#Surface
 display:Surface rdf:type owl:Class ;
                 rdfs:subClassOf display:Support ;
-                rdfs:comment """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
+                rdfs:comment "La notion de surface d’accrochage serait vraisemblablement prise en charge par bot:Element dont la sémantique est acteuellement intégrée par display:BuildingElement owl:equivalentClass bot:Element"@fr ,
+                             """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
 
 Surface plane, convexe, concave, accidentée.
 
 Surface mobile, cloison mobile (par contre immobile dans le cadre d’une exposition)."""@fr ;
                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                owl:deprecated "true"^^xsd:boolean ;
                 vs:term_status "unstable" .
 
 
