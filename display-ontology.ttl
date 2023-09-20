@@ -60,18 +60,131 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://ouvroir.umontreal.ca/onto/display#conceptualRelation
+display:conceptualRelation rdf:type owl:ObjectProperty ,
+                                    owl:SymmetricProperty ;
+                           rdfs:comment "Conceptual relation between exhibits (non topological). Not to be stated explicitly."@en ;
+                           vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#contains
+display:contains rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 owl:inverseOf display:isContainedIn ;
+                 rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An artifact is inside a showcase."@en ;
+                 vs:term_status "unstable" .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
 display:containsExhibit rdf:type owl:ObjectProperty ;
                         rdfs:domain display:ExhibitionSpace ;
                         rdfs:range display:Exhibit ;
-                        rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l'espace expographique."@fr .
+                        rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l'espace expographique."@fr ;
+                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#covers
+display:covers rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf display:topologicalRelation ;
+               vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#inFrontOf
+display:inFrontOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf display:topologicalRelation ;
+                  rdf:type owl:SymmetricProperty ;
+                  vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#includesExhibit
 display:includesExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf display:conceptualRelation ;
                         rdfs:domain display:Display ;
                         rdfs:range display:Exhibit ;
-                        rdfs:comment "Realtion entre un display et un expôt agencé au sein du display."@fr .
+                        rdfs:comment "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#intersects
+display:intersects rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf display:topologicalRelation ;
+                   vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isAbove
+display:isAbove rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:isAdjacentTo ;
+                owl:propertyDisjointWith display:isBelow ;
+                vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isAdjacentTo
+display:isAdjacentTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf display:topologicalRelation ;
+                     vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isBehind
+display:isBehind rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isBelow
+display:isBelow rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:isAdjacentTo ;
+                vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isComposedOf
+display:isComposedOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf display:conceptualRelation ;
+                     rdfs:domain display:Artwork ;
+                     rdfs:range display:Exhibit ;
+                     rdfs:comment "Relation between an artwork and an artifact: An artwork is made up of one or more artifacts."@en ,
+                                  "Relation entre une œuvre et un artéfact : une oeuvre est composée de un ou plusieurs artéfacts."@fr ;
+                     vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isContainedIn
+display:isContainedIn rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf display:topologicalRelation ;
+                      vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isLeftOf
+display:isLeftOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:isAdjacentTo ;
+                 owl:inverseOf display:isRightOf ;
+                 owl:propertyDisjointWith display:isRightOf ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isRightOf
+display:isRightOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf display:isAdjacentTo ;
+                  vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#overlaps
+display:overlaps rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#topologicalRelation
+display:topologicalRelation rdf:type owl:ObjectProperty ;
+                            rdfs:domain display:Exhibit ;
+                            rdfs:range display:Exhibit ;
+                            rdfs:comment "Topological relation within the exhibition space. Not to be stated explicitly."@en ;
+                            vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#touches
+display:touches rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:topologicalRelation ;
+                rdf:type owl:SymmetricProperty ;
+                vs:term_status "unstable" .
 
 
 #################################################################
