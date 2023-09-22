@@ -1,5 +1,5 @@
-@prefix : <https://ouvroir.umontreal.ca/onto/display#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix bot: <https://w3id.org/bot-0.3.2#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,25 +7,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
-@base <https://ouvroir.umontreal.ca/onto/display#> .
+@base <https://ouvroir.umontreal.ca/onto/display> .
 
-<https://ouvroir.umontreal.ca/onto/display#> rdf:type owl:Ontology ;
-                                              dcterms:creator "David Valentine" ,
-                                                              "Emmanuel Chateau-Dutier" ,
-                                                              "Lena Krause" ,
-                                                              "Zoë Renaudie" ;
-                                              dcterms:description """This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.).
+display: rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/bot-0.3.2> ;
+  dcterms:creator "David Valentine" ,
+    "Emmanuel Chateau-Dutier" ,
+    "Lena Krause" ,
+    "Zoë Renaudie" ;
+  dcterms:description """This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.).
 This ontology is developed at the Ouvroir laboratory in the framework of the partnership New uses of collections in art museums.
 Project manager: Lena Krause.
 Scientific director: Emmanuel Chateau-Dutier.
 Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
-                                              dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-                                              dcterms:modified "2023-08-28T09:22:00-04:00"^^xsd:dateTime ;
-                                              dcterms:title "L’ontologie Display"@fr ,
-                                                            "Display Ontology"@en ;
-                                              rdfs:seeAlso <https://github.com/ouvroir/display-ontology> ,
-                                                           <https://ouvroir.umontreal.ca/en/projects/expots/> ;
-                                              owl:versionInfo "0.0.0" .
+  dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+  dcterms:modified "2023-09-20T17:45:00-04:00"^^xsd:dateTime ;
+  dcterms:title "Display Ontology"@en ,
+    "L’ontologie Display"@fr ;
+  rdfs:comment "On 09/19/2019 this ontology is a work in progress that is the result of the first reflections of the team, and that is not intended to be use at the moment." ;
+  rdfs:seeAlso <https://github.com/ouvroir/display-ontology> ,
+    <https://ouvroir.umontreal.ca/en/projects/expots/> ;
+  owl:versionInfo "0.0.0" .
 
 #################################################################
 #    Annotation properties
@@ -56,13 +58,144 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://ouvroir.umontreal.ca/onto/display#conceptualRelation
+display:conceptualRelation rdf:type owl:ObjectProperty ,
+                                    owl:SymmetricProperty ;
+                           rdfs:comment "Conceptual relation between exhibits (non topological). Not to be stated explicitly."@en ;
+                           vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#contains
+display:contains rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 owl:inverseOf display:isContainedIn ;
+                 rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An artifact is inside a showcase."@en ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
+display:containsExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:domain display:ExhibitionSpace ;
+                        rdfs:range display:Exhibit ;
+                        rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l'espace expographique."@fr ;
+                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#covers
+display:covers rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf display:topologicalRelation ;
+               vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#inFrontOf
+display:inFrontOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf display:topologicalRelation ;
+                  rdf:type owl:SymmetricProperty ;
+                  vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#includesExhibit
+display:includesExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf display:conceptualRelation ;
+                        rdfs:domain display:Display ;
+                        rdfs:range display:Exhibit ;
+                        rdfs:comment "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#intersects
+display:intersects rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf display:topologicalRelation ;
+                   vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isAbove
+display:isAbove rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:isAdjacentTo ;
+                owl:propertyDisjointWith display:isBelow ;
+                vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isAdjacentTo
+display:isAdjacentTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf display:topologicalRelation ;
+                     vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isBehind
+display:isBehind rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isBelow
+display:isBelow rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:isAdjacentTo ;
+                vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isComposedOf
+display:isComposedOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf display:conceptualRelation ;
+                     rdfs:domain display:Artwork ;
+                     rdfs:range display:Exhibit ;
+                     rdfs:comment "Relation between an artwork and an artifact: An artwork is made up of one or more artifacts."@en ,
+                                  "Relation entre une œuvre et un artéfact : une oeuvre est composée de un ou plusieurs artéfacts."@fr ;
+                     vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isContainedIn
+display:isContainedIn rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf display:topologicalRelation ;
+                      vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isLeftOf
+display:isLeftOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:isAdjacentTo ;
+                 owl:inverseOf display:isRightOf ;
+                 owl:propertyDisjointWith display:isRightOf ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isRightOf
+display:isRightOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf display:isAdjacentTo ;
+                  vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#overlaps
+display:overlaps rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:topologicalRelation ;
+                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#topologicalRelation
+display:topologicalRelation rdf:type owl:ObjectProperty ;
+                            rdfs:domain display:Exhibit ;
+                            rdfs:range display:Exhibit ;
+                            rdfs:comment "Topological relation within the exhibition space. Not to be stated explicitly."@en ;
+                            vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#touches
+display:touches rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf display:topologicalRelation ;
+                rdf:type owl:SymmetricProperty ;
+                vs:term_status "unstable" .
+
+
+#################################################################
 #    Classes
 #################################################################
 
 ###  https://ouvroir.umontreal.ca/onto/display#Artifact
 display:Artifact rdf:type owl:Class ;
                  rdfs:subClassOf display:Exhibit ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy display: ;
                  rdfs:label "artifact"@en ,
                             "artéfact"@fr ;
                  vs:term_status "unstable" .
@@ -72,7 +205,7 @@ display:Artifact rdf:type owl:Class ;
 display:Artwork rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
                 rdfs:comment "À discuter : positionnement dans la hiérarchie (artéfact ou non?)."@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy display: ;
                 rdfs:label "artwork"@en ,
                            "œuvre d’art"@fr ;
                 vs:term_status "unstable" .
@@ -81,16 +214,23 @@ display:Artwork rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Base
 display:Base rdf:type owl:Class ;
              rdfs:subClassOf display:Support ;
-             rdfs:comment "Socle, plateforme, base, etc."@fr ;
-             rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+             rdfs:comment "Objet sur lequel repose un expôt. Exemple : socle, plateforme, base, chevalet, etc."@fr ;
+             rdfs:isDefinedBy display: ;
              vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#BuildingElement
+display:BuildingElement rdf:type owl:Class ;
+                        owl:equivalentClass bot:Element ;
+                        rdfs:subClassOf display:Support ;
+                        vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
-                             "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace d’exposition."@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                             "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
+                rdfs:isDefinedBy display: ;
                 rdfs:label "display"@en ,
                            "display"@fr ;
                 vs:term_status "unstable" .
@@ -99,33 +239,33 @@ display:Display rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
 display:DistancingDevice rdf:type owl:Class ;
                          rdfs:subClassOf display:StructuralExhibit ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                         rdfs:isDefinedBy display: ;
                          vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Easel
-display:Easel rdf:type owl:Class ;
-              rdfs:subClassOf display:Support ;
-              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-              rdfs:label "chevalet"@fr ,
-                         "easel"@en ;
-              vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
 display:Exhibit rdf:type owl:Class ;
-                rdfs:comment "Objet exposé"@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:comment "Constituent of a display entity with a characteristic aesthetic or technical function, with form or position"@en ,
+                             "Objet exposé"@fr ;
+                rdfs:isDefinedBy display: ;
                 rdfs:label "exhibit"@en ,
                            "expôt"@fr ;
                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
+display:ExhibitionSpace rdf:type owl:Class ;
+                        rdfs:subClassOf bot:Space ;
+                        rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for exhibition functions within the zone it is contained in."@en ;
+                        rdfs:label "espace expographique"@fr ,
+                                   "exhibition space"@en .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#InformativeExhibit
 display:InformativeExhibit rdf:type owl:Class ;
                            rdfs:subClassOf display:Exhibit ;
                            rdfs:comment "Expôt fournissant de l’information. Exemple : cartel."@fr ;
-                           rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                           rdfs:isDefinedBy display: ;
                            vs:term_status "unstable" .
 
 
@@ -133,14 +273,14 @@ display:InformativeExhibit rdf:type owl:Class ;
 display:MountingDevice rdf:type owl:Class ;
                        rdfs:comment """Classe ou propriété? La notion d’interface a été évoquée.
 La relation entre l’expôt et le support pourrait, par exemple, être définie par une propriété précisant la manière (suspendu, posé, accroché, en fonction d’un vocabulaire contrôlé) et une propriété précisant l’objet utilisé pour ce faire, si nécessaire (avec vocabulaire contrôlé puisqu’on ne voudra probablement pas avoir de l’info sur les instances du dispositif d’accrochage). Propiétés de la relation topologique (?), celle-ci envisagée comme entité, permettant de garder séparés les expôts et la topologie."""@fr ;
-                       rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                       rdfs:isDefinedBy display: ;
                        vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Showcase
 display:Showcase rdf:type owl:Class ;
                  rdfs:subClassOf display:Support ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy display: ;
                  rdfs:label "showcase"@en ,
                             "vitrine"@fr ;
                  vs:term_status "unstable" .
@@ -149,7 +289,7 @@ display:Showcase rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#SonicArtifact
 display:SonicArtifact rdf:type owl:Class ;
                       rdfs:subClassOf display:Artifact ;
-                      rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                      rdfs:isDefinedBy display: ;
                       rdfs:label "artéfact sonore"@fr ,
                                  "sonic artifact"@en ;
                       vs:term_status "unstable" .
@@ -159,49 +299,48 @@ display:SonicArtifact rdf:type owl:Class ;
 display:StructuralExhibit rdf:type owl:Class ;
                           rdfs:subClassOf display:Exhibit ;
                           rdfs:comment """Contrainte physique qui structure l’espace d’exposition. Détermine ou influence la relation spatiale entre l’expôt et l’origine du point de vue.
-Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde
-mazzanine
-cadre (regarder un expôt à travers un cadre, un trou ou un objectif).
-À discuter : portes et fenêtres incluses dans un display, ou autres éléments fixes de l’espace du bâtiment."""@fr ;
-                          rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde; mazzanine; cadre (regarder un expôt à travers un cadre, un trou ou un objectif)."""@fr ;
+                          rdfs:isDefinedBy display: ;
                           vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
-                rdfs:comment """instanciable? Est-il nécessaire de créer une hiérarchie de classe?
-
-Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace d’exposition, si ce support n’est qu’un type générique?
-
-Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet).
-
-Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter).
-
-La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."""@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:comment "instanciable? Est-il nécessaire de créer une hiérarchie de classe? Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace expographique, si ce support n’est qu’un type générique? Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet). Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter). La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."@fr ;
+                rdfs:isDefinedBy display: ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Surface
 display:Surface rdf:type owl:Class ;
                 rdfs:subClassOf display:Support ;
-                rdfs:comment """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
+                rdfs:comment "La notion de surface d’accrochage serait vraisemblablement prise en charge par bot:Element dont la sémantique est acteuellement intégrée par display:BuildingElement owl:equivalentClass bot:Element"@fr ,
+                             """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
 
 Surface plane, convexe, concave, accidentée.
 
 Surface mobile, cloison mobile (par contre immobile dans le cadre d’une exposition)."""@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy display: ;
+                owl:deprecated "true"^^xsd:boolean ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#VisualArtifact
 display:VisualArtifact rdf:type owl:Class ;
                        rdfs:subClassOf display:Artifact ;
-                       rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                       rdfs:isDefinedBy display: ;
                        rdfs:label "artéfact visuel"@fr ,
                                   "visual artifact"@en ;
                        vs:term_status "unstable" .
+
+
+###  https://w3id.org/bot-0.3.2#Element
+bot:Element rdf:type owl:Class .
+
+
+###  https://w3id.org/bot-0.3.2#Space
+bot:Space rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
