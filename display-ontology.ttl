@@ -140,10 +140,10 @@ display:isBelow rdf:type owl:ObjectProperty ;
 ###  https://ouvroir.umontreal.ca/onto/display#isComposedOf
 display:isComposedOf rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf display:conceptualRelation ;
-                     rdfs:domain display:Artwork ;
+                     rdfs:domain display:Artifact ;
                      rdfs:range display:Exhibit ;
-                     rdfs:comment "Relation between an artwork and an artifact: An artwork is made up of one or more artifacts."@en ,
-                                  "Relation entre une œuvre et un artéfact : une oeuvre est composée de un ou plusieurs artéfacts."@fr ;
+                     rdfs:comment "Relation between an artifact and an exhibit: An artifact is made up of one or more exhibits."@en ,
+                                  "Relation entre un artéfact et un expôt : une artéfact est composé de un ou plusieurs expôts."@fr ;
                      vs:term_status "unstable" .
 
 
@@ -201,16 +201,6 @@ display:Artifact rdf:type owl:Class ;
                  vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#Artwork
-display:Artwork rdf:type owl:Class ;
-                rdfs:subClassOf display:Exhibit ;
-                rdfs:comment "À discuter : positionnement dans la hiérarchie (artéfact ou non?)."@fr ;
-                rdfs:isDefinedBy display: ;
-                rdfs:label "artwork"@en ,
-                           "œuvre d’art"@fr ;
-                vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Base
 display:Base rdf:type owl:Class ;
              rdfs:subClassOf display:Support ;
@@ -226,6 +216,11 @@ display:BuildingElement rdf:type owl:Class ;
                         vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#Device
+display:Device rdf:type owl:Class ;
+               rdfs:subClassOf display:Exhibit .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
@@ -238,8 +233,8 @@ display:Display rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
 display:DistancingDevice rdf:type owl:Class ;
-                         rdfs:subClassOf display:StructuralExhibit ;
-                         rdfs:isDefinedBy display: ;
+                         rdfs:subClassOf display:Device ;
+                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                          vs:term_status "unstable" .
 
 
@@ -251,6 +246,13 @@ display:Exhibit rdf:type owl:Class ;
                 rdfs:label "exhibit"@en ,
                            "expôt"@fr ;
                 vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#ExhibitWall
+display:ExhibitWall rdf:type owl:Class ;
+                    rdfs:subClassOf display:StructuralExhibit ;
+                    rdfs:label "cimaise"@fr ,
+                               "exhibit wall"@en .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
@@ -271,6 +273,7 @@ display:InformativeExhibit rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#MountingDevice
 display:MountingDevice rdf:type owl:Class ;
+                       rdfs:subClassOf display:Device ;
                        rdfs:comment """Classe ou propriété? La notion d’interface a été évoquée.
 La relation entre l’expôt et le support pourrait, par exemple, être définie par une propriété précisant la manière (suspendu, posé, accroché, en fonction d’un vocabulaire contrôlé) et une propriété précisant l’objet utilisé pour ce faire, si nécessaire (avec vocabulaire contrôlé puisqu’on ne voudra probablement pas avoir de l’info sur les instances du dispositif d’accrochage). Propiétés de la relation topologique (?), celle-ci envisagée comme entité, permettant de garder séparés les expôts et la topologie."""@fr ;
                        rdfs:isDefinedBy display: ;
@@ -292,7 +295,13 @@ display:SonicArtifact rdf:type owl:Class ;
                       rdfs:isDefinedBy display: ;
                       rdfs:label "artéfact sonore"@fr ,
                                  "sonic artifact"@en ;
+                      owl:deprecated "true"^^xsd:boolean ;
                       vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#SonicDevice
+display:SonicDevice rdf:type owl:Class ;
+                    rdfs:subClassOf display:Device .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#StructuralExhibit
@@ -332,7 +341,14 @@ display:VisualArtifact rdf:type owl:Class ;
                        rdfs:isDefinedBy display: ;
                        rdfs:label "artéfact visuel"@fr ,
                                   "visual artifact"@en ;
+                       owl:deprecated "true"^^xsd:boolean ;
                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
+display:VisualDevice rdf:type owl:Class ;
+                     rdfs:subClassOf display:Device .
+
 
 
 ###  https://w3id.org/bot-0.3.2#Element
