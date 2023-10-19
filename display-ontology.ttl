@@ -192,6 +192,11 @@ display:touches rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
+###  https://ouvroir.umontreal.ca/onto/display#Arch
+display:Arch rdf:type owl:Class ;
+             rdfs:subClassOf display:Element .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#Artifact
 display:Artifact rdf:type owl:Class ;
                  rdfs:subClassOf display:Exhibit ;
@@ -210,10 +215,15 @@ display:Base rdf:type owl:Class ;
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#BuildingElement
-display:BuildingElement rdf:type owl:Class ;
+display:Element rdf:type owl:Class ;
                         owl:equivalentClass bot:Element ;
-                        rdfs:subClassOf display:Support ;
+                        rdfs:subClassOf display:Exhibit ;
                         vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#Ceiling
+display:Ceiling rdf:type owl:Class ;
+                rdfs:subClassOf display:Element .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Device
@@ -231,11 +241,23 @@ display:Display rdf:type owl:Class ;
                 vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#DisplayWall
+display:DisplayWall rdf:type owl:Class ;
+                    rdfs:subClassOf display:Wall ;
+                    rdfs:label "Display wall"@en ,
+                               "cimaise"@fr .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
 display:DistancingDevice rdf:type owl:Class ;
                          rdfs:subClassOf display:Device ;
                          rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                          vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#Door
+display:Door rdf:type owl:Class ;
+             rdfs:subClassOf display:Element .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
@@ -262,6 +284,13 @@ display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:label "espace expographique"@fr ,
                                    "exhibition space"@en .
 
+
+###  https://ouvroir.umontreal.ca/onto/display#Floor
+display:Floor rdf:type owl:Class ;
+              rdfs:subClassOf display:Element .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
 
 ###  https://ouvroir.umontreal.ca/onto/display#InformativeExhibit
 display:InformativeExhibit rdf:type owl:Class ;
@@ -324,7 +353,7 @@ display:Support rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Surface
 display:Surface rdf:type owl:Class ;
                 rdfs:subClassOf display:Support ;
-                rdfs:comment "La notion de surface d’accrochage serait vraisemblablement prise en charge par bot:Element dont la sémantique est acteuellement intégrée par display:BuildingElement owl:equivalentClass bot:Element"@fr ,
+                rdfs:comment "La notion de surface d’accrochage serait vraisemblablement prise en charge par bot:Element dont la sémantique est acteuellement intégrée par display:Element owl:equivalentClass bot:Element"@fr ,
                              """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
 
 Surface plane, convexe, concave, accidentée.
@@ -349,6 +378,15 @@ display:VisualArtifact rdf:type owl:Class ;
 display:VisualDevice rdf:type owl:Class ;
                      rdfs:subClassOf display:Device .
 
+
+###  https://ouvroir.umontreal.ca/onto/display#Wall
+display:Wall rdf:type owl:Class ;
+             rdfs:subClassOf display:Element .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#Window
+display:Window rdf:type owl:Class ;
+               rdfs:subClassOf display:Element .
 
 
 ###  https://w3id.org/bot#Element
