@@ -1,5 +1,5 @@
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix bot: <https://w3id.org/bot-0.3.2#> .
+@prefix bot: <https://w3id.org/bot#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -10,7 +10,7 @@
 @base <https://ouvroir.umontreal.ca/onto/display> .
 
 display: rdf:type owl:Ontology ;
-  owl:imports <https://w3id.org/bot-0.3.2> ;
+  owl:imports <https://w3id.org/bot> ;
   dcterms:creator "David Valentine" ,
     "Emmanuel Chateau-Dutier" ,
     "Lena Krause" ,
@@ -351,11 +351,11 @@ display:VisualDevice rdf:type owl:Class ;
 
 
 
-###  https://w3id.org/bot-0.3.2#Element
+###  https://w3id.org/bot#Element
 bot:Element rdf:type owl:Class .
 
 
-###  https://w3id.org/bot-0.3.2#Space
+###  https://w3id.org/bot#Space
 bot:Space rdf:type owl:Class .
 
 
