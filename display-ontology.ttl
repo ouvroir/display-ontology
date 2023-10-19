@@ -296,13 +296,6 @@ display:Exhibit rdf:type owl:Class ;
                 vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#ExhibitWall
-display:ExhibitWall rdf:type owl:Class ;
-                    rdfs:subClassOf display:StructuralExhibit ;
-                    rdfs:label "cimaise"@fr ,
-                               "exhibit wall"@en .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
 display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:subClassOf bot:Space ;
@@ -317,6 +310,9 @@ display:Floor rdf:type owl:Class ;
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
+display:HangingInterface rdf:type owl:Class ;
+                         rdfs:subClassOf bot:Interface .
+
 
 ###  https://ouvroir.umontreal.ca/onto/display#InformativeExhibit
 display:InformativeExhibit rdf:type owl:Class ;
@@ -333,6 +329,11 @@ display:MountingDevice rdf:type owl:Class ;
 La relation entre l’expôt et le support pourrait, par exemple, être définie par une propriété précisant la manière (suspendu, posé, accroché, en fonction d’un vocabulaire contrôlé) et une propriété précisant l’objet utilisé pour ce faire, si nécessaire (avec vocabulaire contrôlé puisqu’on ne voudra probablement pas avoir de l’info sur les instances du dispositif d’accrochage). Propiétés de la relation topologique (?), celle-ci envisagée comme entité, permettant de garder séparés les expôts et la topologie."""@fr ;
                        rdfs:isDefinedBy display: ;
                        vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#PathwayInterface
+display:PathwayInterface rdf:type owl:Class ;
+                         rdfs:subClassOf bot:Interface .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Showcase
