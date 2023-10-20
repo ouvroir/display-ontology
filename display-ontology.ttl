@@ -218,11 +218,6 @@ display:touches rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://ouvroir.umontreal.ca/onto/display#Arch
-display:Arch rdf:type owl:Class ;
-             rdfs:subClassOf display:Element .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Artifact
 display:Artifact rdf:type owl:Class ;
                  rdfs:subClassOf display:Exhibit ;
@@ -238,13 +233,6 @@ display:Base rdf:type owl:Class ;
              rdfs:comment "Objet sur lequel repose un expôt. Exemple : socle, plateforme, base, chevalet, etc."@fr ;
              rdfs:isDefinedBy display: ;
              vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#BuildingElement
-display:Element rdf:type owl:Class ;
-                        owl:equivalentClass bot:Element ;
-                        rdfs:subClassOf display:Exhibit ;
-                        vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Ceiling
@@ -277,13 +265,20 @@ display:DisplayWall rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
 display:DistancingDevice rdf:type owl:Class ;
                          rdfs:subClassOf display:Device ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                         rdfs:isDefinedBy display: ;
                          vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Door
 display:Door rdf:type owl:Class ;
              rdfs:subClassOf display:Element .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#Element
+display:Element rdf:type owl:Class ;
+                owl:equivalentClass bot:Element ;
+                rdfs:subClassOf display:Exhibit ;
+                vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
@@ -345,16 +340,6 @@ display:Showcase rdf:type owl:Class ;
                  vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#SonicArtifact
-display:SonicArtifact rdf:type owl:Class ;
-                      rdfs:subClassOf display:Artifact ;
-                      rdfs:isDefinedBy display: ;
-                      rdfs:label "artéfact sonore"@fr ,
-                                 "sonic artifact"@en ;
-                      owl:deprecated "true"^^xsd:boolean ;
-                      vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#SonicDevice
 display:SonicDevice rdf:type owl:Class ;
                     rdfs:subClassOf display:Device .
@@ -386,19 +371,8 @@ display:Surface rdf:type owl:Class ;
 Surface plane, convexe, concave, accidentée.
 
 Surface mobile, cloison mobile (par contre immobile dans le cadre d’une exposition)."""@fr ;
-                rdfs:isDefinedBy display: ;
                 owl:deprecated "true"^^xsd:boolean ;
                 vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#VisualArtifact
-display:VisualArtifact rdf:type owl:Class ;
-                       rdfs:subClassOf display:Artifact ;
-                       rdfs:isDefinedBy display: ;
-                       rdfs:label "artéfact visuel"@fr ,
-                                  "visual artifact"@en ;
-                       owl:deprecated "true"^^xsd:boolean ;
-                       vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
