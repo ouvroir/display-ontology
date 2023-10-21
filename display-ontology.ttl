@@ -139,6 +139,7 @@ display:includesExhibit rdf:type owl:ObjectProperty ;
 ###  https://ouvroir.umontreal.ca/onto/display#intersects
 display:intersects rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                   owl:deprecated "true"^^xsd:boolean ;
                    vs:term_status "unstable" .
 
 
@@ -154,6 +155,7 @@ display:isAbove rdf:type owl:ObjectProperty ;
 display:isAdjacentTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf display:hasTopologicalRelationWith ;
                      rdf:type owl:SymmetricProperty ;
+                     owl:deprecated "true"^^xsd:boolean ;
                      vs:term_status "unstable" .
 
 
@@ -224,6 +226,7 @@ display:Artifact rdf:type owl:Class ;
                  rdfs:isDefinedBy display: ;
                  rdfs:label "artifact"@en ,
                             "artéfact"@fr ;
+                 owl:deprecated "true"^^xsd:boolean ;
                  vs:term_status "unstable" .
 
 
@@ -313,7 +316,7 @@ display:HangingInterface rdf:type owl:Class ;
 display:InformativeExhibit rdf:type owl:Class ;
                            rdfs:subClassOf display:Exhibit ;
                            rdfs:comment "Expôt fournissant de l’information. Exemple : cartel."@fr ;
-                           rdfs:isDefinedBy display: ;
+                           owl:deprecated "true"^^xsd:boolean ;
                            vs:term_status "unstable" .
 
 
@@ -355,7 +358,7 @@ display:StructuralExhibit rdf:type owl:Class ;
                           rdfs:subClassOf display:Exhibit ;
                           rdfs:comment """Contrainte physique qui structure l’espace d’exposition. Détermine ou influence la relation spatiale entre l’expôt et l’origine du point de vue.
 Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde; mazzanine; cadre (regarder un expôt à travers un cadre, un trou ou un objectif)."""@fr ;
-                          rdfs:isDefinedBy display: ;
+                          owl:deprecated "true"^^xsd:boolean ;
                           vs:term_status "unstable" .
 
 
