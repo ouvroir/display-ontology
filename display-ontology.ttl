@@ -242,7 +242,7 @@ display:Ceiling rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Device
 display:Device rdf:type owl:Class ;
-               rdfs:subClassOf display:Exhibit .
+               rdfs:subClassOf display:Element .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Display
@@ -317,6 +317,11 @@ display:InformativeExhibit rdf:type owl:Class ;
                            vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#LightingDevice
+display:LightingDevice rdf:type owl:Class ;
+                       rdfs:subClassOf display:Device .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#MountingDevice
 display:MountingDevice rdf:type owl:Class ;
                        rdfs:subClassOf display:Device ;
@@ -356,7 +361,7 @@ Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisa
 
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
-                rdfs:subClassOf display:Exhibit ;
+                rdfs:subClassOf display:Element ;
                 rdfs:comment "instanciable? Est-il nécessaire de créer une hiérarchie de classe? Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace expographique, si ce support n’est qu’un type générique? Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet). Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter). La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."@fr ;
                 rdfs:isDefinedBy display: ;
                 vs:term_status "unstable" .
@@ -371,6 +376,7 @@ display:Surface rdf:type owl:Class ;
 Surface plane, convexe, concave, accidentée.
 
 Surface mobile, cloison mobile (par contre immobile dans le cadre d’une exposition)."""@fr ;
+                rdfs:isDefinedBy display: ;
                 owl:deprecated "true"^^xsd:boolean ;
                 vs:term_status "unstable" .
 
