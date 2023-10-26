@@ -122,6 +122,9 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty ;
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasInterface
+display:hasInterface rdf:type owl:ObjectProperty ;
+                     owl:inverseOf bot:interfaceOf .
+
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith
 display:hasTopologicalRelationWith rdf:type owl:ObjectProperty ;
@@ -213,6 +216,12 @@ display:isLeftOf rdf:type owl:ObjectProperty ;
                  vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#isMadeOf
+display:isMadeOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain bot:Interface ;
+                 rdfs:range display:StructuralElement .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#isRightOf
 display:isRightOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:spatialRelation ;
@@ -247,6 +256,8 @@ display:touches rdf:type owl:ObjectProperty ;
                 rdf:type owl:SymmetricProperty ;
                 vs:term_status "unstable" .
 
+
+###  https://w3id.org/bot#interfaceOf
 
 #################################################################
 #    Classes
