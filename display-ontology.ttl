@@ -251,7 +251,7 @@ display:Base rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Ceiling
 display:Ceiling rdf:type owl:Class ;
-                rdfs:subClassOf display:Element .
+                rdfs:subClassOf display:StructuralElement .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Device
@@ -261,6 +261,7 @@ display:Device rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Display
 display:Display rdf:type owl:Class ;
+                rdfs:subClassOf display:Exhibit ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
                              "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
                 rdfs:isDefinedBy display: ;
@@ -285,18 +286,20 @@ display:DistancingDevice rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Door
 display:Door rdf:type owl:Class ;
-             rdfs:subClassOf display:Element .
+             rdfs:subClassOf display:StructuralElement .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Element
 display:Element rdf:type owl:Class ;
                 owl:equivalentClass bot:Element ;
                 rdfs:subClassOf display:Exhibit ;
+                rdfs:comment "Nous voulons bénéficier de l'héritage à la fois de bot:Element et de display:Element (qui lui est un expôt). Pour ce faire, nous aurions pu simplment déclarer bot:Element comme sous-classe de display:Exhibit. Toutefois, la définition de bot:Element ne convient pas à la perspective expographique adoptée par display, bien que les propriétés de l'un et de l'autre s'appliquent sans incohérence. Il nous semblait donc plus approprié de déclarer display:Element owl:equivalent bot:Element, permettant l'existance de définitions propres aux deux domaines et d'une spécialisation mutuelle de ces deux classes."@fr ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
 display:Exhibit rdf:type owl:Class ;
+                owl:disjointWith display:ExhibitionSpace ;
                 rdfs:comment "Constituent of a display entity with a characteristic aesthetic or technical function, with form or position"@en ,
                              "Objet exposé"@fr ;
                 rdfs:isDefinedBy display: ;
@@ -315,7 +318,7 @@ display:ExhibitionSpace rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Floor
 display:Floor rdf:type owl:Class ;
-              rdfs:subClassOf display:Element .
+              rdfs:subClassOf display:StructuralElement .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
@@ -364,6 +367,11 @@ display:SonicDevice rdf:type owl:Class ;
                     rdfs:subClassOf display:Device .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#StructuralElement
+display:StructuralElement rdf:type owl:Class ;
+                          rdfs:subClassOf display:Element .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#StructuralExhibit
 display:StructuralExhibit rdf:type owl:Class ;
                           rdfs:subClassOf display:Exhibit ;
@@ -375,9 +383,17 @@ Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisa
 
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
-                rdfs:subClassOf display:Element ;
-                rdfs:comment "instanciable? Est-il nécessaire de créer une hiérarchie de classe? Par exemple, veut-on identifier de façon unique chaque \"base\" utilisé dans l’espace expographique, si ce support n’est qu’un type générique? Ou veut-on dire qu’un expôt est posé sur un support générique de type \"chevalet\" sans identifier chaque chevalet? Par exemple, une collection d’objets posés sur des chevalets. Dans ce cas, un système de typage avec vocabulaire contrôlé serait approprié (Exhibit hasSupportType Easel au lieu d’instancier chaque chevalet). Mais nous voudrons probablement identifier les meubles, les murs, les plafonds utilisés comme support. Tous les supports ne partageraient donc pas les mêmes propriétés, voire certains supports seraient des expôts et d’autres non (à discuter). La question est : besoin d’indentification? Si oui, instanciation. Sinon, typage avec vocabulaire contrôlé. Solution ontologique à discuter."@fr ;
-                rdfs:isDefinedBy display: ;
+                owl:equivalentClass [ owl:intersectionOf ( display:Element
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty display:hasInterface ;
+                                                             owl:someValuesFrom display:HangingInterface
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:label "Support"@en ,
+                           "Support"@fr ;
                 vs:term_status "unstable" .
 
 
@@ -402,12 +418,12 @@ display:VisualDevice rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Wall
 display:Wall rdf:type owl:Class ;
-             rdfs:subClassOf display:Element .
+             rdfs:subClassOf display:StructuralElement .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Window
 display:Window rdf:type owl:Class ;
-               rdfs:subClassOf display:Element .
+               rdfs:subClassOf display:StructuralElement .
 
 
 ###  https://w3id.org/bot#Element
