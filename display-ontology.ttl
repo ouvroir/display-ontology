@@ -21,7 +21,7 @@ Project manager: Lena Krause.
 Scientific director: Emmanuel Chateau-Dutier.
 Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-  dcterms:modified "2023-09-20T17:45:00-04:00"^^xsd:dateTime ;
+  dcterms:modified "2023-10-25T17:45:00-04:00"^^xsd:dateTime ;
   dcterms:title "Display Ontology"@en ,
     "L’ontologie Display"@fr ;
   rdfs:comment "On 09/19/2019 this ontology is a work in progress that is the result of the first reflections of the team, and that is not intended to be use at the moment." ;
@@ -142,13 +142,14 @@ display:inFrontOf rdf:type owl:ObjectProperty ;
                   vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#includesExhibit
-display:includesExhibit rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                        rdfs:domain display:Display ;
-                        rdfs:range display:Exhibit ;
-                        rdfs:comment "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
-                        vs:term_status "unstable" .
+###  https://ouvroir.umontreal.ca/onto/display#includes
+display:includes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf display:hasConceptualRelationWith ;
+                 owl:inverseOf display:isIncludedIn ;
+                 rdfs:domain display:Display ;
+                 rdfs:range display:Exhibit ;
+                 rdfs:comment "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#intersects
@@ -194,18 +195,11 @@ display:isContainedIn rdf:type owl:ObjectProperty ;
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#isIncludedIn
+display:isIncludedIn rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                     rdfs:domain display:Artifact ;
-                     rdfs:range display:Exhibit ;
                      rdfs:comment "Relation between an artifact and an exhibit: An artifact is made up of one or more exhibits."@en ,
                                   "Relation entre un artéfact et un expôt : une artéfact est composé de un ou plusieurs expôts."@fr ;
                      vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#isContainedIn
-display:isContainedIn rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf display:hasTopologicalRelationWith ;
-                      vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#isLeftOf
