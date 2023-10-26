@@ -63,7 +63,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  https://ouvroir.umontreal.ca/onto/display#backToBack
 display:backToBack rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                   rdfs:subPropertyOf display:proximalRelation ;
                    rdf:type owl:SymmetricProperty ;
                    rdfs:comment "The subject exhibit is back-to-back with the object exhibit."@en ;
                    rdfs:label "back-to-back"@en ;
@@ -72,30 +72,21 @@ display:backToBack rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#contains
 display:contains rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                 rdfs:subPropertyOf display:proximalRelation ;
                  owl:inverseOf display:isContainedIn ;
                  rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An artifact is inside a showcase."@en ;
                  vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
-display:containsExhibit rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf bot:containsElement ;
-                        rdfs:domain display:ExhibitionSpace ;
-                        rdfs:range display:Exhibit ;
-                        rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l'espace expographique."@fr ;
-                        vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#covers
 display:covers rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+               rdfs:subPropertyOf display:proximalRelation ;
                vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#faces
 display:faces rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+              rdfs:subPropertyOf display:spatialRelation ;
               rdf:type owl:SymmetricProperty ;
               rdfs:comment "The subject exhibit faces the object exhibit."@en ;
               rdfs:label "en face de"@fr ,
@@ -121,7 +112,7 @@ display:hasTopologicalRelationWith rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#inFrontOf
 display:inFrontOf rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                  rdfs:subPropertyOf display:spatialRelation ;
                   owl:inverseOf display:isBehind ;
                   rdfs:comment "The subject exhibit is in front of the object exhibit. Not to be confused with display:faces."@en ;
                   vs:term_status "unstable" .
@@ -145,7 +136,7 @@ display:intersects rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#isAbove
 display:isAbove rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                rdfs:subPropertyOf display:spatialRelation ;
                 owl:inverseOf display:isBelow ;
                 rdf:type owl:TransitiveProperty ;
                 vs:term_status "unstable" .
@@ -161,19 +152,24 @@ display:isAdjacentTo rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#isBehind
 display:isBehind rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                 rdfs:subPropertyOf display:spatialRelation ;
                  vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#isBelow
 display:isBelow rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                rdfs:subPropertyOf display:spatialRelation ;
                 rdf:type owl:TransitiveProperty ;
                 vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#isComposedOf
-display:isComposedOf rdf:type owl:ObjectProperty ;
+###  https://ouvroir.umontreal.ca/onto/display#isContainedIn
+display:isContainedIn rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf display:proximalRelation ;
+                      vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#isIncludedIn
                      rdfs:subPropertyOf display:hasConceptualRelationWith ;
                      rdfs:domain display:Artifact ;
                      rdfs:range display:Exhibit ;
@@ -190,7 +186,7 @@ display:isContainedIn rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#isLeftOf
 display:isLeftOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                 rdfs:subPropertyOf display:spatialRelation ;
                  owl:inverseOf display:isRightOf ;
                  rdf:type owl:TransitiveProperty ;
                  vs:term_status "unstable" .
@@ -198,20 +194,35 @@ display:isLeftOf rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#isRightOf
 display:isRightOf rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                  rdfs:subPropertyOf display:spatialRelation ;
                   rdf:type owl:TransitiveProperty ;
                   vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#liesOn
+display:liesOn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf display:proximalRelation .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#overlaps
 display:overlaps rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                 rdfs:subPropertyOf display:proximalRelation ;
                  vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#proximalRelation
+display:proximalRelation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf display:hasTopologicalRelationWith .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#spatialRelation
+display:spatialRelation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf display:hasTopologicalRelationWith .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#touches
 display:touches rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                rdfs:subPropertyOf display:proximalRelation ;
                 rdf:type owl:SymmetricProperty ;
                 vs:term_status "unstable" .
 
