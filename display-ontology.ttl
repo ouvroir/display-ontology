@@ -356,7 +356,7 @@ display:HangingInterface rdf:type owl:Class ;
 display:InformativeExhibit rdf:type owl:Class ;
                            rdfs:subClassOf display:Exhibit ;
                            rdfs:comment "Expôt fournissant de l’information. Exemple : cartel."@fr ;
-                           rdfs:isDefinedBy :display ;
+                           rdfs:isDefinedBy display: ;
                            owl:deprecated "true"^^xsd:boolean ;
                            vs:term_status "unstable" .
 
