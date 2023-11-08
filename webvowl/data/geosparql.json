@@ -1,0 +1,4993 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.opengis.net/ont/gml", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.opengis.net/ont/geosparql", "http://www.w3.org/2004/02/skos/core" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "gml" : "http://www.opengis.net/ont/gml#",
+      "skos" : "http://www.w3.org/2004/02/skos/core#",
+      "geo" : "http://www.opengis.net/ont/geosparql#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "dct" : "http://purl.org/dc/terms/",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri" : "http://www.opengis.net/ont/geosparql",
+    "version" : "OGC GeoSPARQL 1.0",
+    "author" : [ "Open Geospatial Consortium" ],
+    "description" : {
+      "undefined" : "An RDF/OWL vocabulary for representing spatial information"
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2012-04-30",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Open Geospatial Consortium",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/doc/IS/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/def/rule/ogc-geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/doc/IS/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/def/function/ogc-geosparql/1.0",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "owl:Class"
+  }, {
+    "id" : "155",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.opengis.net/ont/gml#PolynomialSpline",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PolynomialSpline",
+      "en" : "Polynomial Spline"
+    },
+    "subClasses" : [ "8" ],
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractParametricCurveSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractParametricCurveSurface",
+      "en" : "Abstract Parametric Curve Surface"
+    },
+    "subClasses" : [ "11" ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An ordered collection of concepts, where both the grouping and the ordering are meaningful.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrderedCollection",
+      "en" : "Ordered Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Tin",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Tin",
+      "en" : "Triangulated Irregular Network"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#MultiSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiSurface",
+      "en" : "Multi-Surface"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Ring",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Ring",
+      "en" : "Ring"
+    },
+    "subClasses" : [ "30" ],
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractSurfacePatch",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractSurfacePatch",
+      "en" : "Abstract Surface Patch"
+    },
+    "subClasses" : [ "9", "31" ],
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Composite",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Composite",
+      "en" : "Composite"
+    },
+    "subClasses" : [ "29", "35", "36" ],
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#CompositeSolid",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CompositeSolid",
+      "en" : "Composite Solid"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "33", "37" ]
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#GeodesicString",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeodesicString",
+      "en" : "Geodesic String"
+    },
+    "subClasses" : [ "41" ],
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Feature",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "description" : {
+      "en" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Feature",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Feature",
+      "en" : "Feature"
+    },
+    "comment" : {
+      "en" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
+    },
+    "id" : "42",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Bezier",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bezier",
+      "en" : "Bezier"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Circle",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Circle",
+      "en" : "Circle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#OrientableSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrientableSurface",
+      "en" : "Orientable Surface"
+    },
+    "subClasses" : [ "56", "36" ],
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractGeometricPrimitive",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractGeometricPrimitive",
+      "en" : "Abstract Geometric Primitive"
+    },
+    "subClasses" : [ "56", "58", "59", "60", "54", "37" ],
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A meaningful collection of concepts.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "Collection"
+    },
+    "subClasses" : [ "12" ],
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Arc",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Arc",
+      "en" : "Arc"
+    },
+    "subClasses" : [ "51" ],
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Point",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "Point"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Surface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Surface",
+      "en" : "Surface"
+    },
+    "subClasses" : [ "67", "68" ],
+    "attributes" : [ "external" ],
+    "id" : "56",
+    "superClasses" : [ "55", "54" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractGriddedSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractGriddedSurface",
+      "en" : "Abstract Gridded Surface"
+    },
+    "subClasses" : [ "69", "70", "71" ],
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#ArcByCenterPoint",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ArcByCenterPoint",
+      "en" : "Arc by Center Point"
+    },
+    "subClasses" : [ "73" ],
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Solid",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Solid",
+      "en" : "Solid"
+    },
+    "subClasses" : [ "35" ],
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Geodesic",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Geodesic",
+      "en" : "Geodesic"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#CompositeCurve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CompositeCurve",
+      "en" : "Composite Curve"
+    },
+    "subClasses" : [ "28" ],
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "59", "33" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "attributes" : [ "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractGeometry",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractGeometry",
+      "en" : "Abstract Geometry"
+    },
+    "subClasses" : [ "55", "34", "27" ],
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#PolyhedralSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PolyhedralSurface",
+      "en" : "Polyhedral Surface"
+    },
+    "subClasses" : [ "24" ],
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#OffsetCurve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OffsetCurve",
+      "en" : "Offset Curve"
+    },
+    "attributes" : [ "external" ],
+    "id" : "79",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Sphere",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sphere",
+      "en" : "Sphere"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#CubicSpline",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CubicSpline",
+      "en" : "Cubic Spline"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Rectangle",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Rectangle",
+      "en" : "Rectangle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "83",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#ArcString",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ArcString",
+      "en" : "Arc String"
+    },
+    "subClasses" : [ "52" ],
+    "attributes" : [ "external" ],
+    "id" : "65",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#MultiSolid",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiSolid",
+      "en" : "Multi-Solid"
+    },
+    "attributes" : [ "external" ],
+    "id" : "85",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#BSpline",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BSpline",
+      "en" : "BSpline"
+    },
+    "subClasses" : [ "44" ],
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "description" : {
+      "en" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "SpatialObject",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialObject",
+      "en" : "SpatialObject"
+    },
+    "subClasses" : [ "42", "21" ],
+    "comment" : {
+      "en" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#MultiGeometry",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiGeometry",
+      "en" : "Multi-Geometry"
+    },
+    "subClasses" : [ "89", "90", "26", "85" ],
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#LineStringSegment",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LineStringSegment",
+      "en" : "Line String Segment"
+    },
+    "subClasses" : [ "92" ],
+    "attributes" : [ "external" ],
+    "id" : "91",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#TriangulatedSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TriangulatedSurface",
+      "en" : "Triangulated Surface"
+    },
+    "subClasses" : [ "23" ],
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "67" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Shell",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Shell",
+      "en" : "Shell"
+    },
+    "attributes" : [ "external" ],
+    "id" : "104",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#MultiPoint",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiPoint",
+      "en" : "Multi-Point"
+    },
+    "attributes" : [ "external" ],
+    "id" : "90",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "47",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#LineString",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LineString",
+      "en" : "Line String"
+    },
+    "attributes" : [ "external" ],
+    "id" : "92",
+    "superClasses" : [ "91" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#gmlLiteral",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "gmlLiteral",
+      "en" : "GML Literal"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#OrientableCurve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrientableCurve",
+      "en" : "Orientable Curve"
+    },
+    "subClasses" : [ "58", "29" ],
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#PolygonPatch",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PolygonPatch",
+      "en" : "Polygon Patch"
+    },
+    "subClasses" : [ "83", "123" ],
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Cone",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cone",
+      "en" : "Cone"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#ArcByBulge",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ArcByBulge",
+      "en" : "Arc by Bulge"
+    },
+    "attributes" : [ "external" ],
+    "id" : "125",
+    "superClasses" : [ "126" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Triangle",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Triangle",
+      "en" : "Triangle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#MultiCurve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MultiCurve",
+      "en" : "Multi-Curve"
+    },
+    "attributes" : [ "external" ],
+    "id" : "89",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#SplineCurve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SplineCurve",
+      "en" : "Spline Curve"
+    },
+    "subClasses" : [ "45", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#CircleByCenterPoint",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CircleByCenterPoint",
+      "en" : "CircleByCenterPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#LinearRing",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LinearRing",
+      "en" : "Linear Ring"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "description" : {
+      "en" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Geometry",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Geometry",
+      "en" : "Geometry"
+    },
+    "subClasses" : [ "10", "40", "57" ],
+    "comment" : {
+      "en" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
+    },
+    "id" : "21",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Cylinder",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cylinder",
+      "en" : "Cylinder"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#AbstractCurveSegment",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AbstractCurveSegment",
+      "en" : "Abstract Curve Segment"
+    },
+    "subClasses" : [ "65", "126", "7", "79", "72", "155", "91", "39" ],
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Polygon",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Polygon",
+      "en" : "Polygon"
+    },
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "56" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "13", "1" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "162",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "wktLiteral",
+      "en" : "Well-known Text Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#CompositeSurface",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CompositeSurface",
+      "en" : "Composite Surface"
+    },
+    "subClasses" : [ "104" ],
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "33", "54" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#ArcStringByBulge",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ArcStringByBulge",
+      "en" : "Arc String by Bulge"
+    },
+    "subClasses" : [ "125" ],
+    "attributes" : [ "external" ],
+    "id" : "126",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Clothoid",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Clothoid",
+      "en" : "Clothoid"
+    },
+    "attributes" : [ "external" ],
+    "id" : "155",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#Curve",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Curve",
+      "en" : "Curve"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "55", "59" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/gml#GeometricComplex",
+    "baseIri" : "http://www.opengis.net/ont/gml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeometricComplex",
+      "en" : "Geometric Complex"
+    },
+    "subClasses" : [ "33" ],
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "57" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "184",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "185",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "186",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#semanticRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a concept to a concept related by meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "semanticRelation",
+      "en" : "is in semantic relation with"
+    },
+    "domain" : "1",
+    "subproperty" : [ "2", "3", "4", "5" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "inverse" : "16",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more specific in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "15",
+    "subproperty" : [ "17" ],
+    "comment" : {
+      "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfTouches",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "touches",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfTouches",
+      "en" : "touches"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#spatialDimension",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "22",
+    "description" : {
+      "en" : "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "spatialDimension",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spatialDimension",
+      "en" : "spatialDimension"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept with which there is an associative semantic relationship.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related",
+      "en" : "has related"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "15",
+    "subproperty" : [ "25" ],
+    "comment" : {
+      "en" : "skos:related is disjoint with skos:broaderTransitive"
+    },
+    "attributes" : [ "symmetric", "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfWithin",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "within",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfWithin",
+      "en" : "within"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8po",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "partially overlapping",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8po",
+      "en" : "partially overlapping"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "48",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept may be a member of more than one concept scheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inScheme",
+      "en" : "is in scheme"
+    },
+    "domain" : "47",
+    "subproperty" : [ "49" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "inverse" : "49",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopConcept",
+      "en" : "has top concept"
+    },
+    "domain" : "48",
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8tpp",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "tangential proper part",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8tpp",
+      "en" : "tangential proper part"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehCoveredBy",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "coveredBy",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehCoveredBy",
+      "en" : "coveredBy"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "exactMatch",
+      "en" : "has exact match"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
+    },
+    "attributes" : [ "symmetric", "object", "transitive", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehInside",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "inside",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehInside",
+      "en" : "inside"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+    "inverse" : "17",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broadMatch",
+      "en" : "has broader match"
+    },
+    "superproperty" : [ "16", "5" ],
+    "domain" : "15",
+    "attributes" : [ "object", "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#isEmpty",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "75",
+    "description" : {
+      "en" : "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "isEmpty",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isEmpty",
+      "en" : "isEmpty"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "77",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "notation",
+      "en" : "notation"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8ntpp",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "non-tangential proper part",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8ntpp",
+      "en" : "non-tangential proper part"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#defaultGeometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "21",
+    "description" : {
+      "en" : "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "defaultGeometry",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "defaultGeometry",
+      "en" : "defaultGeometry"
+    },
+    "superproperty" : [ "81" ],
+    "domain" : "42",
+    "comment" : {
+      "en" : "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8dc",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "disconnected",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8dc",
+      "en" : "disconnected"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatedMatch",
+      "en" : "has related match"
+    },
+    "superproperty" : [ "4", "5" ],
+    "domain" : "15",
+    "attributes" : [ "symmetric", "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "48",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to the concept scheme that it is a top level concept of.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "topConceptOf",
+      "en" : "is top concept in scheme"
+    },
+    "superproperty" : [ "46" ],
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowMatch",
+      "en" : "has narrower match"
+    },
+    "superproperty" : [ "14", "5" ],
+    "domain" : "15",
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#memberList",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an ordered collection to the RDF list containing its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "memberList",
+      "en" : "has member list"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
+    },
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#member",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a collection to one of its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "member",
+      "en" : "has member"
+    },
+    "domain" : "13",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "range" : "33",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehDisjoint",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "disjoint",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehDisjoint",
+      "en" : "disjoint"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "range" : "10",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "28",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "27",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfContains",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "contains",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfContains",
+      "en" : "contains"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "range" : "91",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "103"
+  }, {
+    "range" : "27",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8ec",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "externally connected",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8ec",
+      "en" : "externally connected"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#isSimple",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "108",
+    "description" : {
+      "en" : "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "isSimple",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSimple",
+      "en" : "isSimple"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8ntppi",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "non-tangential proper part inverse",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8ntppi",
+      "en" : "non-tangential proper part inverse"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfDisjoint",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "disjoint",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfDisjoint",
+      "en" : "disjoint"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "19",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "27",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8eq",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "equals",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8eq",
+      "en" : "equals"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "range" : "56",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#coordinateDimension",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "120",
+    "description" : {
+      "en" : "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "coordinateDimension",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "coordinateDimension",
+      "en" : "coordinateDimension"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "119"
+  }, {
+    "range" : "11",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "56",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "closeMatch",
+      "en" : "has close match"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "15",
+    "subproperty" : [ "62" ],
+    "attributes" : [ "symmetric", "object", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehOverlap",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "overlap",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehOverlap",
+      "en" : "overlap"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "124"
+  }, {
+    "range" : "7",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "range" : "52",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "55",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "55",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "55",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "55",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "55",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "range" : "55",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehContains",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "contains",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehContains",
+      "en" : "contains"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfCrosses",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "crosses",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfCrosses",
+      "en" : "crosses"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "138"
+  }, {
+    "range" : "54",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehMeet",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "meet",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehMeet",
+      "en" : "meet"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "140"
+  }, {
+    "range" : "31",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "59",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "54",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "31",
+    "domain" : "123",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "33",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "range" : "33",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "146"
+  }, {
+    "range" : "59",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "39",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "range" : "40",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "40",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "65",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfIntersects",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "intersects",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfIntersects",
+      "en" : "intersects"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "152"
+  }, {
+    "range" : "36",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "40",
+    "domain" : "155",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehEquals",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "equals",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehEquals",
+      "en" : "equals"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#dimension",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "115",
+    "description" : {
+      "en" : "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "dimension",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "dimension",
+      "en" : "dimension"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "inverse" : "2",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:broaderTransitive is a transitive superproperty of skos:broader.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broaderTransitive",
+      "en" : "has broader transitive"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "15",
+    "subproperty" : [ "16" ],
+    "attributes" : [ "object", "transitive", "external" ],
+    "id" : "3"
+  }, {
+    "range" : "40",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "40",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "40",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "162",
+    "description" : {
+      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has serialization",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Connects a geometry object with its text-based serialization.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSerialization",
+      "en" : "has serialization"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "161"
+  }, {
+    "range" : "21",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "40",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "40",
+    "domain" : "126",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "67",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "57",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "21",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "range" : "21",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more general in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "15",
+    "subproperty" : [ "66" ],
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "21",
+    "description" : {
+      "en" : "\n      A spatial representation for a given feature.\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "hasGeometry",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      A spatial representation for a given feature.\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasGeometry",
+      "en" : "hasGeometry"
+    },
+    "domain" : "42",
+    "subproperty" : [ "80" ],
+    "comment" : {
+      "en" : "\n      A spatial representation for a given feature.\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfEquals",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "equals",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfEquals",
+      "en" : "equals"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "170"
+  }, {
+    "range" : "57",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "57",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  }, {
+    "range" : "11",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "11",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#mappingRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mappingRelation",
+      "en" : "is in mapping relation with"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "15",
+    "subproperty" : [ "25", "63", "17", "66" ],
+    "comment" : {
+      "en" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "5"
+  }, {
+    "range" : "37",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "72",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "21",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "range" : "1",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "48",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "range" : "1",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#asWKT",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "180",
+    "description" : {
+      "en" : "\n      The WKT serialization of a geometry\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "asWKT",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The WKT serialization of a geometry\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asWKT",
+      "en" : "asWKT"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      The WKT serialization of a geometry\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "183"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#ehCovers",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "covers",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ehCovers",
+      "en" : "covers"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "184"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#rcc8tppi",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "tangential proper part inverse",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rcc8tppi",
+      "en" : "tangential proper part inverse"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#asGML",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "117",
+    "description" : {
+      "en" : "\n      The GML serialization of a geometry\n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "asGML",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      The GML serialization of a geometry\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGML",
+      "en" : "asGML"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "\n      The GML serialization of a geometry\n    "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "186"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:narrowerTransitive is a transitive superproperty of skos:narrower.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowerTransitive",
+      "en" : "has narrower transitive"
+    },
+    "superproperty" : [ "0" ],
+    "domain" : "15",
+    "subproperty" : [ "14" ],
+    "attributes" : [ "object", "transitive", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#sfOverlaps",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "19",
+    "description" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    "
+    },
+    "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "overlaps",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sfOverlaps",
+      "en" : "overlaps"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    "
+    },
+    "attributes" : [ "object" ],
+    "id" : "187"
+  }, {
+    "range" : "34",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "range" : "126",
+    "domain" : "125",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "189"
+  } ]
+}
