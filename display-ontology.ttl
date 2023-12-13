@@ -257,16 +257,6 @@ display:touches rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  https://ouvroir.umontreal.ca/onto/display#Artifact
-display:Artifact rdf:type owl:Class ;
-                 rdfs:subClassOf display:Exhibit ;
-                 rdfs:isDefinedBy display: ;
-                 rdfs:label "artifact"@en ,
-                            "artéfact"@fr ;
-                 owl:deprecated "true"^^xsd:boolean ;
-                 vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Base
 display:Base rdf:type owl:Class ;
              rdfs:subClassOf display:Support ;
@@ -351,16 +341,6 @@ display:Floor rdf:type owl:Class ;
 display:HangingInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface .
 
-
-###  https://ouvroir.umontreal.ca/onto/display#InformativeExhibit
-display:InformativeExhibit rdf:type owl:Class ;
-                           rdfs:subClassOf display:Exhibit ;
-                           rdfs:comment "Expôt fournissant de l’information. Exemple : cartel."@fr ;
-                           rdfs:isDefinedBy display: ;
-                           owl:deprecated "true"^^xsd:boolean ;
-                           vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#LightingDevice
 display:LightingDevice rdf:type owl:Class ;
                        rdfs:subClassOf display:Device .
@@ -398,16 +378,6 @@ display:SonicDevice rdf:type owl:Class ;
 display:StructuralElement rdf:type owl:Class ;
                           rdfs:subClassOf display:Element .
 
-
-###  https://ouvroir.umontreal.ca/onto/display#StructuralExhibit
-display:StructuralExhibit rdf:type owl:Class ;
-                          rdfs:subClassOf display:Exhibit ;
-                          rdfs:comment """Contrainte physique qui structure l’espace d’exposition. Détermine ou influence la relation spatiale entre l’expôt et l’origine du point de vue.
-Exemple : poteau de délimitation, poteau de mise à distance, poteau de balisage, poteau de guidage, corde, barrière, barrière de corde; mazzanine; cadre (regarder un expôt à travers un cadre, un trou ou un objectif)."""@fr ;
-                          owl:deprecated "true"^^xsd:boolean ;
-                          vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( display:Element
@@ -422,21 +392,6 @@ display:Support rdf:type owl:Class ;
                 rdfs:label "Support"@en ,
                            "Support"@fr ;
                 vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Surface
-display:Surface rdf:type owl:Class ;
-                rdfs:subClassOf display:Support ;
-                rdfs:comment "La notion de surface d’accrochage serait vraisemblablement prise en charge par bot:Element dont la sémantique est acteuellement intégrée par display:Element owl:equivalentClass bot:Element"@fr ,
-                             """Terme \"surface\" à reconsidérer : on essaie de représenter murs, plafonds, planchers, cimaises utilisés comme surface d’exposition.
-
-Surface plane, convexe, concave, accidentée.
-
-Surface mobile, cloison mobile (par contre immobile dans le cadre d’une exposition)."""@fr ;
-                rdfs:isDefinedBy display: ;
-                owl:deprecated "true"^^xsd:boolean ;
-                vs:term_status "unstable" .
-
 
 ###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
 display:VisualDevice rdf:type owl:Class ;
