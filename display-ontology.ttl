@@ -116,7 +116,7 @@ display:hasExhibit rdf:type owl:ObjectProperty ;
                                             display:hasExhibit
                                           ) ;
                    rdfs:label "has exhibit"@en ,
-                    rdfs:label "est lié à l’expôt"
+                    "est lié à l’expôt" ;
                    rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ,
                    "Links a exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exbition space given that they have a spatial (topological) reletion to elements of the building."@en ;
                    vs:moreinfo "Il n’est pas nécessaire de redéfinir en parallèle les trois propriétés semblables aux sous-propriétés de bot:hasElement. Ainsi, display:hasExhibit ne fonctionne pas de la même manière. Cependant les expôts, que l’on suppose donc systématiquement contenu par l’espace expographique, peuvent être mis en relation avec des éléments qui font usage de bot:Element et, par inférence, être positionnés dans le bâtiment." ;
@@ -129,8 +129,8 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty ;
                            rdfs:domain bot:Zone ;
                            rdfs:range display:ExhibitionSpace ;
                            rdfs:comment "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExihibitionSpace. A space is often divided into two or more exhibition spaces."@en ;
-                           rdfs:label "has exhibition space"@en ;
-                            , "est lié é un espace expographique"@fr .
+                           rdfs:label "has exhibition space"@en ,
+                            "est lié é un espace expographique"@fr .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasInterface
