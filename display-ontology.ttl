@@ -22,10 +22,10 @@ Project manager: Lena Krause.
 Scientific director: Emmanuel Chateau-Dutier.
 Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-  dcterms:modified "2023-10-25T17:45:00-04:00"^^xsd:dateTime ;
+  dcterms:modified "2024-01-15T08:00:00-05:00" ;
   dcterms:title "Display Ontology"@en ,
     "L’ontologie Display"@fr ;
-  rdfs:comment "On 09/19/2019 this ontology is a work in progress that is the result of the first reflections of the team, and that is not intended to be use at the moment." ;
+  rdfs:comment "On 01/15/2024 this ontology is a work in progress that is the result of the first reflections of the team, and that is not intended to be use at the moment."@en ;
   rdfs:seeAlso <https://github.com/ouvroir/display-ontology> ,
     <https://ouvroir.umontreal.ca/en/projects/expots/> ;
   owl:versionInfo "0.0.0" .
@@ -52,6 +52,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo
+vs:moreinfo rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
@@ -129,8 +133,8 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty ;
                            rdfs:domain bot:Zone ;
                            rdfs:range display:ExhibitionSpace ;
                            rdfs:comment "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExihibitionSpace. A space is often divided into two or more exhibition spaces."@en ;
-                           rdfs:label "has exhibition space"@en ,
-                            "est lié é un espace expographique"@fr .
+                           rdfs:label "est lié à un espace expographique"@fr ,
+                                      "has exhibition space"@en .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasInterface
@@ -143,8 +147,8 @@ display:hasTopologicalRelationWith rdf:type owl:ObjectProperty ;
                                    rdfs:domain display:Exhibit ;
                                    rdfs:range display:Exhibit ;
                                    rdfs:comment "Topological relation between exhibits within the exhibition space. Not to be stated explicitly, but to be inferred from its sub-properties."@en ;
-                                   rdfs:label "has topological relation with"@en ,
-                                    "est en relation topologique avec"@fr ;
+                                   rdfs:label "est en relation topologique avec"@fr ,
+                                              "has topological relation with"@en ;
                                    vs:term_status "unstable" .
 
 
@@ -153,8 +157,8 @@ display:inFrontOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:spatialRelation ;
                   owl:inverseOf display:isBehind ;
                   rdfs:comment "The subject exhibit is in front of the object exhibit. Not to be confused with display:faces."@en ;
-                  rdfs:label "is in front of"@en ,
-                    "est devant"@fr ;
+                  rdfs:label "est devant"@fr ,
+                             "is in front of"@en ;
                   vs:term_status "unstable" .
 
 
@@ -323,37 +327,38 @@ display:Door rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#Element
 display:Element rdf:type owl:Class ;
-  rdfs:subClassOf display:Exhibit ;
-  owl:equivalentClass bot:Element ;
-  rdfs:label "Element"@en ,
-    "Élement"@fr ;
-  rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of BOT a construction entity may be furniture."@en ,
-  "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l'espace d'exposition. Dans l'optique du BOT, l'élément constitutif du bâti peut être un meuble (par exemple : vitrine ou cimaise)."@fr;
-  vs:moreinfo "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalent bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." ;
-  rdfs:isDefinedBy display: ;
-  vs:term_status "unstable" .
+                owl:equivalentClass bot:Element ;
+                rdfs:subClassOf display:Exhibit ;
+                rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of BOT a construction entity may be furniture."@en ,
+                             "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l'espace d'exposition. Dans l'optique du BOT, l'élément constitutif du bâti peut être un meuble (par exemple : vitrine ou cimaise)."@fr ;
+                rdfs:isDefinedBy display: ;
+                rdfs:label "Element"@en ,
+                           "Élement"@fr ;
+                vs:moreinfo "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalent bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." ;
+                vs:term_status "unstable" .
+
 
 ###  https://ouvroir.umontreal.ca/onto/display#Exhibit
 display:Exhibit rdf:type owl:Class ;
-  owl:disjointWith display:ExhibitionSpace ;
-  rdfs:comment "Any exhibition element, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
-  rdfs:label "Exhibit"@en ,
-    "Expôt"@fr ;
-  vs:moreinfo "Proposition centrale de cette ontologie." ;
-  rdfs:isDefinedBy display: ;
-  vs:term_status "unstable" .
+                owl:disjointWith display:ExhibitionSpace ;
+                rdfs:comment "Any exhibition element, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
+                rdfs:isDefinedBy display: ;
+                rdfs:label "Exhibit"@en ,
+                           "Expôt"@fr ;
+                vs:moreinfo "Proposition centrale de cette ontologie." ;
+                vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
 display:ExhibitionSpace rdf:type owl:Class ;
-  rdfs:subClassOf bot:Space ;
-  rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
-    "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
-  rdfs:label "Espace expographique"@fr ,
-    "Exhibition space"@en ;
-  vs:moreinfo "La description de cette ressource est fortement inspirée de bot:Space pour assurer l’adéquation sémantique de display: et de bot:." ;
-  rdfs:isDefinedBy display: ;
-  vs:term_status "unstable" .
+                        rdfs:subClassOf bot:Space ;
+                        rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
+                                     "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
+                        rdfs:isDefinedBy display: ;
+                        rdfs:label "Espace expographique"@fr ,
+                                   "Exhibition space"@en ;
+                        vs:moreinfo "La description de cette ressource est fortement inspirée de bot:Space pour assurer l’adéquation sémantique de display: et de bot:." ;
+                        vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Floor
@@ -364,6 +369,7 @@ display:Floor rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
 display:HangingInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface .
+
 
 ###  https://ouvroir.umontreal.ca/onto/display#LightingDevice
 display:LightingDevice rdf:type owl:Class ;
@@ -402,6 +408,7 @@ display:SonicDevice rdf:type owl:Class ;
 display:StructuralElement rdf:type owl:Class ;
                           rdfs:subClassOf display:Element .
 
+
 ###  https://ouvroir.umontreal.ca/onto/display#Support
 display:Support rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( display:Element
@@ -412,10 +419,11 @@ display:Support rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy display: ;
                 rdfs:label "Support"@en ,
                            "Support"@fr ;
                 vs:term_status "unstable" .
+
 
 ###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
 display:VisualDevice rdf:type owl:Class ;
