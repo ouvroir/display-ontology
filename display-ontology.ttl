@@ -172,6 +172,15 @@ display:includes rdf:type owl:ObjectProperty ;
                  vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#intersectingExhibit
+display:intersectingExhibit rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf display:hasExhibit ;
+                            rdfs:comment "Relation between a exhibition space and a exhibit that intersects it totally or partially."@en ;
+                            rdfs:label "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement."@fr ,
+                                       "expôt intersectant"@fr ,
+                                       "intersecting exhibit"@en .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#intersects
 display:intersects rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf display:hasTopologicalRelationWith ;
