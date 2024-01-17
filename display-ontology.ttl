@@ -66,24 +66,48 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://ouvroir.umontreal.ca/onto/display#adjacentExhibit
+display:adjacentExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf display:hasExhibit .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#backToBack
 display:backToBack rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf display:proximalRelation ;
                    rdf:type owl:SymmetricProperty ;
                    rdfs:comment "The subject exhibit is back-to-back with the object exhibit."@en ;
                    rdfs:label "back-to-back"@en ,
-                    "dos à dos"@fr ;
+                              "dos à dos"@fr ;
                    vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#containedIn
+display:containedIn rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf display:proximalRelation ;
+                    owl:inverseOf display:contains ;
+                    rdf:type owl:TransitiveProperty ;
+                    vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#contains
 display:contains rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:proximalRelation ;
-                 owl:inverseOf display:isContainedIn ;
+                 rdf:type owl:TransitiveProperty ;
                  rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An artifact is inside a showcase."@en ;
                  rdfs:label "contains"@en ,
-                  "contient"@fr ;
+                            "contient"@fr ;
                  vs:term_status "unstable" .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
+display:containsExhibit rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf display:hasExhibit .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#coveredBy
+display:coveredBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf display:proximalRelation ;
+                  owl:inverseOf display:covers .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#covers
@@ -91,7 +115,7 @@ display:covers rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf display:proximalRelation ;
                rdfs:comment "The subject exhibit spatially covers the object exhibit."@en ;
                rdfs:label "covers"@en ,
-                "recouvre"@fr ;
+                          "recouvre"@fr ;
                vs:term_status "unstable" .
 
 
@@ -111,6 +135,7 @@ display:hasConceptualRelationWith rdf:type owl:ObjectProperty ;
                                   rdfs:comment "Conceptual relation between exhibits (non topological). Not to be stated explicitly."@en ;
                                   vs:term_status "unstable" .
 
+
 ###  https://ouvroir.umontreal.ca/onto/display#hasExhibit
 display:hasExhibit rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
@@ -119,11 +144,11 @@ display:hasExhibit rdf:type owl:ObjectProperty ;
                    owl:propertyChainAxiom ( bot:containsZone
                                             display:hasExhibit
                                           ) ;
-                   rdfs:label "has exhibit"@en ,
-                    "est lié à l’expôt" ;
-                   rdfs:comment "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ,
-                   "Links a exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exbition space given that they have a spatial (topological) reletion to elements of the building."@en ;
-                   vs:moreinfo "Il n’est pas nécessaire de redéfinir en parallèle les trois propriétés semblables aux sous-propriétés de bot:hasElement. Ainsi, display:hasExhibit ne fonctionne pas de la même manière. Cependant les expôts, que l’on suppose donc systématiquement contenu par l’espace expographique, peuvent être mis en relation avec des éléments qui font usage de bot:Element et, par inférence, être positionnés dans le bâtiment." ;
+                   rdfs:comment "Links a exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exbition space given that they have a spatial (topological) reletion to elements of the building."@en ,
+                                "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ;
+                   rdfs:label "est lié à l’expôt" ,
+                              "has exhibit"@en ;
+                   vs:moreinfo "Cette propriété redéfinit en parallèle les trois sous-propriétés semblables de bot:hasElement (puisque les expôts ne sont des bot:Element). Cependant les expôts, que l’on suppose donc systématiquement contenu par l’espace expographique, peuvent être mis en relation avec des instance de bot:Element et, par inférence, être positionnés ainsi dans le bâtiment."@fr ;
                    vs:term_status "unstable" .
 
 
@@ -162,13 +187,22 @@ display:inFrontOf rdf:type owl:ObjectProperty ;
                   vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#includedIn
+display:includedIn rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf display:hasConceptualRelationWith ;
+                   owl:inverseOf display:includes ;
+                   rdfs:comment "Relation between an exhibit and a display: An exhibit is included in a display."@en ,
+                                "Relation entre un expôt et un display : un expôt est inclus dans un display."@fr ;
+                   vs:term_status "unstable" .
+
+
 ###  https://ouvroir.umontreal.ca/onto/display#includes
 display:includes rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                 owl:inverseOf display:isIncludedIn ;
                  rdfs:domain display:Display ;
                  rdfs:range display:Exhibit ;
-                 rdfs:comment "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                 rdfs:comment "Relation between a display and an exhibit: A display is made up one or more exhibits."@en ,
+                              "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
                  vs:term_status "unstable" .
 
 
@@ -217,32 +251,12 @@ display:isBelow rdf:type owl:ObjectProperty ;
                 vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#isContainedIn
-display:isContainedIn rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf display:proximalRelation ;
-                      vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#isIncludedIn
-display:isIncludedIn rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                     rdfs:comment "Relation between an artifact and an exhibit: An artifact is made up of one or more exhibits."@en ,
-                                  "Relation entre un artéfact et un expôt : une artéfact est composé de un ou plusieurs expôts."@fr ;
-                     vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#isLeftOf
 display:isLeftOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:spatialRelation ;
                  owl:inverseOf display:isRightOf ;
                  rdf:type owl:TransitiveProperty ;
                  vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#isMadeOf
-display:isMadeOf rdf:type owl:ObjectProperty ;
-                 rdfs:domain bot:Interface ;
-                 rdfs:range display:StructuralElement .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#isRightOf
@@ -254,7 +268,24 @@ display:isRightOf rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#liesOn
 display:liesOn rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf display:proximalRelation .
+               rdfs:subPropertyOf display:proximalRelation ;
+               rdfs:comment "Le sujet est posé contre l'objet."@fr ;
+               rdfs:label "contre"@fr .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#nextTo
+display:nextTo rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf display:proximalRelation ;
+               rdf:type owl:SymmetricProperty .
+
+
+###  https://ouvroir.umontreal.ca/onto/display#on
+display:on rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf display:proximalRelation .
+
+###  https://ouvroir.umontreal.ca/onto/display#under
+display:under rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf display:proximalRelation .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#overlaps
@@ -265,12 +296,14 @@ display:overlaps rdf:type owl:ObjectProperty ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#proximalRelation
 display:proximalRelation rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf display:hasTopologicalRelationWith .
+                         rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                         rdfs:comment "à proximité, dans l'environnement immédiat"@fr .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#spatialRelation
 display:spatialRelation rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf display:hasTopologicalRelationWith .
+                        rdfs:subPropertyOf display:hasTopologicalRelationWith ;
+                        rdfs:comment "pas à proximité, mais partage un espace"@fr .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#touches
