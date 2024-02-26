@@ -13,13 +13,13 @@
 display: rdf:type owl:Ontology ;
   owl:imports <https://w3id.org/bot> ;
   dcterms:creator "David Valentine" ,
-    "Emmanuel Chateau-Dutier" ,
-    "Lena Krause" ,
-    "Zoë Renaudie" ;
+    "Zoë Renaudie" ,
+    "Emmanuel Château-Dutier" ,
+    "Lena Krause" .
   dcterms:description """This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.).
 This ontology is developed at the Ouvroir laboratory in the framework of the partnership New uses of collections in art museums.
 Project manager: Lena Krause.
-Scientific director: Emmanuel Chateau-Dutier.
+Scientific director: Emmanuel Château-Dutier.
 Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
   dcterms:modified "2024-01-15T08:00:00-05:00" ;
@@ -86,6 +86,8 @@ display:containedIn rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf display:proximalRelation ;
                     owl:inverseOf display:contains ;
                     rdf:type owl:TransitiveProperty ;
+                    rdfs:label "contained in"@en ,
+                              "contenu dans"@fr ;
                     vs:term_status "unstable" .
 
 
@@ -93,21 +95,28 @@ display:containedIn rdf:type owl:ObjectProperty ;
 display:contains rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:proximalRelation ;
                  rdf:type owl:TransitiveProperty ;
-                 rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An artifact is inside a showcase."@en ;
+                 rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An exhibit is inside a element (showcase)."@en ;
                  rdfs:label "contains"@en ,
                             "contient"@fr ;
-                 vs:term_status "unstable" .
+                 vs:term_status "unstable" ;
+                 vs:moreinfo "3D spatial extent perspective. See also mereological properties." .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
 display:containsExhibit rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf display:hasExhibit .
+                        rdfs:subPropertyOf display:hasExhibit ;
+                        rdfs:label "contained in"@en ,
+                          "contenu dans"@fr ;
+                        vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#coveredBy
 display:coveredBy rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:proximalRelation ;
-                  owl:inverseOf display:covers .
+                  owl:inverseOf display:covers ;
+                  rdfs:label "covered by"@en ,
+                    "recouvert par"@fr ;
+                  vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#covers
@@ -127,12 +136,15 @@ display:faces rdf:type owl:ObjectProperty ;
               rdfs:label "en face de"@fr ,
                          "faces"@en ,
                          "vis-à-vis"@fr ;
-              vs:term_status "unstable" .
+              vs:term_status "unstable" ,
+              vs:moreinfo "Problem: Relative property, as one needs to define the exhibit's face in order to consistently use this property. Potential conflict with owl:SymmetricProperty" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasConceptualRelationWith
 display:hasConceptualRelationWith rdf:type owl:ObjectProperty ;
                                   rdfs:comment "Conceptual relation between exhibits (non topological). Not to be stated explicitly."@en ;
+                                  rdfs:label "has conceptual relation with"@en ,
+                                    "est en relation conceptuelle avec"@fr ;
                                   vs:term_status "unstable" .
 
 
@@ -144,9 +156,9 @@ display:hasExhibit rdf:type owl:ObjectProperty ;
                    owl:propertyChainAxiom ( bot:containsZone
                                             display:hasExhibit
                                           ) ;
-                   rdfs:comment "Links a exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exbition space given that they have a spatial (topological) reletion to elements of the building."@en ,
+                   rdfs:comment "Links an exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exbition space given that they have a spatial (topological) reletion to elements of the building."@en ,
                                 "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ;
-                   rdfs:label "est lié à l’expôt" ,
+                   rdfs:label "contient l’expôt" ,
                               "has exhibit"@en ;
                    vs:moreinfo "Cette propriété redéfinit en parallèle les trois sous-propriétés semblables de bot:hasElement (puisque les expôts ne sont des bot:Element). Cependant les expôts, que l’on suppose donc systématiquement contenu par l’espace expographique, peuvent être mis en relation avec des instance de bot:Element et, par inférence, être positionnés ainsi dans le bâtiment."@fr ;
                    vs:term_status "unstable" .
@@ -158,8 +170,9 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty ;
                            rdfs:domain bot:Zone ;
                            rdfs:range display:ExhibitionSpace ;
                            rdfs:comment "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExihibitionSpace. A space is often divided into two or more exhibition spaces."@en ;
-                           rdfs:label "est lié à un espace expographique"@fr ,
-                                      "has exhibition space"@en .
+                           rdfs:label "contient un espace expographique"@fr ,
+                                      "has exhibition space"@en ;
+                          vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#hasInterface
@@ -184,49 +197,48 @@ display:inFrontOf rdf:type owl:ObjectProperty ;
                   rdfs:comment "The subject exhibit is in front of the object exhibit. Not to be confused with display:faces."@en ;
                   rdfs:label "est devant"@fr ,
                              "is in front of"@en ;
-                  vs:term_status "unstable" .
+                  vs:term_status "unstable" ;
+                  vs:moreinfo "To be in front of doesn't entail that the subject faces the object." .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#includedIn
 display:includedIn rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                   owl:inverseOf display:includes ;
-                   rdfs:comment "Relation between an exhibit and a display: An exhibit is included in a display."@en ,
-                                "Relation entre un expôt et un display : un expôt est inclus dans un display."@fr ;
+                  rdfs:subPropertyOf display:hasConceptualRelationWith ;
+                  owl:inverseOf display:includes ;
+                  rdfs:comment "Relation between an exhibit and a display: An exhibit is included in a display."@en ,
+                    "Relation entre un expôt et un display : un expôt est inclus dans un display."@fr ;
+                  rdfs:label "est inclus dans"@fr ,
+                    "included in"@en ;
                    vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#includes
 display:includes rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf display:hasConceptualRelationWith ;
-                 rdfs:domain display:Display ;
-                 rdfs:range display:Exhibit ;
-                 rdfs:comment "Relation between a display and an exhibit: A display is made up one or more exhibits."@en ,
-                              "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                rdfs:subPropertyOf display:hasConceptualRelationWith ;
+                rdfs:domain display:Display ;
+                rdfs:range display:Exhibit ;
+                rdfs:comment "Relation between a display and an exhibit: A display is made up one or more exhibits."@en ,
+                  "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr ;
+                                  rdfs:label "inclut"@fr ,
+                             "includes"@en ;
                  vs:term_status "unstable" .
-
 
 ###  https://ouvroir.umontreal.ca/onto/display#intersectingExhibit
 display:intersectingExhibit rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf display:hasExhibit ;
-                            rdfs:comment "Relation between a exhibition space and a exhibit that intersects it totally or partially."@en ;
-                            rdfs:label "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement."@fr ,
-                                       "expôt intersectant"@fr ,
-                                       "intersecting exhibit"@en .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#intersects
-display:intersects rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf display:hasTopologicalRelationWith ;
-                   owl:deprecated "true"^^xsd:boolean ;
-                   vs:term_status "unstable" .
-
+                            rdfs:comment "Relation between a exhibition space and a exhibit that intersects it totally or partially."@en ,
+                              "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement."@fr ;
+                            rdfs:label "contient un expôt intersectant"@fr ,
+                              "has intersecting exhibit"@en ;
+                            vs:moreinfo "Propriété définie parallèlement à bot:intersectingElement pour champ d'application à l'expôt. Voir display:hasExhibit pour plus d'information."@fr .
 
 ###  https://ouvroir.umontreal.ca/onto/display#isAbove
 display:isAbove rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf display:spatialRelation ;
                 owl:inverseOf display:isBelow ;
                 rdf:type owl:TransitiveProperty ;
+                rdfs:label "est au-dessus"@fr ,
+                  "is above"@en ;
                 vs:term_status "unstable" .
 
 
@@ -266,12 +278,17 @@ display:isRightOf rdf:type owl:ObjectProperty ;
                   vs:term_status "unstable" .
 
 
+###  https://ouvroir.umontreal.ca/onto/display#liesAgainst
+display:liesAgainst rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf display:proximalRelation ;
+               rdfs:comment "Le sujet est posé contre l'objet."@fr , "The subject exhibit lies against the object exhibit."@en ;
+               rdfs:label "contre"@fr , "lies against"@en .
+
 ###  https://ouvroir.umontreal.ca/onto/display#liesOn
 display:liesOn rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf display:proximalRelation ;
-               rdfs:comment "Le sujet est posé contre l'objet."@fr ;
-               rdfs:label "contre"@fr .
-
+               rdfs:comment "Le sujet repose horizontalement sur l'objet."@fr , "The subject exhibit rest in a horizontal position on the object exhibit."@en ;
+               rdfs:label "repose sur"@fr , "lies on"@en .
 
 ###  https://ouvroir.umontreal.ca/onto/display#nextTo
 display:nextTo rdf:type owl:ObjectProperty ;
@@ -351,7 +368,7 @@ display:Display rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#DisplayWall
 display:DisplayWall rdf:type owl:Class ;
                     rdfs:subClassOf display:Wall ;
-                    rdfs:label "Display wall"@en ,
+                    rdfs:label "display wall"@en ,
                                "cimaise"@fr .
 
 
@@ -374,8 +391,8 @@ display:Element rdf:type owl:Class ;
                 rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of BOT a construction entity may be furniture."@en ,
                              "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l'espace d'exposition. Dans l'optique du BOT, l'élément constitutif du bâti peut être un meuble (par exemple : vitrine ou cimaise)."@fr ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "Element"@en ,
-                           "Élement"@fr ;
+                rdfs:label "element"@en ,
+                           "élement"@fr ;
                 vs:moreinfo "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalent bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." ;
                 vs:term_status "unstable" .
 
@@ -385,8 +402,8 @@ display:Exhibit rdf:type owl:Class ;
                 owl:disjointWith display:ExhibitionSpace ;
                 rdfs:comment "Any exhibition element, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "Exhibit"@en ,
-                           "Expôt"@fr ;
+                rdfs:label "exhibit"@en ,
+                           "expôt"@fr ;
                 vs:moreinfo "Proposition centrale de cette ontologie." ;
                 vs:term_status "unstable" .
 
@@ -397,9 +414,9 @@ display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
                                      "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
                         rdfs:isDefinedBy display: ;
-                        rdfs:label "Espace expographique"@fr ,
-                                   "Exhibition space"@en ;
-                        vs:moreinfo "La description de cette ressource est fortement inspirée de bot:Space pour assurer l’adéquation sémantique de display: et de bot:." ;
+                        rdfs:label "espace expographique"@fr ,
+                                   "exhibition space"@en ;
+                        vs:moreinfo "La description de cette ressource est fortement inspirée de bot:Space pour assurer l’adéquation sémantique de display: et de bot:. Voir alignement ontologique parallèle" ;
                         vs:term_status "unstable" .
 
 
@@ -462,8 +479,8 @@ display:Support rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "Support"@en ,
-                           "Support"@fr ;
+                rdfs:label "support"@en ,
+                           "support"@fr ;
                 vs:term_status "unstable" .
 
 
