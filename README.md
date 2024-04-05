@@ -11,3 +11,7 @@ The functionalities offered by the data model and the application are based on a
 - BIM context and creation of digital twin
 - Existing ontologies in the BIM field
 - CIDOC-CRM and exhibition description + LinkedArt Exhibithions pattern https://linked.art/model/exhibition/
+
+## Schema
+
+![alt text](./display-visual-notation.svg)
