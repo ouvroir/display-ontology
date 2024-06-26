@@ -14,4 +14,4 @@ The functionalities offered by the data model and the application are based on a
 
 ## Schema
 
-![alt text](./display-visual-notation.svg)
+![alt text](./visual-notation/display-core-graffoo-notation.png)
