@@ -18,7 +18,7 @@ display: rdf:type owl:Ontology ;
     "Zoë Renaudie" ;
   dcterms:description """This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.).
 This ontology is developed at the Ouvroir laboratory in the framework of the partnership New uses of collections in art museums.
-Project manager: Lena Krause.
+Project manager: Zoë Renaudie (formerly Lena Krause).
 Scientific director: Emmanuel Chateau-Dutier.
 Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
