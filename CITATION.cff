@@ -1,0 +1,49 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Display Ontology
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Emmanuel
+    family-names: Château-Dutier
+    email: emmanuel.chateau.dutier@umontreal.ca
+    affiliation: Université de Montréal
+    orcid: 'https://orcid.org/0000-0003-4092-4569'
+  - given-names: David
+    family-names: Valentine
+    email: david.valentine@umontreal.ca
+    affiliation: Université de Montréal
+    orcid: 'https://orcid.org/0000-0003-3410-7677'
+  - given-names: Zoë
+    family-names: Renaudie
+    email: zoe.renaudie@umontreal.ca
+    affiliation: Université de Montréal
+    orcid: 'https://orcid.org/0009-0001-5825-8624'
+  - given-names: Lena
+    family-names: Krause
+    email: lena.krause@umontreal.ca
+    affiliation: Université de Montréal
+    orcid: 'https://orcid.org/0000-0001-6280-6657'
+  - name: >-
+      Ouvroir d’histoire de l’art et de muséologie
+      numériques
+    city: Montréal
+    country: CA
+    region: Québec
+    website: 'https://ouvroir.umontreal.ca'
+    address: 3150 rue Jean-Brillant
+    post-code: H3T 1N8
+    location: Pavillon Lionel-Groulx (local C-8132)
+    email: ouvroir@umontreal.ca
+repository-code: 'https://github.com/ouvroir/display-ontology'
+url: 'http://ouvroir.umontreal.ca/projets/display'
+keywords:
+  - ontology
+  - museology
+  - displays
+  - OWL
+license: CC-BY-4.0
