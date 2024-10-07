@@ -347,14 +347,16 @@ display:Base rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Ceiling
 display:Ceiling rdf:type owl:Class ;
                 rdfs:subClassOf display:StructuralElement ;
-                rdfs:label "ceiling"@en ,
-                           "plafond"@fr ;
+                rdfs:label "Ceiling"@en ,
+                           "Plafond"@fr ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Device
 display:Device rdf:type owl:Class ;
-               rdfs:subClassOf display:Element .
+               rdfs:subClassOf display:Element ;
+               rdfs:label "Device"@en ,
+                          "Dispositif"@fr .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Display
@@ -363,16 +365,16 @@ display:Display rdf:type owl:Class ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
                              "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "display"@en ,
-                           "display"@fr ;
+                rdfs:label "Display"@en ,
+                           "Display"@fr ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#DisplayWall
 display:DisplayWall rdf:type owl:Class ;
                     rdfs:subClassOf display:Wall ;
-                    rdfs:label "cimaise"@fr ,
-                               "display wall"@en ;
+                    rdfs:label "Cimaise"@fr ,
+                               "Display wall"@en ;
                     rdfs:seeAlso <http://vocab.getty.edu/page/aat/300375221> ;
                     vs:term_status "unstable" .
 
@@ -380,16 +382,16 @@ display:DisplayWall rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
 display:DistancingDevice rdf:type owl:Class ;
                          rdfs:subClassOf display:Device ;
-                         rdfs:label "dispositif de distanciation"@fr ,
-                                    "distancing device"@en ;
+                         rdfs:label "Dispositif de distanciation"@fr ,
+                                    "Distancing device"@en ;
                          vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Door
 display:Door rdf:type owl:Class ;
              rdfs:subClassOf display:StructuralElement ;
-             rdfs:label "door"@en ,
-                        "porte"@fr ;
+             rdfs:label "Door"@en ,
+                        "Porte"@fr ;
              vs:term_status "unstable" .
 
 
@@ -400,8 +402,8 @@ display:Element rdf:type owl:Class ;
                 rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of BOT a construction entity may be furniture."@en ,
                              "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l'espace d'exposition. Dans l'optique du BOT, l'élément constitutif du bâti peut être un meuble (par exemple : vitrine ou cimaise)."@fr ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "element"@en ,
-                           "élement"@fr ;
+                rdfs:label "Element"@en ,
+                           "Élement"@fr ;
                 vs:moreinfo "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalent bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." ;
                 vs:term_status "unstable" .
 
@@ -411,8 +413,8 @@ display:Exhibit rdf:type owl:Class ;
                 owl:disjointWith display:ExhibitionSpace ;
                 rdfs:comment "Any exhibition element, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "exhibit"@en ,
-                           "expôt"@fr ;
+                rdfs:label "Exhibit"@en ,
+                           "Expôt"@fr ;
                 vs:moreinfo "Proposition centrale de cette ontologie." ;
                 vs:term_status "unstable" .
 
@@ -423,8 +425,8 @@ display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
                                      "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
                         rdfs:isDefinedBy display: ;
-                        rdfs:label "espace expographique"@fr ,
-                                   "exhibition space"@en ;
+                        rdfs:label "Espace expographique"@fr ,
+                                   "Exhibition space"@en ;
                         vs:moreinfo "La description de cette ressource est fortement inspirée de bot:Space pour assurer l’adéquation sémantique de display: et de bot:. Voir alignement ontologique parallèle" ;
                         vs:term_status "unstable" .
 
@@ -432,31 +434,31 @@ display:ExhibitionSpace rdf:type owl:Class ;
 ###  https://ouvroir.umontreal.ca/onto/display#Floor
 display:Floor rdf:type owl:Class ;
               rdfs:subClassOf display:StructuralElement ;
-              rdfs:label "floor"@en ,
-                         "plancher"@fr ;
+              rdfs:label "Floor"@en ,
+                         "Plancher"@fr ;
               vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
 display:HangingInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
-                         rdfs:label "hanging interface"@en ,
-                                    "interface d'accrochage"@fr ;
+                         rdfs:label "Hanging interface"@en ,
+                                    "Interface d'accrochage"@fr ;
                          vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#LightingDevice
 display:LightingDevice rdf:type owl:Class ;
                        rdfs:subClassOf display:Device ;
-                       rdfs:label "dispositif d'éclairage"@fr ,
-                                  "lighting device"@en ;
+                       rdfs:label "Dispositif d'éclairage"@fr ,
+                                  "Lighting device"@en ;
                        vs:term_status "unstable" .
 
 ###  https://ouvroir.umontreal.ca/onto/display#PathwayInterface
 display:PathwayInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
-                         rdfs:label "interface de circulation"@fr ,
-                                    "pathway interface"@en ;
+                         rdfs:label "Interface de circulation"@fr ,
+                                    "Pathway interface"@en ;
                          vs:term_status "unstable" .
 
 
@@ -464,23 +466,23 @@ display:PathwayInterface rdf:type owl:Class ;
 display:Showcase rdf:type owl:Class ;
                  rdfs:subClassOf display:Support ;
                  rdfs:isDefinedBy display: ;
-                 rdfs:label "showcase"@en ,
-                            "vitrine"@fr ;
+                 rdfs:label "Showcase"@en ,
+                            "Vitrine"@fr ;
                  vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#SonicDevice
 display:SonicDevice rdf:type owl:Class ;
                     rdfs:subClassOf display:Device ;
-                    rdfs:label "dispositif sonore"@fr ,
-                               "sonic device"@en ;
+                    rdfs:label "Dispositif sonore"@fr ,
+                               "Sonic device"@en ;
                     vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#StructuralElement
 display:StructuralElement rdf:type owl:Class ;
-                          rdfs:label "structural element"@en ,
-                                     "élément structurel"@fr ;
+                          rdfs:label "Structural element"@en ,
+                                     "Élément structurel"@fr ;
                           vs:term_status "unstable" .
 
 
@@ -495,32 +497,32 @@ display:Support rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                 rdfs:isDefinedBy display: ;
-                rdfs:label "support"@en ,
-                           "support"@fr ;
+                rdfs:label "Support"@en ,
+                           "Support"@fr ;
                 vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
 display:VisualDevice rdf:type owl:Class ;
                      rdfs:subClassOf display:Device ;
-                     rdfs:label "dispositif visuel"@fr ,
-                                "visual device"@en ;
+                     rdfs:label "Dispositif visuel"@fr ,
+                                "Visual device"@en ;
                      vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Wall
 display:Wall rdf:type owl:Class ;
              rdfs:subClassOf display:StructuralElement ;
-             rdfs:label "mur"@fr ,
-                        "wall"@en ;
+             rdfs:label "Mur"@fr ,
+                        "Wall"@en ;
              vs:term_status "unstable" .
 
 
 ###  https://ouvroir.umontreal.ca/onto/display#Window
 display:Window rdf:type owl:Class ;
                rdfs:subClassOf display:StructuralElement ;
-               rdfs:label "fenêtre"@fr ,
-                          "window"@en ;
+               rdfs:label "Fenêtre"@fr ,
+                          "Window"@en ;
                vs:term_status "unstable" .
 
 
