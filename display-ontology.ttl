@@ -225,6 +225,7 @@ display:includes rdf:type owl:ObjectProperty ;
 display:intersectingExhibit rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf display:hasExhibit ;
                             rdfs:comment "Relation between a exhibition space and a exhibit that intersects it totally or partially."@en ,
+                                         "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement."@fr ;
                             rdfs:label "est traversé par l’expôt"@fr ,
                                        "has intersecting exhibit"@en ;
                             vs:moreinfo "Propriété définie parallèlement à bot:intersectingElement pour champ d’application à l’expôt. Voir display:hasExhibit pour plus d’information."@fr .
@@ -481,6 +482,7 @@ display:SonicDevice rdf:type owl:Class ;
 
 ###  https://ouvroir.umontreal.ca/onto/display#StructuralElement
 display:StructuralElement rdf:type owl:Class ;
+                          rdfs:subClassOf display:Element ;
                           rdfs:label "Structural element"@en ,
                                      "Élément structurel"@fr ;
                           vs:term_status "unstable" .
