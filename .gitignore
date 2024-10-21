@@ -1,5 +1,13 @@
-# vowl
+# vowl & viz
 /webvowl/data/display.json
+visual-notation*
+
+# local doc
+/build-doc.sh
+display-documentation/
+/widoco.jar
+/tmp*
+/interface*
 
 # catalogue d'ontologies utiles
 ontologies/
