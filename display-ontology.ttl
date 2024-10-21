@@ -7,28 +7,50 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf:	<http://purl.org/vocommons/voaf#> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
-@base <https://ouvroir.umontreal.ca/onto/display> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@base <https://ouvroir.umontreal.ca/onto/display#> .
 
-display: rdf:type owl:Ontology ;
+<https://ouvroir.umontreal.ca/onto/display> rdf:type owl:Ontology ;
+  vann:preferredNamespaceUri <https://ouvroir.umontreal.ca/onto/display#> ;
+  vann:preferredNamespacePrefix "display" ;
   owl:imports <https://w3id.org/bot> ;
-  dcterms:creator "David Valentine" ,
+  voaf:extends <https://w3id.org/bot> ;
+  dcterms:creator <https://orcid.org/0000-0003-3410-7677> ,
     "Zoë Renaudie" ,
     "Emmanuel Château-Dutier" ,
     "Lena Krause" ;
-  dcterms:description """This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.).
-This ontology is developed at the Ouvroir laboratory in the framework of the partnership New uses of collections in art museums.
-Project manager: Zoë Renaudie (formerly Lena Krause).
-Scientific director: Emmanuel Chateau-Dutier.
-Project supported by the University of Montreal, the Canada Fund for Innovation and the Province of Quebec."""@en ;
-  dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-  dcterms:modified "2024-01-15T08:00:00-05:00" ;
-  dcterms:title "Display Ontology"@en ,
+  rdfs:comment "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
+  dcterms:description "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
+  dcterms:abstract "This Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). The project supported by the University of Montreal, the Canada Fund for Innovation, and the Province of Quebec. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:issued "2024-10-21"^^xsd:date ;
+  dcterms:modified "2024-10-21T15:50:00-04:00"^^xsd:dateTime ;
+  dcterms:created "2024-10-18"^^xsd:date ;
+  dcterms:title "The Display Ontology"@en ,
     "L’ontologie Display"@fr ;
-  rdfs:comment "On 01/15/2024 this ontology is a work in progress that is the result of the first reflections of the team, and that is not intended to be use at the moment."@en ;
-  rdfs:seeAlso <https://github.com/ouvroir/display-ontology> ,
-    <https://ouvroir.umontreal.ca/en/projects/expots/> ;
-  owl:versionInfo "0.0.0" .
+  rdfs:label "Display"@en , "Display"@fr ;
+  rdfs:seeAlso <https://github.com/ouvroir/display-ontology/> ,
+    <https://ouvroir.github.io/display/> ,
+    <https://ouvroir.umontreal.ca/projets/display> ;
+  # schema:creativeWorkStatus describes the status of Display specification
+  schema:creativeWorkStatus "Display Ontology Specification Draft"@en ;
+  owl:versionIRI <https://ouvroir.umontreal.ca/onto/display-0.1.0-alpha-ch> ;
+  owl:versionInfo "0.1.0-alpha-ch" ;
+  schema:codeRepository "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
+  dcterms:publisher <https://ouvroir.umontreal.ca> .
+
+<https://orcid.org/0000-0003-3410-7677> a foaf:Person , vcard:Individual , schema:Person ;
+  foaf:name   "David Valentine" ;
+  vcard:fn    "David Valentine" ;
+	schema:name "David Valentine" ;
+  foaf:made   <https://ouvroir.umontreal.ca/onto/display> .
+
+<https://ouvroir.umontreal.ca> a foaf:Organization ;
+  foaf:name "Ouvroir d’histoire de l’art et de muséologie numériques"@fr .
 
 #################################################################
 #    Annotation properties
