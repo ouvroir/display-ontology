@@ -392,6 +392,8 @@ display:overlaps rdf:type owl:ObjectProperty ;
 display:proximalRelationship rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf display:hasTopologicalRelationWith ;
                          owl:propertyDisjointWith display:spatialRelationship ;
+                         rdfs:label "proximal relationship"@en ;
+                         rdfs:label "relation proximale"@fr ;
                          rdfs:comment "Proximal relationship is the super-property of relations describing abstract proximity between two exhibits that are necessarily close to each other. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
                            "à proximité, dans l’environnement immédiat"@fr ;
                          vs:term_status "testing" ;
@@ -401,6 +403,8 @@ display:proximalRelationship rdf:type owl:ObjectProperty ;
 display:spatialRelationship rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf display:hasTopologicalRelationWith ;
                         owl:propertyDisjointWith display:proximalRelationship ;
+                        rdfs:label "spatial relationship"@en ;
+                        rdfs:label "relation spatiale"@fr ;
                         rdfs:comment "Spatial relationship is the super-property of relations describing abstract spatial location of exhibits that are not necessarily close to each other within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
                           "pas à proximité, mais partage un espace"@fr ;
                         vs:term_status "testing" ;
