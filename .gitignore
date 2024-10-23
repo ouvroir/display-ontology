@@ -3,9 +3,9 @@
 visual-notation*
 
 # local doc
-/build-doc.sh
-display-documentation/
-/widoco.jar
+/dev-build.sh
+docs/
+/bin/
 /tmp*
 /interface*
 
