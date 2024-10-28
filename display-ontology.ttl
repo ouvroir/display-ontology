@@ -456,33 +456,6 @@ bot:interfaceOf rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  https://ouvroir.umontreal.ca/onto/display#Base
-display:Base rdf:type owl:Class ;
-             rdfs:subClassOf display:Support ;
-             rdfs:comment "Socle, base."@fr ;
-             rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-             rdfs:label "Base"@en ,
-                        "Socle"@fr ;
-             vs:moreinfo "voir aussi plateforme, chevalet, etc."@fr ;
-             vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Ceiling
-display:Ceiling rdf:type owl:Class ;
-                rdfs:subClassOf display:StructuralElement ;
-                rdfs:label "Ceiling"@en ,
-                           "Plafond"@fr ;
-                vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Device
-display:Device rdf:type owl:Class ;
-               rdfs:subClassOf display:Element ;
-               rdfs:label "Device"@en ,
-                          "Dispositif"@fr ;
-               vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
@@ -492,34 +465,6 @@ display:Display rdf:type owl:Class ;
                 rdfs:label "Display"@en ,
                            "Display"@fr ;
                 vs:term_status "testing" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#DisplayWall
-display:DisplayWall rdf:type owl:Class ;
-                    rdfs:subClassOf display:Wall ;
-                    rdfs:label "Cimaise"@fr ,
-                               "Display wall"@en ;
-                    rdfs:seeAlso <http://vocab.getty.edu/page/aat/300375221> ;
-                    vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#DistancingDevice
-display:DistancingDevice rdf:type owl:Class ;
-                         rdfs:subClassOf display:Device ;
-                         rdfs:comment "Device used to keep people at a certain distance from things around. For instance: Stanchions and ropes."@en ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-                         rdfs:label "Dispositif de distanciation"@fr ,
-                                    "Distancing device"@en ;
-                         vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Door
-display:Door rdf:type owl:Class ;
-             rdfs:subClassOf display:StructuralElement ;
-             rdfs:label "Door"@en ,
-                        "Porte"@fr ;
-             vs:term_status "unstable" .
-
 
 ###  https://ouvroir.umontreal.ca/onto/display#Element
 display:Element rdf:type owl:Class ;
@@ -554,15 +499,6 @@ display:ExhibitionSpace rdf:type owl:Class ;
                                    "Exhibition space"@en ;
                         vs:term_status "testing" .
 
-
-###  https://ouvroir.umontreal.ca/onto/display#Floor
-display:Floor rdf:type owl:Class ;
-              rdfs:subClassOf display:StructuralElement ;
-              rdfs:label "Floor"@en ,
-                         "Plancher"@fr ;
-              vs:term_status "unstable" .
-
-
 ###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
 display:HangingInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
@@ -572,13 +508,6 @@ display:HangingInterface rdf:type owl:Class ;
                          rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                          vs:term_status "unstable" .
 
-###  https://ouvroir.umontreal.ca/onto/display#LightingDevice
-display:LightingDevice rdf:type owl:Class ;
-                       rdfs:subClassOf display:Device ;
-                       rdfs:label "Dispositif d'éclairage"@fr ,
-                                  "Lighting device"@en ;
-                       vs:term_status "unstable" .
-
 ###  https://ouvroir.umontreal.ca/onto/display#PathwayInterface
 display:PathwayInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
@@ -587,73 +516,6 @@ display:PathwayInterface rdf:type owl:Class ;
                                     "Pathway interface"@en ;
                          rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
                          vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Showcase
-display:Showcase rdf:type owl:Class ;
-                 rdfs:subClassOf display:Support ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-                 rdfs:label "Showcase"@en ,
-                            "Vitrine"@fr ;
-                 vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#SonicDevice
-display:SonicDevice rdf:type owl:Class ;
-                    rdfs:subClassOf display:Device ;
-                    rdfs:label "Dispositif sonore"@fr ,
-                               "Sonic device"@en ;
-                    vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#StructuralElement
-display:StructuralElement rdf:type owl:Class ;
-                          rdfs:subClassOf display:Element ;
-                          rdfs:comment "Élément d'exposition permettant de structurer l'espace."@fr ;
-                          rdfs:label "Structural element"@en ,
-                                     "Élément structurel"@fr ;
-                          vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Support
-display:Support rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( display:Element
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty display:hasInterface ;
-                                                             owl:someValuesFrom display:HangingInterface
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
-                rdfs:label "Support"@en ,
-                           "Support"@fr ;
-                vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#VisualDevice
-display:VisualDevice rdf:type owl:Class ;
-                     rdfs:subClassOf display:Device ;
-                     rdfs:label "Dispositif visuel"@fr ,
-                                "Visual device"@en ;
-                     vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Wall
-display:Wall rdf:type owl:Class ;
-             rdfs:subClassOf display:StructuralElement ;
-             rdfs:label "Mur"@fr ,
-                        "Wall"@en ;
-             vs:term_status "unstable" .
-
-
-###  https://ouvroir.umontreal.ca/onto/display#Window
-display:Window rdf:type owl:Class ;
-               rdfs:subClassOf display:StructuralElement ;
-               rdfs:label "Fenêtre"@fr ,
-                          "Window"@en ;
-               vs:term_status "unstable" .
-
 
 ###  https://w3id.org/bot#Element
 bot:Element rdf:type owl:Class .
