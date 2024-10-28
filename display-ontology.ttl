@@ -10,12 +10,14 @@
 @prefix voaf:	<http://purl.org/vocommons/voaf#> .
 @prefix schema: <https://schema.org/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix display: <https://ouvroir.umontreal.ca/onto/display#> .
+@prefix display: <https://w3id.org/display#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@base <https://ouvroir.umontreal.ca/onto/display#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@base <https://w3id.org/display#> .
 
-<https://ouvroir.umontreal.ca/onto/display> rdf:type owl:Ontology ;
-  vann:preferredNamespaceUri <https://ouvroir.umontreal.ca/onto/display#> ;
+
+<https://w3id.org/display> rdf:type owl:Ontology ;
+  vann:preferredNamespaceUri <https://w3id.org/display#> ;
   vann:preferredNamespacePrefix "display" ;
   owl:imports <https://w3id.org/bot> ;
   voaf:extends <https://w3id.org/bot> ;
@@ -38,8 +40,9 @@
     <https://ouvroir.umontreal.ca/projets/display> ;
   # schema:creativeWorkStatus describes the status of Display specification
   schema:creativeWorkStatus "Display Ontology Specification Draft"@en ;
-  owl:versionIRI <https://ouvroir.umontreal.ca/onto/display-0.1.0-alpha-ch> ;
-  owl:versionInfo "0.1.0-alpha-ch" ;
+  owl:versionIRI <https://w3id.org/display/display-0.1.0-alpha> ;
+  owl:versionInfo "0.1.0-alpha" ;
+  owl:priorVersion <https://w3id.org/display/display-0.1.0-alpha-ch> ;
   schema:codeRepository "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
   dcterms:publisher <https://ouvroir.umontreal.ca> .
 
@@ -88,7 +91,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://ouvroir.umontreal.ca/onto/display#adjacentExhibit
+###  https://w3id.org/display#adjacentExhibit
 display:adjacentExhibit rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf display:hasExhibit ;
                         owl:propertyDisjointWith display:intersectingExhibit ; 
@@ -96,45 +99,43 @@ display:adjacentExhibit rdf:type owl:ObjectProperty ;
                                    "expôt adjacent"@fr ;
                         rdfs:comment "Relation between an exhibition space and its adjacent exhibition elements or exhibits, bounding the zone. This property is defined in parallel with `bot:adjacentElement` to apply the scope of the `bot:`'s pattern to the Exhibit."@en ,
                           "Propriété définie parallèlement à `bot:adjacentElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information."@fr ;
-                        rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                        rdfs:isDefinedBy <https://w3id.org/display#> ;
                         vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#backToBack
+###  https://w3id.org/display#backToBack
 display:backToBack rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
                    rdfs:subPropertyOf display:proximalRelationship ;
                    rdfs:comment "The subject exhibit is back-to-back with the object exhibit."@en ;
                    rdfs:label "back-to-back"@en ,
                               "dos à dos"@fr ;
-                   rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                   rdfs:isDefinedBy <https://w3id.org/display#> ;
                    vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#containedIn
+###  https://w3id.org/display#containedIn
 display:containedIn rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf display:proximalRelationship ;
                     owl:inverseOf display:contains ;
-                    rdf:type owl:TransitiveProperty ;
                     rdfs:comment "The subject exhibit is spatially contained in the object exhibit."@en ;
                     rdfs:label "contained in"@en ,
                                "contenu dans"@fr ;
-                    rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                    rdfs:isDefinedBy <https://w3id.org/display#> ;
                     vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#contains
+###  https://w3id.org/display#contains
 display:contains rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:proximalRelationship ;
-                 rdf:type owl:TransitiveProperty ;
                  rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An exhibit is inside a element (showcase). Not to be confused with `display:containsExhibit`."@en ;
                  rdfs:label "contains"@en ,
                             "contient"@fr ;
                  vs:moreinfo "3D spatial extent perspective. See also mereological properties." ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#containsExhibit
+###  https://w3id.org/display#containsExhibit
 display:containsExhibit rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf display:hasExhibit ;
                         owl:propertyChainAxiom ( bot:containsZone
@@ -144,32 +145,32 @@ display:containsExhibit rdf:type owl:ObjectProperty ;
                                      "À ne pas confondre avec display:contains"@fr ;
                         rdfs:label "l’espace contient l’expôt"@fr ,
                                    "contains exhibit"@en ;
-                        rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                        rdfs:isDefinedBy <https://w3id.org/display#> ;
                         vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#coveredBy
+###  https://w3id.org/display#coveredBy
 display:coveredBy rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:proximalRelationship ;
                   owl:inverseOf display:covers ;
                   rdfs:comment "The subject exhibit is spatially covered by the object exhibit."@en ;
                   rdfs:label "covered by"@en ,
                              "recouvert par"@fr ;
-                  rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                  rdfs:isDefinedBy <https://w3id.org/display#> ;
                   vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#covers
+###  https://w3id.org/display#covers
 display:covers rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf display:proximalRelationship ;
                rdfs:comment "The subject exhibit spatially covers the object exhibit. For partial covering see `display:overlaps`."@en ;
                rdfs:label "covers"@en ,
                           "recouvre"@fr ;
-               rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+               rdfs:isDefinedBy <https://w3id.org/display#> ;
                vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#faces
+###  https://w3id.org/display#faces
 display:faces rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf display:spatialRelationship ;
               rdf:type owl:SymmetricProperty ;
@@ -177,10 +178,10 @@ display:faces rdf:type owl:ObjectProperty ;
               rdfs:label "faces"@en ,
                          "vis-à-vis"@fr ;
               vs:moreinfo "Potential conflict with owl:SymmetricProperty to be analysed further."@en ;
-              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+              rdfs:isDefinedBy <https://w3id.org/display#> ;
               vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#hasExhibit
+###  https://w3id.org/display#hasExhibit
 display:hasExhibit rdf:type owl:ObjectProperty ;
                    rdfs:domain display:ExhibitionSpace ;
                    rdfs:range display:Exhibit ;
@@ -191,12 +192,12 @@ display:hasExhibit rdf:type owl:ObjectProperty ;
                                 "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ;
                    rdfs:label "en relation avec l’expôt"@fr ,
                               "has exhibit"@en ;
-                   rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                   rdfs:isDefinedBy <https://w3id.org/display#> ;
                    vs:moreinfo "Cette propriété redéfinit en parallèle les trois sous-propriétés semblables de bot:hasElement (puisque l’expôt n’est pas un bot:Element). Cependant l’expôt, que l’on suppose systématiquement contenu par l’espace expographique, peut être mis en relation avec des instances de bot:Element et, par inférence, être ainsi positionné dans le bâtiment."@fr ;
                    vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace
+###  https://w3id.org/display#hasExhibitionSpace
 display:hasExhibitionSpace rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                            rdfs:subPropertyOf bot:hasSpace ;
                            rdfs:domain bot:Zone ;
@@ -207,7 +208,7 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty , owl:TransitiveProperty 
                            vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit
+###  https://w3id.org/display#interfaceOfExhibit
 display:interfaceOfExhibit rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf bot:interfaceOf ;
                      rdfs:domain display:HangingInterface ;
@@ -215,10 +216,10 @@ display:interfaceOfExhibit rdf:type owl:ObjectProperty ;
                      rdfs:comment "Relationship between a hanging interface and an exhibit."@en ;
                      rdfs:label "interface de l'expôt"@fr ,
                                 "interface of exhibit"@en ;
-                     rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                     rdfs:isDefinedBy <https://w3id.org/display#> ;
                      vs:term_status "unstable" .
 
-###  https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace
+###  https://w3id.org/display#interfaceOfSpace
 display:interfaceOfSpace rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf bot:interfaceOf ;
                      rdfs:domain display:PathwayInterface ;
@@ -226,10 +227,10 @@ display:interfaceOfSpace rdf:type owl:ObjectProperty ;
                      rdfs:comment "Relationship between a pathway interface and a space."@en ;
                      rdfs:label " interface de l'espace"@fr ,
                                 "interface of space"@en ;
-                     rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                     rdfs:isDefinedBy <https://w3id.org/display#> ;
                      vs:term_status "unstable" .
 
-###  https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy
+###  https://w3id.org/display#interfaceProvidedBy
 display:interfaceProvidedBy rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf bot:interfaceOf ;
                      rdfs:domain bot:Interface ;
@@ -237,11 +238,11 @@ display:interfaceProvidedBy rdf:type owl:ObjectProperty ;
                      rdfs:comment "Relationship between an interface and an exhibition element that embodies the interface."@en ;
                      rdfs:label " interface fournie par"@fr ,
                                 "interface provided by"@en ;
-                     rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                     rdfs:isDefinedBy <https://w3id.org/display#> ;
                      vs:term_status "unstable" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith
+###  https://w3id.org/display#hasTopologicalRelationWith
 display:hasTopologicalRelationWith rdf:type owl:ObjectProperty ;
                                    rdfs:domain display:Exhibit ;
                                    rdfs:range display:Exhibit ;
@@ -249,20 +250,20 @@ display:hasTopologicalRelationWith rdf:type owl:ObjectProperty ;
                                    rdfs:label "est en relation topologique avec"@fr ,
                                               "has topological relation with"@en ;
                                    vs:term_status "testing" ;
-                                   rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> .
+                                   rdfs:isDefinedBy <https://w3id.org/display#> .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#inFrontOf
+###  https://w3id.org/display#inFrontOf
 display:inFrontOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:spatialRelationship ;
                   rdfs:comment "The subject exhibit is in front of the object exhibit. To be in front of doesn't entail that the subject faces the object. Not to be confused with `display:faces`."@en ;
                   rdfs:label "est devant"@fr ,
                              "in front of"@en ;
                   vs:term_status "testing" ;
-                  rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> .
+                  rdfs:isDefinedBy <https://w3id.org/display#> .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#includedIn
+###  https://w3id.org/display#includedIn
 display:includedIn rdf:type owl:ObjectProperty ;
                    owl:inverseOf display:includes ;
                    rdfs:domain display:Exhibit ;
@@ -272,10 +273,10 @@ display:includedIn rdf:type owl:ObjectProperty ;
                    rdfs:label "inclus dans"@fr ,
                               "included in"@en ;
                    vs:term_status "testing" ;
-                   rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> .
+                   rdfs:isDefinedBy <https://w3id.org/display#> .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#includes
+###  https://w3id.org/display#includes
 display:includes rdf:type owl:ObjectProperty ;
                  rdfs:domain display:Display ;
                  rdfs:range display:Exhibit ;
@@ -285,7 +286,7 @@ display:includes rdf:type owl:ObjectProperty ;
                             "inclut"@fr ;
                  vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#intersectingExhibit
+###  https://w3id.org/display#intersectingExhibit
 display:intersectingExhibit rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf display:hasExhibit ;
                             owl:propertyDisjointWith display:adjacentExhibit ; 
@@ -293,102 +294,102 @@ display:intersectingExhibit rdf:type owl:ObjectProperty ;
                               "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement. Propriété définie parallèlement à `bot:intersectingElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information."@fr ;
                             rdfs:label "traversé par l’expôt"@fr ,
                                        "intersecting exhibit"@en ;
-                            rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                            rdfs:isDefinedBy <https://w3id.org/display#> ;
                             vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#above
-display:above rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+###  https://w3id.org/display#above
+display:above rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf display:spatialRelationship ;
                 owl:inverseOf display:below ;
                 rdfs:comment "The subject exhibit is above the object exhibit on a bidimensional surface."@en ;
                 rdfs:label "au-dessus"@fr ,
                            "above"@en ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#behind
+###  https://w3id.org/display#behind
 display:behind rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:spatialRelationship ;
                  rdfs:comment "The subject exhibit is behind the object exhibit, which means the object exhibit is located on the opposite side of the subject exhibit front side."@en ;
                  rdfs:label "derrière"@fr ,
                             "behind"@en ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#below
-display:below rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+###  https://w3id.org/display#below
+display:below rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf display:spatialRelationship ;
                 owl:inverseOf display:above ;
                 rdfs:comment "The subject exhibit is below the object exhibit on a bidimensional surface. Not to be confused with `display:under`."@en ;
                 rdfs:label "below"@en ,
                            "sous"@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#leftOf
-display:leftOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+###  https://w3id.org/display#leftOf
+display:leftOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:spatialRelationship ;
                  owl:inverseOf display:rightOf ;
                  rdfs:comment "The subject exhibit is to the left of the object exhibit. Since the viewer's perspective is relative within the space volume, 'left of' should not be defined from that point of view. Instead, 'left of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en ;
                  rdfs:label "left of"@en ,
                             "à gauche de"@fr ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#rightOf
-display:rightOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+###  https://w3id.org/display#rightOf
+display:rightOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf display:spatialRelationship ;
                   owl:inverseOf display:leftOf ;
                   rdfs:comment "The subject exhibit is to the right of the object exhibit. Since the viewer's perspective is relative within the space volume, 'right of' should not be defined from that point of view. Instead, 'right of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en ;
                   rdfs:label "is right of"@en ,
                              "à droite de"@fr ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#liesAgainst
+###  https://w3id.org/display#liesAgainst
 display:liesAgainst rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf display:proximalRelationship ;
                     rdfs:comment "Le sujet est posé contre l’objet."@fr ,
                                  "The subject exhibit lies against the object exhibit in a non horizontal position, which means in a vertical or inclined position. Not to be confused with `display:liesOn`."@en ;
                     rdfs:label "lies against"@en ,
                                "repose contre"@fr ;
-                    rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                    rdfs:isDefinedBy <https://w3id.org/display#> ;
                     vs:term_status "testing" .
                                
 
 
-###  https://ouvroir.umontreal.ca/onto/display#liesOn
+###  https://w3id.org/display#liesOn
 display:liesOn rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf display:proximalRelationship ;
                rdfs:comment "Le sujet repose horizontalement sur l’objet."@fr ,
                             "The subject exhibit lies on the object exhibit in a horizontal position. Not to be confused with `display:liesAgaint`."@en ;
                rdfs:label "lies on"@en ,
                           "repose sur"@fr ;
-               rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+               rdfs:isDefinedBy <https://w3id.org/display#> ;
                vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#nextTo
+###  https://w3id.org/display#nextTo
 display:nextTo rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
                rdfs:subPropertyOf display:proximalRelationship ;
                owl:propertyDisjointWith display:touches ;
                rdfs:comment "The subject exhibit is next to the object exhibit, meaning that exhibits are near or close to each other, but have not direct adjacency or not near enough so as to touch."@en ;
                rdfs:label "next to"@en ,
                           "près de"@fr ;
-               rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+               rdfs:isDefinedBy <https://w3id.org/display#> ;
                vs:term_status "testing" .
 
 
-###  https://ouvroir.umontreal.ca/onto/display#overlaps
+###  https://w3id.org/display#overlaps
 display:overlaps rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf display:proximalRelationship ;
                  rdfs:comment "The subject exhibit spatially covers the object exhibit so that it is partially covering the object, creating an intersection of their areas."@en ;
                  rdfs:label "overlaps"@en ,
                             "recouvre partiellement"@fr ;
-                 rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                 rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#proximalRelationship
+###  https://w3id.org/display#proximalRelationship
 display:proximalRelationship rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf display:hasTopologicalRelationWith ;
                          owl:propertyDisjointWith display:spatialRelationship ;
@@ -397,9 +398,9 @@ display:proximalRelationship rdf:type owl:ObjectProperty ;
                          rdfs:comment "Proximal relationship is the super-property of relations describing abstract proximity between two exhibits that are necessarily close to each other. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
                            "à proximité, dans l’environnement immédiat"@fr ;
                          vs:term_status "testing" ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> .
+                         rdfs:isDefinedBy <https://w3id.org/display#> .
 
-###  https://ouvroir.umontreal.ca/onto/display#spatialRelationship
+###  https://w3id.org/display#spatialRelationship
 display:spatialRelationship rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf display:hasTopologicalRelationWith ;
                         owl:propertyDisjointWith display:proximalRelationship ;
@@ -408,36 +409,36 @@ display:spatialRelationship rdf:type owl:ObjectProperty ;
                         rdfs:comment "Spatial relationship is the super-property of relations describing abstract spatial location of exhibits that are not necessarily close to each other within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
                           "pas à proximité, mais partage un espace"@fr ;
                         vs:term_status "testing" ;
-                        rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> .
+                        rdfs:isDefinedBy <https://w3id.org/display#> .
 
-###  https://ouvroir.umontreal.ca/onto/display#touches
+###  https://w3id.org/display#touches
 display:touches rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
                 rdfs:subPropertyOf display:proximalRelationship ;
                 owl:propertyDisjointWith display:nextTo ;
                 rdfs:comment "The subject exhibit touches the object exhibit so that exhibits share adjacency between them."@en ;
                 rdfs:label "touche"@fr ,
                            "touches"@en ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#under
+###  https://w3id.org/display#under
 display:under rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf display:spatialRelationship ;
               owl:inverseOf display:over ;
               rdfs:comment "In a space volume the subject exhibit is under the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:below`."@en ;
               rdfs:label "en dessous de"@fr ,
                          "under"@en ;
-              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+              rdfs:isDefinedBy <https://w3id.org/display#> ;
               vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#over
+###  https://w3id.org/display#over
 display:over rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf display:spatialRelationship ;
               owl:inverseOf display:under ;
               rdfs:comment "In a space volume the subject exhibit is over the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:above`."@en ;
               rdfs:label "au-dessus de"@fr ,
                          "over"@en ;
-              rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+              rdfs:isDefinedBy <https://w3id.org/display#> ;
               vs:term_status "testing" .
 
 ###  https://w3id.org/bot#containsZone
@@ -456,65 +457,63 @@ bot:interfaceOf rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  https://ouvroir.umontreal.ca/onto/display#Display
+###  https://w3id.org/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
                              "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 rdfs:label "Display"@en ,
                            "Display"@fr ;
                 vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#Element
+###  https://w3id.org/display#Element
 display:Element rdf:type owl:Class ;
                 owl:equivalentClass bot:Element ;
                 rdfs:subClassOf display:Exhibit ;
                 rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of the Building Topology Ontology the constituent of a construction entity may also be furniture."@en ,
                   "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l’espace d’exposition. Dans l’optique de la Builduig Topology Ontology, l’élément constitutif du bâti peut également être du mobilier"@fr ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 rdfs:label "Element"@en ,
                            "Élement"@fr ;
                 vs:moreinfo "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalentClass bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." ;
                 vs:term_status "testing" .
 
-
-###  https://ouvroir.umontreal.ca/onto/display#Exhibit
+###  https://w3id.org/display#Exhibit
 display:Exhibit rdf:type owl:Class ;
                 owl:disjointWith display:ExhibitionSpace ;
                 rdfs:comment "Any exhibition entity, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
-                rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                rdfs:isDefinedBy <https://w3id.org/display#> ;
                 rdfs:label "Exhibit"@en ,
                            "Expôt"@fr ;
                 vs:term_status "testing" .
 
-
-###  https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
+###  https://w3id.org/display#ExhibitionSpace
 display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:subClassOf bot:Space ;
                         rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
                                      "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
-                        rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                        rdfs:isDefinedBy <https://w3id.org/display#> ;
                         rdfs:label "Espace expographique"@fr ,
                                    "Exhibition space"@en ;
                         vs:term_status "testing" .
 
-###  https://ouvroir.umontreal.ca/onto/display#HangingInterface
+###  https://w3id.org/display#HangingInterface
 display:HangingInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
-                         rdfs:comment "Hanging interface is a relation describing the hanging of an exhibit using an element. It allows qualifying the relationship of two or more things, where at least one is an exhibit (`display:Exhibit`)and at least one is an exhibition element (`display:Element`), indicating that this element is used in the hanging of the exhibit. Hanging interface can be the 'interface of' an exhibit and may be 'provided by' an exhibition element. In future versions of the Display Ontology, hanging interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties like time span."@en ;
+                         rdfs:comment "Hanging interface is a relation describing the hanging of an exhibit using an element. It allows qualifying the relationship of two or more things, where at least one is an exhibit (`display:Exhibit`) and at least one is an exhibition element (`display:Element`), indicating that this element is used for the hanging of the exhibit. Hanging interface can be the 'interface of' an exhibit and may be 'provided by' an exhibition element. In future versions of the Display Ontology, hanging interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties like time span."@en ;
                          rdfs:label "Hanging interface"@en ,
                                     "Interface d'accrochage"@fr ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                         rdfs:isDefinedBy <https://w3id.org/display#> ;
                          vs:term_status "unstable" .
 
-###  https://ouvroir.umontreal.ca/onto/display#PathwayInterface
+###  https://w3id.org/display#PathwayInterface
 display:PathwayInterface rdf:type owl:Class ;
                          rdfs:subClassOf bot:Interface ;
                          rdfs:comment "Pathway interface is a relation describing the way of circulating between spaces. It allows qualifying the relationship of two or more exhibition spaces, indicating that these spaces are connected together so that one can go from one space to another. Pathway interface can be the 'interface of' an exhibition space and may be 'provided by' an exhibition element. In future versions of the Display Ontology, pathway interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties."@en ;
                          rdfs:label "Interface de circulation"@fr ,
                                     "Pathway interface"@en ;
-                         rdfs:isDefinedBy <https://ouvroir.umontreal.ca/onto/display#> ;
+                         rdfs:isDefinedBy <https://w3id.org/display#> ;
                          vs:term_status "unstable" .
 
 ###  https://w3id.org/bot#Element
