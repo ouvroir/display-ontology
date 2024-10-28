@@ -15,22 +15,25 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @base <https://w3id.org/display#> .
 
+#################################################################
+# Display Ontology Metadata
+#################################################################
 
 <https://w3id.org/display> rdf:type owl:Ontology ;
+  dcterms:creator <https://orcid.org/0000-0003-3410-7677> ,
+    <https://orcid.org/0009-0001-5825-8624> ,
+    <https://orcid.org/0000-0003-4092-4569> ;
+  dcterms:contributor <https://orcid.org/0000-0001-6280-6657> ;
   vann:preferredNamespaceUri <https://w3id.org/display#> ;
   vann:preferredNamespacePrefix "display" ;
   owl:imports <https://w3id.org/bot> ;
   voaf:extends <https://w3id.org/bot> ;
-  dcterms:creator <https://orcid.org/0000-0003-3410-7677> ,
-    "Zoë Renaudie" ,
-    "Emmanuel Château-Dutier" ,
-    "Lena Krause" ;
   rdfs:comment "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
   dcterms:description "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
   dcterms:abstract "This Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). The project supported by the University of Montreal, the Canada Fund for Innovation, and the Province of Quebec. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:issued "2024-10-21"^^xsd:date ;
-  dcterms:modified "2024-10-21T15:50:00-04:00"^^xsd:dateTime ;
+  dcterms:issued "2024-10-28"^^xsd:date ;
+  dcterms:modified "2024-10-28T08:27:00-04:00"^^xsd:dateTime ;
   dcterms:created "2024-10-18"^^xsd:date ;
   dcterms:title "The Display Ontology"@en ,
     "L’ontologie Display"@fr ;
@@ -44,16 +47,39 @@
   owl:versionInfo "0.1.0-alpha" ;
   owl:priorVersion <https://w3id.org/display/display-0.1.0-alpha-ch> ;
   schema:codeRepository "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
-  dcterms:publisher <https://ouvroir.umontreal.ca> .
+  dcterms:publisher <https://ouvroir.umontreal.ca#this> ;
+  dcterms:bibliographicCitation "David Valentine, Zoë Renaudie, Emmanuel Château-Dutier. The Display Ontology. Revision: 0.1.0-alpha. Retrieved from: https://w3id.org/display/display-0.1.0-alpha".
 
-<https://orcid.org/0000-0003-3410-7677> a foaf:Person , vcard:Individual , schema:Person ;
+# Creators and contributors
+<https://orcid.org/0000-0003-3410-7677> a foaf:Person ;
   foaf:name   "David Valentine" ;
-  vcard:fn    "David Valentine" ;
-	schema:name "David Valentine" ;
-  foaf:made   <https://ouvroir.umontreal.ca/onto/display> .
+  foaf:made   <https://w3id.org/display> ;
+  org:memberOf <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox "david.valentine@umontreal.ca" .
+<https://orcid.org/0009-0001-5825-8624> a foaf:Person ;
+  foaf:name   "Zoë Renaudie" ;
+  foaf:made   <https://w3id.org/display> ;
+  org:memberOf <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox "zoe.renaudie@umontreal.ca" .
+<https://orcid.org/0000-0003-4092-4569> a foaf:Person ;
+  foaf:name   "Emmanuel Château-Dutier" ;
+  foaf:made   <https://w3id.org/display> ;
+  org:memberOf <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox "emmanuel.chateau.dutier@umontreal.ca" .
+<https://orcid.org/0000-0001-6280-6657> a foaf:Person ;
+  foaf:name   "Lena Krause" ;
+  org:memberOf <https://ouvroir.umontreal.ca#this> .
 
-<https://ouvroir.umontreal.ca> a foaf:Organization ;
-  foaf:name "Ouvroir d’histoire de l’art et de muséologie numériques"@fr .
+# Organizations
+<https://ouvroir.umontreal.ca#this> a foaf:Organization ;
+  foaf:homepage "https://ouvroir.umontreal.ca"^^xsd:anyURI ;
+  foaf:name "Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)"@fr .
+<https://umontreal.ca#this> a foaf:Organization ;
+  foaf:homepage "https://umontreal.ca"^^xsd:anyURI ;
+  foaf:name "Université de Montréal"@fr .
+
+# BOT metadata
+<https://w3id.org/bot> rdfs:label "Building Topology Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -460,6 +486,7 @@ bot:interfaceOf rdf:type owl:ObjectProperty .
 ###  https://w3id.org/display#Display
 display:Display rdf:type owl:Class ;
                 rdfs:subClassOf display:Exhibit ;
+                owl:disjointWith display:Element ;
                 rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
                              "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
                 rdfs:isDefinedBy <https://w3id.org/display#> ;
@@ -517,19 +544,19 @@ display:PathwayInterface rdf:type owl:Class ;
                          vs:term_status "unstable" .
 
 ###  https://w3id.org/bot#Element
-bot:Element rdf:type owl:Class .
-
+bot:Element rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://w3id.org/bot#> .
 
 ###  https://w3id.org/bot#Interface
-bot:Interface rdf:type owl:Class .
-
+bot:Interface rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://w3id.org/bot#> .
 
 ###  https://w3id.org/bot#Space
-bot:Space rdf:type owl:Class .
-
+bot:Space rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://w3id.org/bot#> .
 
 ###  https://w3id.org/bot#Zone
-bot:Zone rdf:type owl:Class .
-
+bot:Zone rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://w3id.org/bot#> .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
