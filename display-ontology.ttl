@@ -140,7 +140,7 @@ display:backToBack rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
 
 
 ###  https://w3id.org/display#containedIn
-display:containedIn rdf:type owl:ObjectProperty ;
+display:containedIn rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                     rdfs:subPropertyOf display:proximalRelationship ;
                     owl:inverseOf display:contains ;
                     rdfs:comment "The subject exhibit is spatially contained in the object exhibit."@en ;
@@ -151,7 +151,7 @@ display:containedIn rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/display#contains
-display:contains rdf:type owl:ObjectProperty ;
+display:contains rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                  rdfs:subPropertyOf display:proximalRelationship ;
                  rdfs:comment "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An exhibit is inside a element (showcase). Not to be confused with `display:containsExhibit`."@en ;
                  rdfs:label "contains"@en ,
@@ -324,7 +324,7 @@ display:intersectingExhibit rdf:type owl:ObjectProperty ;
                             vs:term_status "testing" .
 
 ###  https://w3id.org/display#above
-display:above rdf:type owl:ObjectProperty ;
+display:above rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                 rdfs:subPropertyOf display:spatialRelationship ;
                 owl:inverseOf display:below ;
                 rdfs:comment "The subject exhibit is above the object exhibit on a bidimensional surface."@en ;
@@ -343,7 +343,7 @@ display:behind rdf:type owl:ObjectProperty ;
                  vs:term_status "testing" .
 
 ###  https://w3id.org/display#below
-display:below rdf:type owl:ObjectProperty ;
+display:below rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                 rdfs:subPropertyOf display:spatialRelationship ;
                 owl:inverseOf display:above ;
                 rdfs:comment "The subject exhibit is below the object exhibit on a bidimensional surface. Not to be confused with `display:under`."@en ;
@@ -353,7 +353,7 @@ display:below rdf:type owl:ObjectProperty ;
                 vs:term_status "testing" .
 
 ###  https://w3id.org/display#leftOf
-display:leftOf rdf:type owl:ObjectProperty ;
+display:leftOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                  rdfs:subPropertyOf display:spatialRelationship ;
                  owl:inverseOf display:rightOf ;
                  rdfs:comment "The subject exhibit is to the left of the object exhibit. Since the viewer's perspective is relative within the space volume, 'left of' should not be defined from that point of view. Instead, 'left of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en ;
@@ -363,7 +363,7 @@ display:leftOf rdf:type owl:ObjectProperty ;
                  vs:term_status "testing" .
 
 ###  https://w3id.org/display#rightOf
-display:rightOf rdf:type owl:ObjectProperty ;
+display:rightOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                   rdfs:subPropertyOf display:spatialRelationship ;
                   owl:inverseOf display:leftOf ;
                   rdfs:comment "The subject exhibit is to the right of the object exhibit. Since the viewer's perspective is relative within the space volume, 'right of' should not be defined from that point of view. Instead, 'right of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en ;
@@ -398,7 +398,6 @@ display:liesOn rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/display#nextTo
 display:nextTo rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
                rdfs:subPropertyOf display:proximalRelationship ;
-               owl:propertyDisjointWith display:touches ;
                rdfs:comment "The subject exhibit is next to the object exhibit, meaning that exhibits are near or close to each other, but have not direct adjacency or not near enough so as to touch."@en ;
                rdfs:label "next to"@en ,
                           "près de"@fr ;
@@ -418,7 +417,6 @@ display:overlaps rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/display#proximalRelationship
 display:proximalRelationship rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf display:hasTopologicalRelationWith ;
-                         owl:propertyDisjointWith display:spatialRelationship ;
                          rdfs:label "proximal relationship"@en ;
                          rdfs:label "relation proximale"@fr ;
                          rdfs:comment "Proximal relationship is the super-property of relations describing abstract proximity between two exhibits that are necessarily close to each other. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
@@ -429,7 +427,6 @@ display:proximalRelationship rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/display#spatialRelationship
 display:spatialRelationship rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf display:hasTopologicalRelationWith ;
-                        owl:propertyDisjointWith display:proximalRelationship ;
                         rdfs:label "spatial relationship"@en ;
                         rdfs:label "relation spatiale"@fr ;
                         rdfs:comment "Spatial relationship is the super-property of relations describing abstract spatial location of exhibits that are not necessarily close to each other within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en ,
@@ -440,7 +437,6 @@ display:spatialRelationship rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/display#touches
 display:touches rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
                 rdfs:subPropertyOf display:proximalRelationship ;
-                owl:propertyDisjointWith display:nextTo ;
                 rdfs:comment "The subject exhibit touches the object exhibit so that exhibits share adjacency between them."@en ;
                 rdfs:label "touche"@fr ,
                            "touches"@en ;
