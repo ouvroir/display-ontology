@@ -367,7 +367,7 @@ display:rightOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
                   rdfs:subPropertyOf display:spatialRelationship ;
                   owl:inverseOf display:leftOf ;
                   rdfs:comment "The subject exhibit is to the right of the object exhibit. Since the viewer's perspective is relative within the space volume, 'right of' should not be defined from that point of view. Instead, 'right of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en ;
-                  rdfs:label "is right of"@en ,
+                  rdfs:label "right of"@en ,
                              "à droite de"@fr ;
                  rdfs:isDefinedBy <https://w3id.org/display#> ;
                  vs:term_status "testing" .
