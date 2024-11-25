@@ -258,7 +258,6 @@ display:interfaceOfSpace rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/display#interfaceProvidedBy
 display:interfaceProvidedBy rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf bot:interfaceOf ;
                      rdfs:domain bot:Interface ;
                      rdfs:range display:Element ;
                      rdfs:comment "Relationship between an interface and an exhibition element that embodies the interface."@en ;
