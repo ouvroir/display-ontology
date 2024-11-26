@@ -1,19 +1,5 @@
-# vowl & viz
-/webvowl/data/display.json
-visual-notation*
-
-# local doc
-/dev-build.sh
-docs/
-/bin/
-/tmp*
-/interface*
-
-# catalogue d'ontologies utiles
-ontologies/
-
 # log de Protege
-catalog-v001.xml
+/catalog-v001.xml
 
 # autres
 /notes.md
