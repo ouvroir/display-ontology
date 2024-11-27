@@ -1,0 +1,692 @@
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2002/07/owl#versionIRI> <https://ouvroir.umontreal.ca/onto/display-0.1.0-alpha-ch> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/abstract> "This Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). The project supported by the University of Montreal, the Canada Fund for Innovation, and the Province of Quebec. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/created> "2024-10-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-3410-7677> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/creator> "Emmanuel Château-Dutier" .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/creator> "Lena Krause" .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/creator> "Zoë Renaudie" .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/description> "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/issued> "2024-10-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/modified> "2024-10-21T15:50:00-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/publisher> <https://ouvroir.umontreal.ca> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/title> "L’ontologie Display"@fr .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/dc/terms/title> "The Display Ontology"@en .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/vocab/vann/preferredNamespacePrefix> "display" .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display> <http://purl.org/vocommons/voaf#extends> <https://w3id.org/bot> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#comment> "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@en .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@fr .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ouvroir/display-ontology/> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://ouvroir.github.io/display/> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://ouvroir.umontreal.ca/projets/display> .
+<https://ouvroir.umontreal.ca/onto/display> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0-alpha-ch" .
+<https://ouvroir.umontreal.ca/onto/display> <https://schema.org/codeRepository> "https://github.com/ouvroir/display-ontology"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://ouvroir.umontreal.ca/onto/display> <https://schema.org/creativeWorkStatus> "Display Ontology Specification Draft"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocommons/voaf#extends
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo
+<http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/made
+<http://xmlns.com/foaf/0.1/made> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://ouvroir.umontreal.ca/onto/display#above
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is above the object exhibit on a bidimensional surface."@en .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2000/01/rdf-schema#label> "above"@en .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2000/01/rdf-schema#label> "au-dessus"@fr .
+<https://ouvroir.umontreal.ca/onto/display#above> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#adjacentExhibit
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#hasExhibit> .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriété définie parallèlement à `bot:adjacentElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information."@fr .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an exhibition space and its adjacent exhibition elements or exhibits, bounding the zone. This property is defined in parallel with `bot:adjacentElement` to apply the scope of the `bot:`'s pattern to the Exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "expôt adjacent"@fr .
+<https://ouvroir.umontreal.ca/onto/display#adjacentExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#backToBack
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is back-to-back with the object exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2000/01/rdf-schema#label> "back-to-back"@en .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2000/01/rdf-schema#label> "dos à dos"@fr .
+<https://ouvroir.umontreal.ca/onto/display#backToBack> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#behind
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is behind the object exhibit, which means the object exhibit is located on the opposite side of the subject exhibit front side."@en .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2000/01/rdf-schema#label> "behind"@en .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2000/01/rdf-schema#label> "derrière"@fr .
+<https://ouvroir.umontreal.ca/onto/display#behind> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#below
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#above> .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is below the object exhibit on a bidimensional surface. Not to be confused with `display:under`."@en .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2000/01/rdf-schema#label> "below"@en .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2000/01/rdf-schema#label> "sous"@fr .
+<https://ouvroir.umontreal.ca/onto/display#below> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#containedIn
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#contains> .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is spatially contained in the object exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2000/01/rdf-schema#label> "contained in"@en .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2000/01/rdf-schema#label> "contenu dans"@fr .
+<https://ouvroir.umontreal.ca/onto/display#containedIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#contains
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit spatially contains the object exhibit inside a space volume. Example: An exhibit is inside a element (showcase). Not to be confused with `display:containsExhibit`."@en .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contient"@fr .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "3D spatial extent perspective. See also mereological properties." .
+<https://ouvroir.umontreal.ca/onto/display#contains> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#containsExhibit
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#hasExhibit> .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ouvroir.umontreal.ca/onto/display#containsExhibit> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to an exhibit contained in an exhibition space. This property is defined in parallel with `bot:containsElement` to apply the scope of the `bot:`'s pattern to the Exhibit. Not to be confused with `display:contains`."@en .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "À ne pas confondre avec display:contains"@fr .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "contains exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "l’espace contient l’expôt"@fr .
+<https://ouvroir.umontreal.ca/onto/display#containsExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#coveredBy
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#covers> .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is spatially covered by the object exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2000/01/rdf-schema#label> "covered by"@en .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2000/01/rdf-schema#label> "recouvert par"@fr .
+<https://ouvroir.umontreal.ca/onto/display#coveredBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#covers
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit spatially covers the object exhibit. For partial covering see `display:overlaps`."@en .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers"@en .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2000/01/rdf-schema#label> "recouvre"@fr .
+<https://ouvroir.umontreal.ca/onto/display#covers> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#faces
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit faces the object exhibit. One needs to define the exhibit's front face in order to consistently use this property."@en .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2000/01/rdf-schema#label> "faces"@en .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2000/01/rdf-schema#label> "vis-à-vis"@fr .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "Potential conflict with owl:SymmetricProperty to be analysed further."@en .
+<https://ouvroir.umontreal.ca/onto/display#faces> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#hasExhibit
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ouvroir.umontreal.ca/onto/display#hasExhibit> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot's core topological relationship patterns to the relation between Exhibition space and Exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "en relation avec l’expôt"@fr .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "has exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "Cette propriété redéfinit en parallèle les trois sous-propriétés semblables de bot:hasElement (puisque l’expôt n’est pas un bot:Element). Cependant l’expôt, que l’on suppose systématiquement contenu par l’espace expographique, peut être mis en relation avec des instances de bot:Element et, par inférence, être ainsi positionné dans le bâtiment."@fr .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSpace> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExihibitionSpace. A space is often divided into two or more exhibition spaces."@en .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#label> "contient un espace expographique"@fr .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has exhibition space"@en .
+<https://ouvroir.umontreal.ca/onto/display#hasExhibitionSpace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#hasInterface
+<https://ouvroir.umontreal.ca/onto/display#hasInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic topological relation between exhibits located within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#label> "est en relation topologique avec"@fr .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2000/01/rdf-schema#label> "has topological relation with"@en .
+<https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#inFrontOf
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is in front of the object exhibit. To be in front of doesn't entail that the subject faces the object. Not to be confused with `display:faces`."@en .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2000/01/rdf-schema#label> "est devant"@fr .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2000/01/rdf-schema#label> "in front of"@en .
+<https://ouvroir.umontreal.ca/onto/display#inFrontOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#includedIn
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#includes> .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Display> .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un expôt et un display : un expôt est inclus dans un display."@fr .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an exhibit and a display entity: An exhibit is included in a display."@en .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#label> "included in"@en .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2000/01/rdf-schema#label> "inclus dans"@fr .
+<https://ouvroir.umontreal.ca/onto/display#includedIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#includes
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#Display> .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts."@fr .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a display entity and an exhibit: A display is made up of one or more exhibits."@en .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes"@en .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2000/01/rdf-schema#label> "inclut"@fr .
+<https://ouvroir.umontreal.ca/onto/display#includes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#HangingInterface> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a hanging interface and an exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "interface de l'expôt"@fr .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "interface of exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ouvroir.umontreal.ca/onto/display#PathwayInterface> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a pathway interface and a space."@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#label> " interface de l'espace"@fr .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2000/01/rdf-schema#label> "interface of space"@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceOfSpace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Interface> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://ouvroir.umontreal.ca/onto/display#Element> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an interface and an exhibition element that embodies the interface."@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#label> " interface fournie par"@fr .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2000/01/rdf-schema#label> "interface provided by"@en .
+<https://ouvroir.umontreal.ca/onto/display#interfaceProvidedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#intersectingExhibit
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#hasExhibit> .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an exhibition space and a exhibit that intersects it totally or partially. This property is defined in parallel with `bot:intersectingElement` to apply the scope of the `bot:`'s pattern to the Exhibit."@en .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement. Propriété définie parallèlement à `bot:intersectingElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information."@fr .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "intersecting exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2000/01/rdf-schema#label> "traversé par l’expôt"@fr .
+<https://ouvroir.umontreal.ca/onto/display#intersectingExhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#leftOf
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#rightOf> .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is to the left of the object exhibit. Since the viewer's perspective is relative within the space volume, 'left of' should not be defined from that point of view. Instead, 'left of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2000/01/rdf-schema#label> "left of"@en .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2000/01/rdf-schema#label> "à gauche de"@fr .
+<https://ouvroir.umontreal.ca/onto/display#leftOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#liesAgainst
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#comment> "Le sujet est posé contre l’objet."@fr .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit lies against the object exhibit in a non horizontal position, which means in a vertical or inclined position. Not to be confused with `display:liesOn`."@en .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#label> "lies against"@en .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2000/01/rdf-schema#label> "repose contre"@fr .
+<https://ouvroir.umontreal.ca/onto/display#liesAgainst> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#liesOn
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Le sujet repose horizontalement sur l’objet."@fr .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit lies on the object exhibit in a horizontal position. Not to be confused with `display:liesAgaint`."@en .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#label> "lies on"@en .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2000/01/rdf-schema#label> "repose sur"@fr .
+<https://ouvroir.umontreal.ca/onto/display#liesOn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#nextTo
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://ouvroir.umontreal.ca/onto/display#touches> .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is next to the object exhibit, meaning that exhibits are near or close to each other, but have not direct adjacency or not near enough so as to touch."@en .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2000/01/rdf-schema#label> "next to"@en .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2000/01/rdf-schema#label> "près de"@fr .
+<https://ouvroir.umontreal.ca/onto/display#nextTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#over
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2002/07/owl#inverseOf> <https://ouvroir.umontreal.ca/onto/display#under> .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2000/01/rdf-schema#comment> "In a space volume the subject exhibit is over the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:above`."@en .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2000/01/rdf-schema#label> "au-dessus de"@fr .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2000/01/rdf-schema#label> "over"@en .
+<https://ouvroir.umontreal.ca/onto/display#over> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#overlaps
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit spatially covers the object exhibit so that it is partially covering the object, creating an intersection of their areas."@en .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps"@en .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2000/01/rdf-schema#label> "recouvre partiellement"@fr .
+<https://ouvroir.umontreal.ca/onto/display#overlaps> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#proximalRelationship
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Proximal relationship is the super-property of relations describing abstract proximity between two exhibits that are necessarily close to each other. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "à proximité, dans l’environnement immédiat"@fr .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#proximalRelationship> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#rightOf
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit is to the right of the object exhibit. Since the viewer's perspective is relative within the space volume, 'right of' should not be defined from that point of view. Instead, 'right of' should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer's position."@en .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2000/01/rdf-schema#label> "is right of"@en .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2000/01/rdf-schema#label> "à droite de"@fr .
+<https://ouvroir.umontreal.ca/onto/display#rightOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#spatialRelationship
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#hasTopologicalRelationWith> .
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial relationship is the super-property of relations describing abstract spatial location of exhibits that are not necessarily close to each other within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits."@en .
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "pas à proximité, mais partage un espace"@fr .
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#spatialRelationship> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#touches
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#proximalRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject exhibit touches the object exhibit so that exhibits share adjacency between them."@en .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2000/01/rdf-schema#label> "touche"@fr .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2000/01/rdf-schema#label> "touches"@en .
+<https://ouvroir.umontreal.ca/onto/display#touches> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#under
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ouvroir.umontreal.ca/onto/display#spatialRelationship> .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2000/01/rdf-schema#comment> "In a space volume the subject exhibit is under the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:below`."@en .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2000/01/rdf-schema#label> "en dessous de"@fr .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2000/01/rdf-schema#label> "under"@en .
+<https://ouvroir.umontreal.ca/onto/display#under> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://w3id.org/bot#containsZone
+<https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/bot#hasSpace
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/bot#interfaceOf
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Base
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Support> .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2000/01/rdf-schema#comment> "Socle, base."@fr .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2000/01/rdf-schema#label> "Base"@en .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2000/01/rdf-schema#label> "Socle"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "voir aussi plateforme, chevalet, etc."@fr .
+<https://ouvroir.umontreal.ca/onto/display#Base> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Ceiling
+<https://ouvroir.umontreal.ca/onto/display#Ceiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Ceiling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#StructuralElement> .
+<https://ouvroir.umontreal.ca/onto/display#Ceiling> <http://www.w3.org/2000/01/rdf-schema#label> "Ceiling"@en .
+<https://ouvroir.umontreal.ca/onto/display#Ceiling> <http://www.w3.org/2000/01/rdf-schema#label> "Plafond"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Ceiling> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Device
+<https://ouvroir.umontreal.ca/onto/display#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Element> .
+<https://ouvroir.umontreal.ca/onto/display#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+<https://ouvroir.umontreal.ca/onto/display#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositif"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Device> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Display
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#comment> "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@en .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Display> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#DisplayWall
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Wall> .
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/2000/01/rdf-schema#label> "Cimaise"@fr .
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/2000/01/rdf-schema#label> "Display wall"@en .
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://vocab.getty.edu/page/aat/300375221> .
+<https://ouvroir.umontreal.ca/onto/display#DisplayWall> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#DistancingDevice
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Device> .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device used to keep people at a certain distance from things around. For instance: Stanchions and ropes."@en .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositif de distanciation"@fr .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Distancing device"@en .
+<https://ouvroir.umontreal.ca/onto/display#DistancingDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Door
+<https://ouvroir.umontreal.ca/onto/display#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#StructuralElement> .
+<https://ouvroir.umontreal.ca/onto/display#Door> <http://www.w3.org/2000/01/rdf-schema#label> "Door"@en .
+<https://ouvroir.umontreal.ca/onto/display#Door> <http://www.w3.org/2000/01/rdf-schema#label> "Porte"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Door> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Element
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/bot#Element> .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Exhibit> .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of the Building Topology Ontology the constituent of a construction entity may also be furniture."@en .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l’espace d’exposition. Dans l’optique de la Builduig Topology Ontology, l’élément constitutif du bâti peut également être du mobilier"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element"@en .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Élement"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo> "Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalentClass bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`." .
+<https://ouvroir.umontreal.ca/onto/display#Element> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Exhibit
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2002/07/owl#disjointWith> <https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Any exhibition entity, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2000/01/rdf-schema#label> "Exhibit"@en .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2000/01/rdf-schema#label> "Expôt"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Exhibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Espace expographique"@fr .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Exhibition space"@en .
+<https://ouvroir.umontreal.ca/onto/display#ExhibitionSpace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Floor
+<https://ouvroir.umontreal.ca/onto/display#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#StructuralElement> .
+<https://ouvroir.umontreal.ca/onto/display#Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor"@en .
+<https://ouvroir.umontreal.ca/onto/display#Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Plancher"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Floor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#HangingInterface
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Interface> .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "Hanging interface is a relation describing the hanging of an exhibit using an element. It allows qualifying the relationship of two or more things, where at least one is an exhibit (`display:Exhibit`)and at least one is an exhibition element (`display:Element`), indicating that this element is used in the hanging of the exhibit. Hanging interface can be the 'interface of' an exhibit and may be 'provided by' an exhibition element. In future versions of the Display Ontology, hanging interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties like time span."@en .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Hanging interface"@en .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface d'accrochage"@fr .
+<https://ouvroir.umontreal.ca/onto/display#HangingInterface> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#LightingDevice
+<https://ouvroir.umontreal.ca/onto/display#LightingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#LightingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Device> .
+<https://ouvroir.umontreal.ca/onto/display#LightingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositif d'éclairage"@fr .
+<https://ouvroir.umontreal.ca/onto/display#LightingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting device"@en .
+<https://ouvroir.umontreal.ca/onto/display#LightingDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#PathwayInterface
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Interface> .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "Pathway interface is a relation describing the way of circulating between spaces. It allows qualifying the relationship of two or more exhibition spaces, indicating that these spaces are connected together so that one can go from one space to another. Pathway interface can be the 'interface of' an exhibition space and may be 'provided by' an exhibition element. In future versions of the Display Ontology, pathway interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties."@en .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface de circulation"@fr .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Pathway interface"@en .
+<https://ouvroir.umontreal.ca/onto/display#PathwayInterface> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Showcase
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Support> .
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/2000/01/rdf-schema#label> "Showcase"@en .
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/2000/01/rdf-schema#label> "Vitrine"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Showcase> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#SonicDevice
+<https://ouvroir.umontreal.ca/onto/display#SonicDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#SonicDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Device> .
+<https://ouvroir.umontreal.ca/onto/display#SonicDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositif sonore"@fr .
+<https://ouvroir.umontreal.ca/onto/display#SonicDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Sonic device"@en .
+<https://ouvroir.umontreal.ca/onto/display#SonicDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#StructuralElement
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Element> .
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Élément d'exposition permettant de structurer l'espace."@fr .
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/2000/01/rdf-schema#label> "Structural element"@en .
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/2000/01/rdf-schema#label> "Élément structurel"@fr .
+<https://ouvroir.umontreal.ca/onto/display#StructuralElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Support
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ouvroir.umontreal.ca/onto/display#HangingInterface> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://ouvroir.umontreal.ca/onto/display#hasInterface> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ouvroir.umontreal.ca/onto/display#Element> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ouvroir.umontreal.ca/onto/display#> .
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/2000/01/rdf-schema#label> "Support"@en .
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/2000/01/rdf-schema#label> "Support"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Support> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#VisualDevice
+<https://ouvroir.umontreal.ca/onto/display#VisualDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#VisualDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#Device> .
+<https://ouvroir.umontreal.ca/onto/display#VisualDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Dispositif visuel"@fr .
+<https://ouvroir.umontreal.ca/onto/display#VisualDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Visual device"@en .
+<https://ouvroir.umontreal.ca/onto/display#VisualDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Wall
+<https://ouvroir.umontreal.ca/onto/display#Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#StructuralElement> .
+<https://ouvroir.umontreal.ca/onto/display#Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Mur"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Wall"@en .
+<https://ouvroir.umontreal.ca/onto/display#Wall> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://ouvroir.umontreal.ca/onto/display#Window
+<https://ouvroir.umontreal.ca/onto/display#Window> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ouvroir.umontreal.ca/onto/display#Window> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ouvroir.umontreal.ca/onto/display#StructuralElement> .
+<https://ouvroir.umontreal.ca/onto/display#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Fenêtre"@fr .
+<https://ouvroir.umontreal.ca/onto/display#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Window"@en .
+<https://ouvroir.umontreal.ca/onto/display#Window> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+# 
+# https://w3id.org/bot#Element
+<https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Interface
+<https://w3id.org/bot#Interface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Space
+<https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Zone
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://ouvroir.umontreal.ca
+<https://ouvroir.umontreal.ca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ouvroir.umontreal.ca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<https://ouvroir.umontreal.ca> <http://xmlns.com/foaf/0.1/name> "Ouvroir d’histoire de l’art et de muséologie numériques"@fr .
+# 
+# https://orcid.org/0000-0003-3410-7677
+<https://orcid.org/0000-0003-3410-7677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0003-3410-7677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://orcid.org/0000-0003-3410-7677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0003-3410-7677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://orcid.org/0000-0003-3410-7677> <http://www.w3.org/2006/vcard/ns#fn> "David Valentine" .
+<https://orcid.org/0000-0003-3410-7677> <http://xmlns.com/foaf/0.1/made> <https://ouvroir.umontreal.ca/onto/display> .
+<https://orcid.org/0000-0003-3410-7677> <http://xmlns.com/foaf/0.1/name> "David Valentine" .
+<https://orcid.org/0000-0003-3410-7677> <https://schema.org/name> "David Valentine" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

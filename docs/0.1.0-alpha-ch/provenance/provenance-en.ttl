@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://ouvroir.umontreal.ca/onto/display/0.1.0-alpha> a prov:Entity;
+	 dc:title "The Display Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2024-01-19";
+.
+:agent0 a prov:Agent; foaf:name "David Valentine".
+:agent1 a prov:Agent; foaf:name "Emmanuel Château-Dutier".
+:agent2 a prov:Agent; foaf:name "Lena Krause".
+:agent3 a prov:Agent; foaf:name "Zoë Renaudie".
