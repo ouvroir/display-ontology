@@ -1,0 +1,35 @@
+<h2 id="desc" class="list">Display: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">
+
+The introduction and the description of this ontology specification draft is a brief sysnthesis of the communication presented at DH2024 Conference by Château-Dutier, Valentine et al. https://ouvroir.github.io/display/
+
+The core of the Display ontology is based on very few classes: the `display:Exhibit` class and the `display:ExhibitionSpace` class. The main assumption is that a `display:Exhibit` instance is located somewhere within or at the boundaries of a `display:ExhibitionSpace` instance, and that `display:Exhibit` instances can be described by the means of the topological relationship between them or between a `display:Exhibit` instance and a `display:ExhibitionSpace` instance.
+
+In order to achieve that proposition, the Display ontology relies on two core elements:
+
+- the topology of the exhibition space: an alignment with the Building Topology Ontology
+- the topological relationship of exhibits: a set of object properties loosely based on RCC8-like terminology, describing the topological relationship of exhibits
+
+### The topology of the exhibition space
+
+Display relies on the Building Topology Ontology. An explanation of the way Display is connected to BOT. figures and explanation about the phrasing of display classes that are sub-classes of bot.
+
+### The topological relationship of exhibits
+
+Display is inspired by RCC8 and GeoSPARQL. Flexibility in description.
+
+### Exhibition and exhibit metadata
+
+As an ontological core that aims to describe the topology of an exhibition, the Display Ontology does not explicitly provide a way to record metadata at the moment. Metadata of entities described using Display could be expressed using a CIDOC CRM application profile that needs to be discussed further. Use `rdfs:label`.
+
+### Release notes
+
+Version `0.1.0-alpha` of this ontology is an unstable work in progress.
+It is the result of the first reflections and experimentations of the research team dedicated to the modelling process.
+It is not intended for production usages at the moment.
+
+Entities marked with term status "testing" are actively used in some experimentations conducted at the Ouvroir laboratory.
+
+Entities marked with term status "unstable" are likely to be deprecated in future versions of this ontology and may be removed at any time.
+</span>
