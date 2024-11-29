@@ -214,7 +214,7 @@ display:hasExhibit rdf:type owl:ObjectProperty ;
                    owl:propertyChainAxiom ( bot:containsZone
                                             display:hasExhibit
                                           ) ;
-                   rdfs:comment "Links an Exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot's core topological relationship patterns to the relation between Exhibition space and Exhibit."@en ,
+                   rdfs:comment "Links an Exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot's core topological relationship patterns to the relation between exhibition space and exhibit."@en ,
                                 "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ;
                    rdfs:label "en relation avec l’expôt"@fr ,
                               "has exhibit"@en ;
@@ -228,7 +228,7 @@ display:hasExhibitionSpace rdf:type owl:ObjectProperty , owl:TransitiveProperty 
                            rdfs:subPropertyOf bot:hasSpace ;
                            rdfs:domain bot:Zone ;
                            rdfs:range display:ExhibitionSpace ;
-                           rdfs:comment "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExihibitionSpace. A space is often divided into two or more exhibition spaces."@en ;
+                           rdfs:comment "Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExhibitionSpace. A space is often divided into two or more exhibition spaces."@en ;
                            rdfs:label "contient un espace expographique"@fr ,
                                       "has exhibition space"@en ;
                            vs:term_status "testing" .
@@ -513,7 +513,7 @@ display:Exhibit rdf:type owl:Class ;
 ###  https://w3id.org/display#ExhibitionSpace
 display:ExhibitionSpace rdf:type owl:Class ;
                         rdfs:subClassOf bot:Space ;
-                        rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at certain time within the zone it is contained in."@en ,
+                        rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at a given moment within the zone it is contained in."@en ,
                                      "Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient."@fr ;
                         rdfs:isDefinedBy <https://w3id.org/display#> ;
                         rdfs:label "Espace expographique"@fr ,
