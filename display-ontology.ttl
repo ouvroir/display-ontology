@@ -20,63 +20,73 @@
 #################################################################
 
 <https://w3id.org/display> rdf:type owl:Ontology ;
-  dcterms:creator <https://orcid.org/0000-0003-3410-7677> ,
+  dcterms:creator
+    <https://orcid.org/0000-0003-3410-7677> ,
     <https://orcid.org/0009-0001-5825-8624> ,
     <https://orcid.org/0000-0003-4092-4569> ;
-  dcterms:contributor <https://orcid.org/0000-0001-6280-6657> ;
+  dcterms:contributor
+    <https://orcid.org/0000-0001-6280-6657> ,
+    <http://viaf.org/viaf/93040963> ;
   vann:preferredNamespaceUri <https://w3id.org/display#> ;
   vann:preferredNamespacePrefix "display" ;
   owl:imports <https://w3id.org/bot> ;
   voaf:extends <https://w3id.org/bot> ;
-  rdfs:comment "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
-  dcterms:description "This computer ontology is intended to describe in an explicit and formal way the features of a collection display or an exhibition (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is aimed to facilitate the recording of historical information about displays and proposes solutions to account for uncertainty and documentary gaps."@en ;
-  dcterms:abstract "This Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). The project supported by the University of Montreal, the Canada Fund for Innovation, and the Province of Quebec. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
+  rdfs:comment "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit."@en ;
+  dcterms:description "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit."@en ;
+  dcterms:abstract "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:issued "2024-10-28"^^xsd:date ;
-  dcterms:modified "2024-10-28T08:27:00-04:00"^^xsd:dateTime ;
   dcterms:created "2024-10-18"^^xsd:date ;
+  dcterms:issued "2024-10-28"^^xsd:date ;
+  dcterms:modified "2024-11-28T16:30:00-05:00"^^xsd:dateTime ;
   dcterms:title "The Display Ontology"@en ,
     "L’ontologie Display"@fr ;
   rdfs:label "Display"@en , "Display"@fr ;
-  rdfs:seeAlso <https://github.com/ouvroir/display-ontology/> ,
+  rdfs:seeAlso
     <https://ouvroir.github.io/display/> ,
     <https://ouvroir.umontreal.ca/projets/display> ;
   # schema:creativeWorkStatus describes the status of Display specification
   schema:creativeWorkStatus "Display Ontology Specification Draft"@en ;
-  owl:versionIRI <https://w3id.org/display/display-0.1.0-alpha> ;
+  owl:versionIRI <https://w3id.org/display/0.1.0-alpha> ;
   owl:versionInfo "0.1.0-alpha" ;
-  owl:priorVersion <https://w3id.org/display/display-0.1.0-alpha-ch> ;
+  owl:priorVersion <https://w3id.org/display/0.1.0-alpha-ch> ;
   schema:codeRepository "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
   dcterms:publisher <https://ouvroir.umontreal.ca#this> ;
-  dcterms:bibliographicCitation "David Valentine, Zoë Renaudie, Emmanuel Château-Dutier. The Display Ontology. Revision: 0.1.0-alpha. Retrieved from: https://w3id.org/display/display-0.1.0-alpha".
+  dcterms:bibliographicCitation "Valentine, David, Zoë Renaudie, and Emmanuel Château-Dutier. 2024. “The Display Ontology”. Ontology Specification Draft. https://ouvroir.github.io/display-ontology/" .
 
 # Creators and contributors
 <https://orcid.org/0000-0003-3410-7677> a foaf:Person ;
-  foaf:name   "David Valentine" ;
-  foaf:made   <https://w3id.org/display> ;
-  org:memberOf <https://ouvroir.umontreal.ca#this> ;
-  foaf:mbox "david.valentine@umontreal.ca" .
+  foaf:name     "David Valentine" ;
+  foaf:made     <https://w3id.org/display> ;
+  org:memberOf  <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox     "david.valentine@umontreal.ca" .
 <https://orcid.org/0009-0001-5825-8624> a foaf:Person ;
-  foaf:name   "Zoë Renaudie" ;
-  foaf:made   <https://w3id.org/display> ;
-  org:memberOf <https://ouvroir.umontreal.ca#this> ;
-  foaf:mbox "zoe.renaudie@umontreal.ca" .
+  foaf:name     "Zoë Renaudie" ;
+  foaf:made     <https://w3id.org/display> ;
+  org:memberOf  <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox     "zoe.renaudie@umontreal.ca" .
 <https://orcid.org/0000-0003-4092-4569> a foaf:Person ;
-  foaf:name   "Emmanuel Château-Dutier" ;
-  foaf:made   <https://w3id.org/display> ;
-  org:memberOf <https://ouvroir.umontreal.ca#this> ;
-  foaf:mbox "emmanuel.chateau.dutier@umontreal.ca" .
+  foaf:name     "Emmanuel Château-Dutier" ;
+  foaf:made     <https://w3id.org/display> ;
+  org:memberOf  <https://ouvroir.umontreal.ca#this> ;
+  foaf:mbox     "emmanuel.chateau.dutier@umontreal.ca" .
 <https://orcid.org/0000-0001-6280-6657> a foaf:Person ;
-  foaf:name   "Lena Krause" ;
-  org:memberOf <https://ouvroir.umontreal.ca#this> .
+  foaf:name     "Lena Krause" ;
+  org:memberOf  <https://ouvroir.umontreal.ca#this> .
+<http://viaf.org/viaf/93040963> a foaf:Person ;
+  foaf:name     "Marie Fraser" ;
+  org:memberOf  <http://www.wikidata.org/entity/Q1634522> .
 
 # Organizations
 <https://ouvroir.umontreal.ca#this> a foaf:Organization ;
   foaf:homepage "https://ouvroir.umontreal.ca"^^xsd:anyURI ;
-  foaf:name "Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)"@fr .
-<https://umontreal.ca#this> a foaf:Organization ;
+  foaf:name "Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)"@fr ;
+  foaf:memberOf <http://www.wikidata.org/entity/Q392189> .
+<http://www.wikidata.org/entity/Q392189> a foaf:Organization ;
   foaf:homepage "https://umontreal.ca"^^xsd:anyURI ;
   foaf:name "Université de Montréal"@fr .
+<http://www.wikidata.org/entity/Q1634522> a foaf:Organization ;
+  foaf:homepage "https://uqam.ca"^^xsd:anyURI ;
+  foaf:name "Université du Québec à Montréal"@fr .
 
 # BOT metadata
 <https://w3id.org/bot> rdfs:label "Building Topology Ontology"@en .
