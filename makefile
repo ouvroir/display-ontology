@@ -31,6 +31,9 @@ copysrc:
 authorsOrder:
 	@bash order.sh
 
+###############################################
+# make build
+# commande exécutée sur la machine virtuelle
 .PHONY: build
 build: docs copysrc authorsOrder
 
