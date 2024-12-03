@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/display#"
+     xml:base="https://w3id.org/display"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://www.w3.org/2006/vcard/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/display">
+        <owl:versionIRI rdf:resource="https://w3id.org/display/0.1.0-alpha"/>
+        <owl:imports rdf:resource="https://w3id.org/bot"/>
+        <terms:abstract xml:lang="en">The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier.</terms:abstract>
+        <terms:bibliographicCitation>Valentine, David, Zoë Renaudie, and Emmanuel Château-Dutier. 2024. “The Display Ontology”. Ontology Specification Draft. https://ouvroir.github.io/display-ontology/</terms:bibliographicCitation>
+        <terms:contributor rdf:resource="http://viaf.org/viaf/93040963"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-6280-6657"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-18</terms:created>
+        <terms:creator rdf:resource="https://orcid.org/0000-0003-3410-7677"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0003-4092-4569"/>
+        <terms:creator rdf:resource="https://orcid.org/0009-0001-5825-8624"/>
+        <terms:description xml:lang="en">The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-28</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-28T16:30:00-05:00</terms:modified>
+        <terms:publisher rdf:resource="https://ouvroir.umontreal.ca#this"/>
+        <terms:title xml:lang="fr">L’ontologie Display</terms:title>
+        <terms:title xml:lang="en">The Display Ontology</terms:title>
+        <vann:preferredNamespacePrefix>display</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/display#"/>
+        <voaf:extends rdf:resource="https://w3id.org/bot"/>
+        <rdfs:comment xml:lang="en">The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Topology Ontology</rdfs:label>
+        <rdfs:label xml:lang="en">Display</rdfs:label>
+        <rdfs:label xml:lang="fr">Display</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://ouvroir.github.io/display/"/>
+        <rdfs:seeAlso rdf:resource="https://ouvroir.umontreal.ca/projets/display"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/display/0.1.0-alpha-ch"/>
+        <owl:versionInfo>0.1.0-alpha</owl:versionInfo>
+        <schema:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/ouvroir/display-ontology</schema:codeRepository>
+        <schema:creativeWorkStatus xml:lang="en">Display Ontology Specification Draft</schema:creativeWorkStatus>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#extends -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocommons/voaf#extends"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/made -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/made"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/memberOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creativeWorkStatus"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/bot#containsZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#containsZone"/>
+    
+
+
+    <!-- https://w3id.org/bot#hasSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSpace"/>
+    
+
+
+    <!-- https://w3id.org/bot#interfaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#interfaceOf"/>
+    
+
+
+    <!-- https://w3id.org/display#above -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#above">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/display#below"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is above the object exhibit on a bidimensional surface.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">above</rdfs:label>
+        <rdfs:label xml:lang="fr">au-dessus</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#adjacentExhibit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#adjacentExhibit">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#hasExhibit"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/display#intersectingExhibit"/>
+        <rdfs:comment xml:lang="fr">Propriété définie parallèlement à `bot:adjacentElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation between an exhibition space and its adjacent exhibition elements or exhibits, bounding the zone. This property is defined in parallel with `bot:adjacentElement` to apply the scope of the `bot:`&apos;s pattern to the Exhibit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">adjacent exhibit</rdfs:label>
+        <rdfs:label xml:lang="fr">expôt adjacent</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#backToBack -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#backToBack">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is back-to-back with the object exhibit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">back-to-back</rdfs:label>
+        <rdfs:label xml:lang="fr">dos à dos</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#behind -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#behind">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is behind the object exhibit, which means the object exhibit is located on the opposite side of the subject exhibit front side.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">behind</rdfs:label>
+        <rdfs:label xml:lang="fr">derrière</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#below -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#below">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is below the object exhibit on a bidimensional surface. Not to be confused with `display:under`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">below</rdfs:label>
+        <rdfs:label xml:lang="fr">sous</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#containedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#containedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/display#contains"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is spatially contained in the object exhibit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">contained in</rdfs:label>
+        <rdfs:label xml:lang="fr">contenu dans</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#contains">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit spatially contains the object exhibit inside a space volume. Example: An exhibit is inside a element (showcase). Not to be confused with `display:containsExhibit`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <rdfs:label xml:lang="fr">contient</rdfs:label>
+        <ns:moreinfo>3D spatial extent perspective. See also mereological properties.</ns:moreinfo>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#containsExhibit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#containsExhibit">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#hasExhibit"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/bot#containsZone"/>
+            <rdf:Description rdf:about="https://w3id.org/display#containsExhibit"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relation to an exhibit contained in an exhibition space. This property is defined in parallel with `bot:containsElement` to apply the scope of the `bot:`&apos;s pattern to the Exhibit. Not to be confused with `display:contains`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">À ne pas confondre avec display:contains</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">contains exhibit</rdfs:label>
+        <rdfs:label xml:lang="fr">l’espace contient l’expôt</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#coveredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#coveredBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/display#covers"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is spatially covered by the object exhibit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">covered by</rdfs:label>
+        <rdfs:label xml:lang="fr">recouvert par</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#covers -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#covers">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdfs:comment xml:lang="en">The subject exhibit spatially covers the object exhibit. For partial covering see `display:overlaps`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">covers</rdfs:label>
+        <rdfs:label xml:lang="fr">recouvre</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#faces -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#faces">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit faces the object exhibit. One needs to define the exhibit&apos;s front face in order to consistently use this property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">faces</rdfs:label>
+        <rdfs:label xml:lang="fr">vis-à-vis</rdfs:label>
+        <ns:moreinfo xml:lang="en">Potential conflict with owl:SymmetricProperty to be analysed further.</ns:moreinfo>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#hasExhibit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#hasExhibit">
+        <rdfs:domain rdf:resource="https://w3id.org/display#ExhibitionSpace"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Exhibit"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/bot#containsZone"/>
+            <rdf:Description rdf:about="https://w3id.org/display#hasExhibit"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Links an Exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot&apos;s core topological relationship patterns to the relation between exhibition space and exhibit.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation entre un espace expographique et un expôt contenu dans l’espace expographique.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">en relation avec l’expôt</rdfs:label>
+        <rdfs:label xml:lang="en">has exhibit</rdfs:label>
+        <ns:moreinfo xml:lang="fr">Cette propriété redéfinit en parallèle les trois sous-propriétés semblables de bot:hasElement (puisque l’expôt n’est pas un bot:Element). Cependant l’expôt, que l’on suppose systématiquement contenu par l’espace expographique, peut être mis en relation avec des instances de bot:Element et, par inférence, être ainsi positionné dans le bâtiment.</ns:moreinfo>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#hasExhibitionSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#hasExhibitionSpace">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSpace"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#ExhibitionSpace"/>
+        <rdfs:comment xml:lang="en">Relation to exhibition spaces contained in a zone. The typical domains of display:hasExhibitionSpace are instances of bot:Space or display:ExhibitionSpace. A space is often divided into two or more exhibition spaces.</rdfs:comment>
+        <rdfs:label xml:lang="fr">contient un espace expographique</rdfs:label>
+        <rdfs:label xml:lang="en">has exhibition space</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#hasTopologicalRelationWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#hasTopologicalRelationWith">
+        <rdfs:domain rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:comment xml:lang="en">Generic topological relation between exhibits located within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">est en relation topologique avec</rdfs:label>
+        <rdfs:label xml:lang="en">has topological relation with</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#inFrontOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#inFrontOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is in front of the object exhibit. To be in front of doesn&apos;t entail that the subject faces the object. Not to be confused with `display:faces`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">est devant</rdfs:label>
+        <rdfs:label xml:lang="en">in front of</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#includedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#includedIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/display#includes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Display"/>
+        <rdfs:comment xml:lang="fr">Relation entre un expôt et un display : un expôt est inclus dans un display.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between an exhibit and a display entity: An exhibit is included in a display.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">included in</rdfs:label>
+        <rdfs:label xml:lang="fr">inclus dans</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#includes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#includes">
+        <rdfs:domain rdf:resource="https://w3id.org/display#Display"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:comment xml:lang="fr">Relation entre un display et un expôt agencé au sein du display : le display constitue un agencement qui inclut un ou plusieurs expôts.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between a display entity and an exhibit: A display is made up of one or more exhibits.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+        <rdfs:label xml:lang="fr">inclut</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#interfaceOfExhibit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#interfaceOfExhibit">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/display#HangingInterface"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:comment xml:lang="en">Relationship between a hanging interface and an exhibit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">interface de l&apos;expôt</rdfs:label>
+        <rdfs:label xml:lang="en">interface of exhibit</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#interfaceOfSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#interfaceOfSpace">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/display#PathwayInterface"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#ExhibitionSpace"/>
+        <rdfs:comment xml:lang="en">Relationship between a pathway interface and a space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr"> interface de l&apos;espace</rdfs:label>
+        <rdfs:label xml:lang="en">interface of space</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#interfaceProvidedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#interfaceProvidedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Interface"/>
+        <rdfs:range rdf:resource="https://w3id.org/display#Element"/>
+        <rdfs:comment xml:lang="en">Relationship between an interface and an exhibition element that embodies the interface.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr"> interface fournie par</rdfs:label>
+        <rdfs:label xml:lang="en">interface provided by</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#intersectingExhibit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#intersectingExhibit">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#hasExhibit"/>
+        <rdfs:comment xml:lang="en">Relation between an exhibition space and a exhibit that intersects it totally or partially. This property is defined in parallel with `bot:intersectingElement` to apply the scope of the `bot:`&apos;s pattern to the Exhibit.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation entre un espace expographique et un expôt qui traverse cet espace complètement ou partiellement. Propriété définie parallèlement à `bot:intersectingElement` pour ouvrir le champ d’application du patron de `bot:` à l’expôt. Voir display:hasExhibit pour plus d’information.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">intersecting exhibit</rdfs:label>
+        <rdfs:label xml:lang="fr">traversé par l’expôt</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#leftOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#leftOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is to the left of the object exhibit. Since the viewer&apos;s perspective is relative within the space volume, &apos;left of&apos; should not be defined from that point of view. Instead, &apos;left of&apos; should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer&apos;s position.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">left of</rdfs:label>
+        <rdfs:label xml:lang="fr">à gauche de</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#liesAgainst -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#liesAgainst">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdfs:comment xml:lang="fr">Le sujet est posé contre l’objet.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The subject exhibit lies against the object exhibit in a non horizontal position, which means in a vertical or inclined position. Not to be confused with `display:liesOn`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">lies against</rdfs:label>
+        <rdfs:label xml:lang="fr">repose contre</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#liesOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#liesOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdfs:comment xml:lang="fr">Le sujet repose horizontalement sur l’objet.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The subject exhibit lies on the object exhibit in a horizontal position. Not to be confused with `display:liesAgaint`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">lies on</rdfs:label>
+        <rdfs:label xml:lang="fr">repose sur</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#nextTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#nextTo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is next to the object exhibit, meaning that exhibits are near or close to each other, but have not direct adjacency or not near enough so as to touch.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">next to</rdfs:label>
+        <rdfs:label xml:lang="fr">près de</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#over -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#over">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <rdfs:comment xml:lang="en">In a space volume the subject exhibit is over the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:above`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">au-dessus de</rdfs:label>
+        <rdfs:label xml:lang="en">over</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#overlaps -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#overlaps">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdfs:comment xml:lang="en">The subject exhibit spatially covers the object exhibit so that it is partially covering the object, creating an intersection of their areas.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <rdfs:label xml:lang="fr">recouvre partiellement</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#proximalRelationship -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#proximalRelationship">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#hasTopologicalRelationWith"/>
+        <rdfs:comment xml:lang="en">Proximal relationship is the super-property of relations describing abstract proximity between two exhibits that are necessarily close to each other. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">à proximité, dans l’environnement immédiat</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">proximal relationship</rdfs:label>
+        <rdfs:label xml:lang="fr">relation proximale</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#rightOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#rightOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/display#leftOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit is to the right of the object exhibit. Since the viewer&apos;s perspective is relative within the space volume, &apos;right of&apos; should not be defined from that point of view. Instead, &apos;right of&apos; should be defined in relation to the front face of the object exhibit whenever possible, which ensures consistent relationship description regardless of the viewer&apos;s position.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">right of</rdfs:label>
+        <rdfs:label xml:lang="fr">à droite de</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#spatialRelationship -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#spatialRelationship">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#hasTopologicalRelationWith"/>
+        <rdfs:comment xml:lang="en">Spatial relationship is the super-property of relations describing abstract spatial location of exhibits that are not necessarily close to each other within an exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from a specific topological relation between two exhibits.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">pas à proximité, mais partage un espace</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">relation spatiale</rdfs:label>
+        <rdfs:label xml:lang="en">spatial relationship</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#touches -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#touches">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#proximalRelationship"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">The subject exhibit touches the object exhibit so that exhibits share adjacency between them.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">touche</rdfs:label>
+        <rdfs:label xml:lang="en">touches</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/display#under -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/display#under">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/display#spatialRelationship"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/display#over"/>
+        <rdfs:comment xml:lang="en">In a space volume the subject exhibit is under the object exhibit. Exhibits may have adjacency, but not necessarily. Not to be confused with `display:below`.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">en dessous de</rdfs:label>
+        <rdfs:label xml:lang="en">under</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/bot#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Element">
+        <owl:equivalentClass rdf:resource="https://w3id.org/display#Element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Interface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Interface">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Space -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Space">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Zone">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#Display -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#Display">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/display#Exhibit"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/display#Element"/>
+        <rdfs:comment xml:lang="en">Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">Display</rdfs:label>
+        <rdfs:label xml:lang="fr">Display</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#Element">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/display#Exhibit"/>
+        <rdfs:comment xml:lang="en">Constituent of a construction entity with a characteristic technical function, form or position within the exhibition space. In the sight of the Building Topology Ontology the constituent of a construction entity may also be furniture.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Élément constitutif du bâti ayant une fonction technique, une forme ou une position caractéristique dans l’espace d’exposition. Dans l’optique de la Builduig Topology Ontology, l’élément constitutif du bâti peut également être du mobilier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+        <rdfs:label xml:lang="fr">Élement</rdfs:label>
+        <ns:moreinfo>Dans la perspective expographique de `display:`, `bot:Element` est considéré comme une spécialisation de l’expôt, tandis que `display:Element` est une spécialisation à la fois de `bot:Element` et de l’expôt. Toutefois, `bot:Element` peut être un expôt sans nécessairement être `display:Element`. C’est pourquoi `display:` utilise les classes équivalentes : `display:Element owl:equivalentClass bot:Element`, permettant leur spécialisation mutuelle et l’existence de leurs définitions respectives. Note : nous aurions pu simplement déclarer `display:Exhibit` comme sous-classe de `bot:Element`, mais la définition de `bot:Element` ne permet pas la spécialisation de l’expôt en tant que `bot:Element`.</ns:moreinfo>
+        <ns:term_status>testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#Exhibit -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#Exhibit">
+        <owl:disjointWith rdf:resource="https://w3id.org/display#ExhibitionSpace"/>
+        <rdfs:comment xml:lang="en">Any exhibition entity, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">Exhibit</rdfs:label>
+        <rdfs:label xml:lang="fr">Expôt</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#ExhibitionSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#ExhibitionSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+        <rdfs:comment xml:lang="en">A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and specifically provides for exhibition functions at a given moment within the zone it is contained in.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une partie du monde physique ou virtuel dont le volume est limité réellement ou théoriquement, et qui sert spécifiquement d’espace expographique à un certain moment au sein de la zone qui la contient.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">Espace expographique</rdfs:label>
+        <rdfs:label xml:lang="en">Exhibition space</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#HangingInterface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#HangingInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+        <rdfs:comment xml:lang="en">Hanging interface is a relation describing the hanging of an exhibit using an element. It allows qualifying the relationship of two or more things, where at least one is an exhibit (`display:Exhibit`) and at least one is an exhibition element (`display:Element`), indicating that this element is used for the hanging of the exhibit. Hanging interface can be the &apos;interface of&apos; an exhibit and may be &apos;provided by&apos; an exhibition element. In future versions of the Display Ontology, hanging interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties like time span.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="en">Hanging interface</rdfs:label>
+        <rdfs:label xml:lang="fr">Interface d&apos;accrochage</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/display#PathwayInterface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/display#PathwayInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+        <rdfs:comment xml:lang="en">Pathway interface is a relation describing the way of circulating between spaces. It allows qualifying the relationship of two or more exhibition spaces, indicating that these spaces are connected together so that one can go from one space to another. Pathway interface can be the &apos;interface of&apos; an exhibition space and may be &apos;provided by&apos; an exhibition element. In future versions of the Display Ontology, pathway interface could also receive additional qualifying properties, such as a type (using terms from a controlled vocabulary) or some other datatype properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/display#"/>
+        <rdfs:label xml:lang="fr">Interface de circulation</rdfs:label>
+        <rdfs:label xml:lang="en">Pathway interface</rdfs:label>
+        <ns:term_status>unstable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://viaf.org/viaf/93040963 -->
+
+
+    <owl:NamedIndividual rdf:about="http://viaf.org/viaf/93040963">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:memberOf rdf:resource="http://www.wikidata.org/entity/Q1634522"/>
+        <foaf:name>Marie Fraser</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1634522 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q1634522">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://uqam.ca</foaf:homepage>
+        <foaf:name xml:lang="fr">Université du Québec à Montréal</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q392189 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q392189">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://umontreal.ca</foaf:homepage>
+        <foaf:name xml:lang="fr">Université de Montréal</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0001-6280-6657 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-6280-6657">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:memberOf rdf:resource="https://ouvroir.umontreal.ca#this"/>
+        <foaf:name>Lena Krause</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0003-3410-7677 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-3410-7677">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:memberOf rdf:resource="https://ouvroir.umontreal.ca#this"/>
+        <foaf:made rdf:resource="https://w3id.org/display"/>
+        <foaf:mbox>david.valentine@umontreal.ca</foaf:mbox>
+        <foaf:name>David Valentine</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0003-4092-4569 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-4092-4569">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:memberOf rdf:resource="https://ouvroir.umontreal.ca#this"/>
+        <foaf:made rdf:resource="https://w3id.org/display"/>
+        <foaf:mbox>emmanuel.chateau.dutier@umontreal.ca</foaf:mbox>
+        <foaf:name>Emmanuel Château-Dutier</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0009-0001-5825-8624 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0009-0001-5825-8624">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:memberOf rdf:resource="https://ouvroir.umontreal.ca#this"/>
+        <foaf:made rdf:resource="https://w3id.org/display"/>
+        <foaf:mbox>zoe.renaudie@umontreal.ca</foaf:mbox>
+        <foaf:name>Zoë Renaudie</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ouvroir.umontreal.ca#this -->
+
+
+    <owl:NamedIndividual rdf:about="https://ouvroir.umontreal.ca#this">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ouvroir.umontreal.ca</foaf:homepage>
+        <foaf:memberOf rdf:resource="http://www.wikidata.org/entity/Q392189"/>
+        <foaf:name xml:lang="fr">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</foaf:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

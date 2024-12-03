@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>The Display Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/display#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/display#","name":"The Display Ontology", "headline":"The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier.", "dateReleased":"2024-10-18", "dateModified":"2024-11-28T16:30:00-05:00", "version":"0.1.0-alpha", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/ouvroir/display-ontology", "author":[{"@type":"Person","name":"David Valentine","url":"https://orcid.org/0000-0003-3410-7677"},{"@type":"Person","name":"Emmanuel Château-Dutier","url":"https://orcid.org/0000-0003-4092-4569"},{"@type":"Person","name":"Zoë Renaudie","url":"https://orcid.org/0009-0001-5825-8624"}], "contributor":[{"@type":"Person","name":"Marie Fraser","url":"http://viaf.org/viaf/93040963"},{"@type":"Person","name":"Lena Krause","url":"https://orcid.org/0000-0001-6280-6657"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#nstable").load("sections/ns-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Display Ontology</h1>
+<h2>Release: 2024-10-18</h2>
+
+
+<dl>
+<dt>Modified on: 2024-11-28T16:30:00-05:00</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/display/0.1.0-alpha">https://w3id.org/display/0.1.0-alpha</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/display/0.1.0-alpha-ch">https://w3id.org/display/0.1.0-alpha-ch</a></dd>
+<dt>Revision:</dt>
+<dd>0.1.0-alpha</dd>
+<dt>Issued on:</dt>
+<dd>2024-11-28</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0003-3410-7677">David Valentine</a>, <a href="https://ouvroir.umontreal.ca">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</a><a href="mailto:david.valentine@umontreal.ca">&#9993;</a></dd><dd><a href="https://orcid.org/0009-0001-5825-8624">Zoë Renaudie</a>, <a href="https://ouvroir.umontreal.ca">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</a><a href="mailto:zoe.renaudie@umontreal.ca">&#9993;</a></dd><dd><a href="https://orcid.org/0000-0003-4092-4569">Emmanuel Château-Dutier</a>, <a href="https://ouvroir.umontreal.ca">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</a><a href="mailto:emmanuel.chateau.dutier@umontreal.ca">&#9993;</a></dd>
+
+<dt>Contributors:</dt>
+<dd><a href="http://viaf.org/viaf/93040963">Marie Fraser</a>, <a href="https://uqam.ca">Université du Québec à Montréal</a></dd><dd><a href="https://orcid.org/0000-0001-6280-6657">Lena Krause</a>, <a href="https://ouvroir.umontreal.ca">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</a></dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://ouvroir.umontreal.ca">Ouvroir d’histoire de l’art et de muséologie numériques (Université de Montréal)</a></dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="https://w3id.org/bot#">bot#</a></dd>
+
+<dt>Extended Ontologies:</dt>
+<dd><a href="https://w3id.org/bot">https://w3id.org/bot</a></dd>
+
+<dt>See also:</dt>
+<dd><a href="https://ouvroir.github.io/display/">https://ouvroir.github.io/display/</a></dd><dd><a href="https://ouvroir.umontreal.ca/projets/display">https://ouvroir.umontreal.ca/projets/display</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Valentine, David, Zoë Renaudie, and Emmanuel Château-Dutier. 2024. “The Display Ontology”. Ontology Specification Draft. https://ouvroir.github.io/display-ontology/</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/ouvroir/display-ontology">https://github.com/ouvroir/display-ontology</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Display Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+	  <div id="nstable"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+     <div id="changelog"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
