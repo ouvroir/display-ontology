@@ -1,0 +1,58 @@
+<h2 id="desc" class="list">Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">
+### Namespace
+
+The namespace for the Display ontology terms is `https://w3id.org/display#`.
+
+The suggested prefix for the Display ontology namespace is `display`.
+
+### Ontological core and metadata
+
+Version 0.1.0 of the Display Ontology is an ontological core for describing exhibition topology.
+Currently, it does not explicitly provide a way to record metadata for exhibitions and exhibits.
+Metadata for entities described using this ontology could be expressed through a CIDOC CRM application profile, which requires further discussions.
+The exemplar dataset currently follows the Linked Art application profile patterns.
+
+The core of the Display ontology is based on few classes:
+the `display:Exhibit` class and the `display:ExhibitionSpace` class.
+The main assumption is that a `display:Exhibit` instance is located somewhere within or at the boundaries of a `display:ExhibitionSpace` instance, and that `display:Exhibit` instances can be described by the means of the topological relationship between them or between a `display:Exhibit` instance and a `display:ExhibitionSpace` instance.
+
+In order to achieve this proposition, the Display ontology relies on two core elements:
+
+- the topology of the exhibition space: an alignment with the Building Topology Ontology (BOT)
+- the topological relationship of exhibits: a set of object properties loosely based on RCC8-like terminology, describing the topological relationship of exhibits
+
+### The topology of the exhibition space
+
+The Display Ontology is aligned with BOT for the basic description of relations between the sub-components of a building [Rasmussen2020].
+There are two specializations to manage exhibition space:
+The `bot:Space` class is specialized by a `display:ExhibitionSpace` subclass, which is designed to describe exhibition spaces and inherits  BOT’s properties for generic mereological relationships.
+The `bot:hasSpace` property is specialized by the `display:hasExhibitionSpace` sub-property.
+
+The `display:Exhibit` class and the properties that enable exhibits to be located in `display:ExhibitionSpace` are defined in parallel with `bot:Element` and its corresponding properties, which also allow for locating things in space but are semantically incompatible with the concept represented by `display:Exhibit`.
+The branches of this parallel pattern are merged through the `bot:Element` class, which is a subclass of `display:Exhibit`.
+It allows to share topological and mereological relations at the model level.
+
+For consistency, the phrasing used to describe Display classes and properties for the exhibition space generally follows the linguistic patterns of the Building Topology Ontology’s classes and properties.
+
+### The topological relationship of exhibits
+
+BOT is limited to the description of adjacency, partition and intersection relations, lacking a generic framework for topological relationships.
+Display defines the topological relationships of exhibits that are used to describe relations observed between the elements of an exhibition.
+
+An exhibit can be anything located within or at the boundaries of an exhibition space.
+The relationship between exhibits forms a set of object properties whose terms are loosely based on RCC8-like terminology [Randell], describing the topological or mereological connections between exhibits.
+It is designed to provide some degree of flexibility in descriptions, allowing for the creation of abstract topological statements that are close to natural language while remaining as unambiguous as possible.
+
+The phrasing used to describe topological relations relies heavily on the RCC8 implementation of the GeoSPARQL standard for its clarity, but there is no formal connection between GeoSPARQL and Display.
+
+### Release notes
+
+Version `0.1.0-alpha` of this ontology is an unstable work in progress.
+It is the result of the first reflections and experimentations of the research team dedicated to the modelling process.
+
+Entities marked with term status “testing” are actively used in some experimentations conducted at the Ouvroir laboratory.
+
+Entities marked with term status “unstable” are likely to be deprecated in future versions of this ontology and may be removed at any time.
+</span>
