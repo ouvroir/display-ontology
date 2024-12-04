@@ -36,8 +36,8 @@
   dcterms:abstract "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition, allowing the connection between space and exhibit to be formally defined using a topological approach. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:created "2024-10-18"^^xsd:date ;
-  dcterms:issued "2024-11-28"^^xsd:date ;
-  dcterms:modified "2024-11-28T16:30:00-05:00"^^xsd:dateTime ;
+  dcterms:issued "2024-12-03"^^xsd:date ;
+  dcterms:modified "2024-12-03T19:30:00-05:00"^^xsd:dateTime ;
   dcterms:title "The Display Ontology"@en ,
     "L’ontologie Display"@fr ;
   rdfs:label "Display"@en , "Display"@fr ;
@@ -46,9 +46,9 @@
     <https://ouvroir.umontreal.ca/projets/display> ;
   # schema:creativeWorkStatus describes the status of Display specification
   schema:creativeWorkStatus "Display Ontology Specification Draft"@en ;
-  owl:versionIRI <https://w3id.org/display/0.1.0-alpha> ;
-  owl:versionInfo "0.1.0-alpha" ;
-  owl:priorVersion <https://w3id.org/display/0.1.0-alpha-ch> ;
+  owl:versionIRI <https://w3id.org/display/0.1.0> ;
+  owl:versionInfo "0.1.0" ;
+  owl:priorVersion <https://w3id.org/display/0.1.0-alpha> ;
   schema:codeRepository "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
   dcterms:publisher <https://ouvroir.umontreal.ca#this> ;
   dcterms:bibliographicCitation "Valentine, David, Zoë Renaudie, and Emmanuel Château-Dutier. 2024. “The Display Ontology”. Ontology Specification Draft. https://ouvroir.github.io/display-ontology/" .
