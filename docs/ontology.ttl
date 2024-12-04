@@ -7,9 +7,9 @@
 @base <https://w3id.org/display#> .
 
 <https://w3id.org/display> rdf:type owl:Ontology ;
-                            owl:versionIRI <https://w3id.org/display/0.1.0-alpha> ;
+                            owl:versionIRI <https://w3id.org/display/0.1.0> ;
                             owl:imports <https://w3id.org/bot> ;
-                            <http://purl.org/dc/terms/abstract> "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
+                            <http://purl.org/dc/terms/abstract> "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition, allowing the connection between space and exhibit to be formally defined using a topological approach. The project is supported by the University of Montreal and by the Social Sciences and Humanities Research Council of Canada. Main ontologist: David Valentine. Project manager: Zoë Renaudie (formerly Lena Krause). Scientific director: Emmanuel Château-Dutier."@en ;
                             <http://purl.org/dc/terms/bibliographicCitation> "Valentine, David, Zoë Renaudie, and Emmanuel Château-Dutier. 2024. “The Display Ontology”. Ontology Specification Draft. https://ouvroir.github.io/display-ontology/" ;
                             <http://purl.org/dc/terms/contributor> <http://viaf.org/viaf/93040963> ,
                                                                    <https://orcid.org/0000-0001-6280-6657> ;
@@ -17,24 +17,24 @@
                             <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-3410-7677> ,
                                                                <https://orcid.org/0000-0003-4092-4569> ,
                                                                <https://orcid.org/0009-0001-5825-8624> ;
-                            <http://purl.org/dc/terms/description> "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit."@en ;
-                            <http://purl.org/dc/terms/issued> "2024-11-28"^^xsd:date ;
+                            <http://purl.org/dc/terms/description> "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition, allowing the connection between space and exhibit to be formally defined using a topological approach."@en ;
+                            <http://purl.org/dc/terms/issued> "2024-12-03"^^xsd:date ;
                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                            <http://purl.org/dc/terms/modified> "2024-11-28T16:30:00-05:00"^^xsd:dateTime ;
+                            <http://purl.org/dc/terms/modified> "2024-12-03T19:30:00-05:00"^^xsd:dateTime ;
                             <http://purl.org/dc/terms/publisher> <https://ouvroir.umontreal.ca#this> ;
                             <http://purl.org/dc/terms/title> "L’ontologie Display"@fr ,
                                                              "The Display Ontology"@en ;
                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "display" ;
                             <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                             <http://purl.org/vocommons/voaf#extends> <https://w3id.org/bot> ;
-                            rdfs:comment "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (identification of the exhibition, proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition in order to describe the topological relationship between space and exhibit."@en ;
+                            rdfs:comment "The Display Ontology is intended to describe in an explicit and formal way the features of an exhibition or a collection display (proximity and contiguity of the works, vis-à-vis, etc.). It is based on a spatial perspective of the exhibition, allowing the connection between space and exhibit to be formally defined using a topological approach."@en ;
                             rdfs:label "Building Topology Ontology"@en ,
                                        "Display"@en ,
                                        "Display"@fr ;
                             rdfs:seeAlso <https://ouvroir.github.io/display/> ,
                                          <https://ouvroir.umontreal.ca/projets/display> ;
-                            owl:priorVersion <https://w3id.org/display/0.1.0-alpha-ch> ;
-                            owl:versionInfo "0.1.0-alpha" ;
+                            owl:priorVersion <https://w3id.org/display/0.1.0-alpha> ;
+                            owl:versionInfo "0.1.0" ;
                             <https://schema.org/codeRepository> "https://github.com/ouvroir/display-ontology"^^xsd:anyURI ;
                             <https://schema.org/creativeWorkStatus> "Display Ontology Specification Draft"@en .
 
@@ -280,7 +280,7 @@ xsd:date rdf:type rdfs:Datatype .
             owl:propertyChainAxiom ( <https://w3id.org/bot#containsZone>
                                      :hasExhibit
                                    ) ;
-            rdfs:comment "Links an Exhibition space to an Exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot's core topological relationship patterns to the relation between exhibition space and exhibit."@en ,
+            rdfs:comment "Links an exhibition space to an exhibit that is spatially positioned in the exhibition space. The intended use of this relationship is not to be stated explicitly, but to be inferred from its relation with a building element. It will, for example, allow one to query for all the exhibits of an exhibition space given that they have a topological relation to elements of the building. This property and its sub-properties are defined in parallel with the `bot:hasElement` property and its sub-properties in order to apply the bot's core topological relationship patterns to the relation between exhibition space and exhibit."@en ,
                          "Relation entre un espace expographique et un expôt contenu dans l’espace expographique."@fr ;
             rdfs:isDefinedBy : ;
             rdfs:label "en relation avec l’expôt"@fr ,
@@ -549,7 +549,7 @@ xsd:date rdf:type rdfs:Datatype .
 :Display rdf:type owl:Class ;
          rdfs:subClassOf :Exhibit ;
          owl:disjointWith :Element ;
-         rdfs:comment "Aggregate of exhibits arranged for the presentation of works or artifacts in an exhibition space."@en ,
+         rdfs:comment "Aggregate of exhibits arranged for the presentation of exihibition entities in a space."@en ,
                       "Ensemble ou agrégat d’expôts agencés pour la présentation d’œuvres ou d’artéfacts dans un espace expographique."@fr ;
          rdfs:isDefinedBy : ;
          rdfs:label "Display"@en ,
@@ -572,7 +572,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/display#Exhibit
 :Exhibit rdf:type owl:Class ;
          owl:disjointWith :ExhibitionSpace ;
-         rdfs:comment "Any exhibition entity, building element or furniture with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
+         rdfs:comment "Any exhibition entity, such as a work of art, artifact, device, building element, or furniture, with a characteristic artistic, aesthetic or technical function, with form or position that might be described by the means of topological relationship within an exhibition space, optionally constituent of a display entity."@en ;
          rdfs:isDefinedBy : ;
          rdfs:label "Exhibit"@en ,
                     "Expôt"@fr ;
